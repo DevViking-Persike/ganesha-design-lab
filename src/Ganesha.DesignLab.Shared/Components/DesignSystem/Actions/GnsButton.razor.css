@@ -208,6 +208,39 @@
     to { transform: rotate(360deg); }
 }
 
+/* SVG fill loader inside button */
+.gns-button__svg-loader {
+    position: relative;
+    display: inline-block;
+    height: 1.25em;
+    flex-shrink: 0;
+}
+
+.gns-button__svg-loader-bg,
+.gns-button__svg-loader-fill {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.gns-button__svg-loader-bg {
+    background: currentColor;
+    opacity: 0.25;
+}
+
+.gns-button__svg-loader-fill {
+    background: currentColor;
+    clip-path: inset(82% 0 0 0);
+    animation: gns-button-svg-fill 2.2s ease-in-out infinite;
+}
+
+@keyframes gns-button-svg-fill {
+    0%  { clip-path: inset(82% 0 0 0); opacity: 0.5; }
+    45% { clip-path: inset(0 0 0 0);   opacity: 1; }
+    70% { clip-path: inset(5% 0 0 0);  opacity: 0.92; }
+    100%{ clip-path: inset(82% 0 0 0); opacity: 0.5; }
+}
+
 /* ----------------------------------------------------------------------------
    ICONS
 ---------------------------------------------------------------------------- */

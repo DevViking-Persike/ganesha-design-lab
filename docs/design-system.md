@@ -136,6 +136,7 @@ Arquivos-chave:
 - `GnsAlert`
 - `GnsEmptyState`
 - `GnsLoader`
+- `GnsSvgLoader`
 - `GnsToastContainer`
 - `GnsToastItem`
 
@@ -206,6 +207,32 @@ Também é comum o uso de enums para variantes e tamanhos, por exemplo:
 - `InputSize`
 - `BadgeSeverity`
 - `BadgeSize`
+
+## Componentes com Suporte a SVG Loader
+
+### GnsSvgLoader
+
+Componente standalone de loading que usa `mask-image` CSS para preencher uma silhueta SVG com animação de cor. Aceita qualquer SVG como asset.
+
+Parâmetros:
+
+- `Size` (`LoaderSize`) — Small, Medium, Large
+- `Label` (`string?`) — texto abaixo do loader
+- `AssetPath` (`string`) — caminho do SVG usado como máscara
+- `AspectRatio` (`string`) — aspect ratio do SVG (ex: `"2816 / 1536"`)
+
+### GnsButton — Suporte a SVG Loading
+
+O `GnsButton` aceita SVG loaders opcionais no estado `IsLoading`:
+
+- `LoadingAssetPath` (`string?`) — quando definido, substitui o spinner padrão pelo SVG fill loader
+- `LoadingAspectRatio` (`string`) — aspect ratio do SVG (default: `"1 / 1"`)
+
+Quando `LoadingAssetPath` não é definido, o botão mantém o spinner circular padrão.
+
+### Assets de Loader
+
+Os SVGs de marca ficam em `src/Ganesha.DesignLab.Shared/wwwroot/assets/loaders/` e são servidos via `_content/Ganesha.DesignLab.Shared/assets/loaders/`.
 
 ## Acessibilidade Atual
 

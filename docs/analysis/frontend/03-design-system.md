@@ -84,6 +84,7 @@ Evidência: `src/Ganesha.DesignLab.Shared/Components/DesignSystem/Form/`
 - `GnsAlert`
 - `GnsEmptyState`
 - `GnsLoader`
+- `GnsSvgLoader`
 - `GnsToastContainer`
 - `GnsToastItem`
 

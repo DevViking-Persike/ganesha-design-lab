@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hF1UnQASTvA=",
+  "dgSpecHash": "UwtHwdwBoDg=",
   "success": true,
-  "projectFilePath": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
+  "projectFilePath": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
   "expectedPackageFiles": [
     "/Users/persike/.nuget/packages/microsoft.aspnetcore.authorization/10.0.3/microsoft.aspnetcore.authorization.10.0.3.nupkg.sha512",
     "/Users/persike/.nuget/packages/microsoft.aspnetcore.components/10.0.3/microsoft.aspnetcore.components.10.0.3.nupkg.sha512",

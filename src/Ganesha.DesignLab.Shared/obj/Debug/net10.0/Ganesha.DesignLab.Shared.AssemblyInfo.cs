@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ganesha.DesignLab.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a698a3d4a0d3de163c2a315ff116625bbfcb7a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ganesha.DesignLab.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ganesha.DesignLab.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

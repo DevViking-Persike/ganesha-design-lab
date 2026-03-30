@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Web/Ganesha.DesignLab.Web.csproj": {}
+    "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Web/Ganesha.DesignLab.Web.csproj": {}
   },
   "projects": {
-    "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj": {
+    "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
+        "projectUniqueName": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
         "projectName": "Ganesha.DesignLab.Shared",
-        "projectPath": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
+        "projectPath": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
         "packagesPath": "/Users/persike/.nuget/packages/",
-        "outputPath": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/obj/",
+        "outputPath": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/persike/.nuget/NuGet/NuGet.Config"
@@ -344,14 +344,14 @@
         }
       }
     },
-    "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Web/Ganesha.DesignLab.Web.csproj": {
+    "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Web/Ganesha.DesignLab.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Web/Ganesha.DesignLab.Web.csproj",
+        "projectUniqueName": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Web/Ganesha.DesignLab.Web.csproj",
         "projectName": "Ganesha.DesignLab.Web",
-        "projectPath": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Web/Ganesha.DesignLab.Web.csproj",
+        "projectPath": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Web/Ganesha.DesignLab.Web.csproj",
         "packagesPath": "/Users/persike/.nuget/packages/",
-        "outputPath": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Web/obj/",
+        "outputPath": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Web/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/persike/.nuget/NuGet/NuGet.Config"
@@ -367,8 +367,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj": {
-                "projectPath": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj"
+              "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj": {
+                "projectPath": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj"
               }
             }
           }

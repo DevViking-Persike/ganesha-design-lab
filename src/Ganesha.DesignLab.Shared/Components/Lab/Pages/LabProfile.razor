@@ -4,31 +4,31 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="User Profile" Eyebrow="Patterns" Description="User profile page with avatar, stats, activity feed, and settings.">
+    <GnsPageHeader Title="User Profile" Eyebrow="Patterns" Description="User profile page with avatar, stats, activity feed, and settings.">
         <Breadcrumb>
-            <HlxBreadcrumb>
-                <HlxBreadcrumbItem Label="Dashboard" Href="/lab" />
-                <HlxBreadcrumbItem Label="Users" Href="/lab/table-page" />
-                <HlxBreadcrumbItem Label="Sarah Johnson" IsActive="true" />
-            </HlxBreadcrumb>
+            <GnsBreadcrumb>
+                <GnsBreadcrumbItem Label="Dashboard" Href="/lab" />
+                <GnsBreadcrumbItem Label="Users" Href="/lab/table-page" />
+                <GnsBreadcrumbItem Label="Sarah Johnson" IsActive="true" />
+            </GnsBreadcrumb>
         </Breadcrumb>
         <Actions>
-            <HlxButton Label="Edit Profile" Variant="ButtonVariant.Primary" />
+            <GnsButton Label="Edit Profile" Variant="ButtonVariant.Primary" />
         </Actions>
-    </HlxPageHeader>
+    </GnsPageHeader>
 
     @* Profile Card *@
-    <HlxSection>
-        <HlxCard>
+    <GnsSection>
+        <GnsCard>
             <div style="padding: var(--gns-space-8); display: flex; gap: var(--gns-space-8); align-items: flex-start; flex-wrap: wrap;">
-                <HlxAvatar Initials="SJ" Size="AvatarSize.XLarge" />
+                <GnsAvatar Initials="SJ" Size="AvatarSize.XLarge" />
                 <div style="flex: 1; min-width: 16rem;">
                     <h2 style="font-size: var(--gns-text-2xl); font-weight: var(--gns-font-weight-bold); margin-bottom: var(--gns-space-1);">Sarah Johnson</h2>
                     <p style="font-size: var(--gns-text-base); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-2);">Lead Product Designer</p>
                     <div style="display: flex; gap: var(--gns-space-2); margin-bottom: var(--gns-space-4); flex-wrap: wrap;">
-                        <HlxTag Label="Design" Variant="TagVariant.Primary" />
-                        <HlxTag Label="UX Research" Variant="TagVariant.Info" />
-                        <HlxTag Label="Figma" Variant="TagVariant.Default" />
+                        <GnsTag Label="Design" Variant="TagVariant.Primary" />
+                        <GnsTag Label="UX Research" Variant="TagVariant.Info" />
+                        <GnsTag Label="Figma" Variant="TagVariant.Default" />
                     </div>
                     <p style="font-size: var(--gns-text-sm); color: var(--gns-color-text-secondary); line-height: var(--gns-leading-relaxed); max-width: 48ch;">
                         Passionate about creating intuitive and accessible user experiences. 
@@ -37,21 +37,21 @@
                     </p>
                 </div>
             </div>
-        </HlxCard>
-    </HlxSection>
+        </GnsCard>
+    </GnsSection>
 
     @* Stats Row *@
-    <HlxSection>
-        <HlxGrid Columns="3" Gap="4">
-            <HlxStatCard Title="Projects" Value="24" Description="12 active, 12 completed" />
-            <HlxStatCard Title="Tasks" Value="186" Trend="+8" TrendDirection="TrendDirection.Up" Description="this month" />
-            <HlxStatCard Title="Reviews" Value="47" Description="avg rating: 4.8/5" />
-        </HlxGrid>
-    </HlxSection>
+    <GnsSection>
+        <GnsGrid Columns="3" Gap="4">
+            <GnsStatCard Title="Projects" Value="24" Description="12 active, 12 completed" />
+            <GnsStatCard Title="Tasks" Value="186" Trend="+8" TrendDirection="TrendDirection.Up" Description="this month" />
+            <GnsStatCard Title="Reviews" Value="47" Description="avg rating: 4.8/5" />
+        </GnsGrid>
+    </GnsSection>
 
     @* Activity Feed *@
-    <HlxSection Title="Recent Activity" Subtitle="Latest actions and contributions.">
-        <HlxCard>
+    <GnsSection Title="Recent Activity" Subtitle="Latest actions and contributions.">
+        <GnsCard>
             <div style="display: flex; flex-direction: column;">
                 @foreach (var activity in _activities)
                 {
@@ -68,33 +68,33 @@
                         </div>
                         @if (activity.Badge is not null)
                         {
-                            <HlxBadge Severity="@activity.Badge.Value" Size="BadgeSize.Small">@activity.BadgeLabel</HlxBadge>
+                            <GnsBadge Severity="@activity.Badge.Value" Size="BadgeSize.Small">@activity.BadgeLabel</GnsBadge>
                         }
                     </div>
                 }
             </div>
-        </HlxCard>
-    </HlxSection>
+        </GnsCard>
+    </GnsSection>
 
     @* Settings Panel *@
-    <HlxSection Title="Settings" Subtitle="Profile preferences and notification settings.">
-        <HlxPanel Title="Notification Preferences" IsCollapsible="true">
+    <GnsSection Title="Settings" Subtitle="Profile preferences and notification settings.">
+        <GnsPanel Title="Notification Preferences" IsCollapsible="true">
             <div style="display: flex; flex-direction: column; gap: var(--gns-space-4); padding: var(--gns-space-2) 0;">
-                <HlxSwitch Label="Email notifications for project updates" @bind-Value="_emailNotif" />
-                <HlxSwitch Label="Push notifications for mentions" @bind-Value="_pushNotif" />
-                <HlxSwitch Label="Weekly digest summary" @bind-Value="_weeklyDigest" />
-                <HlxSwitch Label="Marketing communications" @bind-Value="_marketing" />
+                <GnsSwitch Label="Email notifications for project updates" @bind-Value="_emailNotif" />
+                <GnsSwitch Label="Push notifications for mentions" @bind-Value="_pushNotif" />
+                <GnsSwitch Label="Weekly digest summary" @bind-Value="_weeklyDigest" />
+                <GnsSwitch Label="Marketing communications" @bind-Value="_marketing" />
             </div>
-        </HlxPanel>
+        </GnsPanel>
         <div style="margin-top: var(--gns-space-4);">
-            <HlxPanel Title="Privacy" IsCollapsible="true" IsCollapsed="true">
+            <GnsPanel Title="Privacy" IsCollapsible="true" IsCollapsed="true">
                 <div style="display: flex; flex-direction: column; gap: var(--gns-space-4); padding: var(--gns-space-2) 0;">
-                    <HlxSwitch Label="Show profile to other users" @bind-Value="_profileVisible" />
-                    <HlxSwitch Label="Show activity in team feed" @bind-Value="_activityVisible" />
+                    <GnsSwitch Label="Show profile to other users" @bind-Value="_profileVisible" />
+                    <GnsSwitch Label="Show activity in team feed" @bind-Value="_activityVisible" />
                 </div>
-            </HlxPanel>
+            </GnsPanel>
         </div>
-    </HlxSection>
+    </GnsSection>
 
 </div>
 

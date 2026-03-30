@@ -52,12 +52,12 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hpspofl1qu</Fingerprint>
-      <Integrity>a166YOUh7H3GGS3OtlPilk65ednam84xnezM0Z9vgtk=</Integrity>
+      <Fingerprint>apldsczuph</Fingerprint>
+      <Integrity>HqvuI6N2xJt6IEYoFDsUF9reqk9DIoBuXBh1krJNzGo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <FileLength>4198</FileLength>
-      <LastWriteTime>Mon, 30 Mar 2026 01:03:14 GMT</LastWriteTime>
+      <FileLength>4200</FileLength>
+      <LastWriteTime>Mon, 30 Mar 2026 01:06:13 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\ganesha.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\pages\_lab.css'))">
@@ -320,25 +320,25 @@
       <LastWriteTime>Mon, 30 Mar 2026 01:03:14 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\utilities\_utilities.css'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Ganesha.DesignLab.Shared.17kbc6mzer.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Ganesha.DesignLab.Shared.zjm5y4egq7.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>Ganesha.DesignLab.Shared</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Ganesha.DesignLab.Shared</BasePath>
-      <RelativePath>Ganesha.DesignLab.Shared.17kbc6mzer.bundle.scp.css</RelativePath>
+      <RelativePath>Ganesha.DesignLab.Shared.zjm5y4egq7.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>17kbc6mzer</Fingerprint>
-      <Integrity>A0EMnuX72KnHkIiieUH+most8xdPazNtYTPGZSBPkoE=</Integrity>
+      <Fingerprint>zjm5y4egq7</Fingerprint>
+      <Integrity>kSzNWKnI5o27epTf19lCBfZ8LjP3Hu2xgNnT39hjtGk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <FileLength>159783</FileLength>
-      <LastWriteTime>Mon, 30 Mar 2026 01:03:17 GMT</LastWriteTime>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Ganesha.DesignLab.Shared.17kbc6mzer.bundle.scp.css'))</OriginalItemSpec>
+      <LastWriteTime>Mon, 30 Mar 2026 01:20:17 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Ganesha.DesignLab.Shared.zjm5y4egq7.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\ganesha-charts.js'))">
       <SourceType>Package</SourceType>

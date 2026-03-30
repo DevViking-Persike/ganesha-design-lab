@@ -12,7 +12,7 @@ Copie a seção de checklist para a descrição do seu PR ao criá-lo.
 
 ### Nomenclatura e Convenções
 
-- [ ] **[obrigatório]** Nome do componente segue o padrão `Hlx` + PascalCase
+- [ ] **[obrigatório]** Nome do componente segue o padrão `Gns` + PascalCase
 - [ ] **[obrigatório]** Classes CSS seguem BEM com prefixo `hlx-` (ex.: `hlx-button`, `hlx-button--primary`, `hlx-button__icon`)
 - [ ] **[obrigatório]** Namespace do arquivo reflete a estrutura de pastas (`Ganesha.DesignLab.Shared.Components.DesignSystem.{Categoria}`)
 - [ ] **[obrigatório]** Arquivo está na pasta correta conforme a categoria do componente
@@ -97,7 +97,7 @@ Ao abrir o PR, use o template abaixo na descrição:
 
 ## Checklist
 
-- [ ] Nome do componente segue o padrão `Hlx` + PascalCase
+- [ ] Nome do componente segue o padrão `Gns` + PascalCase
 - [ ] Classes CSS seguem BEM com prefixo `hlx-`
 - [ ] Nenhum valor hardcoded — usa tokens CSS
 - [ ] Funciona no tema light e dark

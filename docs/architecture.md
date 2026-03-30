@@ -2,266 +2,220 @@
 
 ## Visão Geral
 
-O Ganesha Design System é uma solução multi-plataforma construída em .NET/Blazor, projetada para compartilhar componentes, tokens e lógica de UI entre uma aplicação Web e uma aplicação MAUI Blazor Hybrid, com total separação entre o núcleo do sistema e os hosts de execução.
+O Ganesha Design System é estruturado como uma biblioteca Razor compartilhada consumida por dois hosts: um host web em Blazor Server e um host MAUI Blazor Hybrid. O núcleo reutilizável está em `src/Ganesha.DesignLab.Shared`; os hosts existem para bootstrap e execução.
 
----
+Este documento resume o estado atual do código. Para o detalhamento operacional do frontend, use também `docs/architecture/frontend/` e `docs/analysis/frontend/`.
 
 ## Estrutura da Solution
 
-```
-Ganesha.DesignLab.sln
-├── src/
-│   ├── Ganesha.DesignLab.Shared/        ← Núcleo do Design System
-│   ├── Ganesha.DesignLab.Web/           ← Host Blazor Web App
-│   └── Ganesha.DesignLab.Maui/          ← Host MAUI Blazor Hybrid
-```
-
-### Diagrama de Dependências
-
-```
-┌─────────────────────┐       ┌─────────────────────┐
-│  Ganesha.DesignLab.Web │       │ Ganesha.DesignLab.Maui │
-│   (Blazor Web App)   │       │ (MAUI Blazor Hybrid) │
-└──────────┬──────────┘       └──────────┬──────────┘
-           │                             │
-           │    referencia               │    referencia
-           ▼                             ▼
-      ┌────────────────────────────────────────┐
-      │       Ganesha.DesignLab.Shared           │
-      │  (tokens · componentes · serviços)     │
-      └────────────────────────────────────────┘
+```text
+src/
+  Ganesha.DesignLab.Shared/   Núcleo reutilizável: componentes, tokens, serviços e pages do lab
+  Ganesha.DesignLab.Web/      Host web principal
+  Ganesha.DesignLab.Maui/     Host MAUI secundário
 ```
 
-**Regra fundamental:** nenhum projeto host referencia o outro. Todo código compartilhável vive exclusivamente em `Shared`.
+## Direção de Dependências
 
----
-
-## Responsabilidades por Camada
-
-### Ganesha.DesignLab.Shared
-
-Contém todo o código agnóstico de plataforma:
-
-| Pasta | Responsabilidade |
-|-------|-----------------|
-| `Components/DesignSystem/` | Componentes Blazor do Design System (Atoms, Composites, Primitives) |
-| `Components/Layout/` | Componentes de estrutura de página (AppShell, Sidebar, TopBar) |
-| `Models/` | Records e classes de domínio imutáveis |
-| `Services/` | Contratos de serviço (interfaces) e implementações portáveis |
-| `wwwroot/css/` | Tokens CSS, temas e estilos base |
-| `wwwroot/js/` | Scripts JavaScript utilitários (interop) |
-
-### Ganesha.DesignLab.Web
-
-Host para ambiente de navegador:
-
-- Configuração de DI para serviços específicos de Web
-- `Program.cs` com registro via extensão `AddGaneshaDesignLab()`
-- Páginas do Lab (galeria de componentes, sandbox)
-- Configurações de render mode (SSR, InteractiveServer, etc.)
-
-### Ganesha.DesignLab.Maui
-
-Host para ambiente desktop/mobile via MAUI:
-
-- Configuração de DI para serviços específicos de MAUI
-- `MauiProgram.cs` com registro via extensão `AddGaneshaDesignLab()`
-- Adaptações de plataforma (splash screen, ciclo de vida nativo)
-- Acesso a APIs nativas quando necessário
-
----
-
-## Arquitetura CSS (ITCSS + BEM)
-
-O sistema de estilos segue a metodologia **ITCSS** (Inverted Triangle CSS) combinada com nomenclatura **BEM**, aplicando o prefixo `hlx-` em todos os seletores do Design System.
-
-### Camadas ITCSS
-
-```
-Settings   → Tokens CSS (variáveis custom properties)
-Tools      → Mixins e funções (quando aplicável)
-Generic    → Reset / normalize
-Elements   → Estilos base em tags HTML (sem classes)
-Objects    → Estruturas de layout genéricas (grid, container)
-Components → Componentes do Design System (hlx-button, hlx-card…)
-Utilities  → Classes utilitárias de override pontual
+```text
+Ganesha.DesignLab.Web   ┐
+                        ├──> Ganesha.DesignLab.Shared
+Ganesha.DesignLab.Maui  ┘
 ```
 
-### Convenção BEM com prefixo hlx-
+Regras atuais:
 
-```
-Bloco:     .hlx-button
-Elemento:  .hlx-button__icon
-Modifier:  .hlx-button--primary
-           .hlx-button--disabled
-           .hlx-button--loading
-```
+- `Web` depende de `Shared`
+- `Maui` depende de `Shared`
+- `Shared` não depende dos hosts
+- nenhum host deve referenciar o outro
 
----
+## Responsabilidades por Projeto
 
-## Sistema de Tokens
+### `src/Ganesha.DesignLab.Shared`
 
-Todos os valores visuais do Design System são expressos como **CSS Custom Properties**, organizados em duas camadas:
+Contém o núcleo do Design System:
 
-### Tokens Primitivos (escala bruta)
+- `Components/DesignSystem/`
+  Componentes base reutilizáveis
+- `Components/Composites/`
+  Composições reutilizáveis de nível intermediário
+- `Components/Infrastructure/`
+  Infraestrutura compartilhada, como `GnsThemeProvider`
+- `Components/Lab/`
+  Layout e páginas de demonstração do catálogo
+- `Services/`
+  Serviços de UI em memória, como tema, toast, modal e drawer
+- `Models/`
+  Modelos auxiliares de feedback, layout, navegação e tabela
+- `wwwroot/css/`
+  Tokens, temas, utilitários e estilos globais do DS
+- `wwwroot/js/`
+  JS complementar, hoje principalmente para interatividade de charts
 
-Definem os valores absolutos da paleta e escalas:
+### `src/Ganesha.DesignLab.Web`
 
-```css
---hlx-color-indigo-500: #6366f1;
---hlx-space-4: 1rem;
---hlx-font-size-base: 1rem;
---hlx-radius-md: 0.375rem;
-```
+Host web principal:
 
-### Tokens Semânticos (aliases)
+- registra os serviços com `AddGaneshaDesignLab()`
+- sobe Razor Components interativos no servidor
+- mapeia os assets estáticos
+- renderiza `App.razor` e o roteamento principal
 
-Mapeiam os tokens primitivos para intenções de uso:
+Arquivos-chave:
 
-```css
---hlx-color-bg-primary:     var(--hlx-color-indigo-500);
---hlx-color-text-default:   var(--hlx-color-gray-900);
---hlx-color-border-subtle:  var(--hlx-color-gray-200);
---hlx-shadow-card:          var(--hlx-shadow-sm);
-```
+- `src/Ganesha.DesignLab.Web/Program.cs`
+- `src/Ganesha.DesignLab.Web/Components/App.razor`
+- `src/Ganesha.DesignLab.Web/Components/Routes.razor`
+- `src/Ganesha.DesignLab.Web/Components/Layout/MainLayout.razor`
 
-Categorias de tokens semânticos:
+### `src/Ganesha.DesignLab.Maui`
 
-| Categoria | Exemplo de token |
-|-----------|-----------------|
-| color | `--hlx-color-bg-primary`, `--hlx-color-text-muted` |
-| typography | `--hlx-font-size-sm`, `--hlx-font-weight-semibold` |
-| spacing | `--hlx-space-2`, `--hlx-space-8` |
-| shadow | `--hlx-shadow-sm`, `--hlx-shadow-lg` |
-| border | `--hlx-border-width-default`, `--hlx-border-color-default` |
-| radius | `--hlx-radius-sm`, `--hlx-radius-full` |
-| z-index | `--hlx-z-dropdown`, `--hlx-z-modal` |
-| size | `--hlx-size-icon-sm`, `--hlx-size-icon-md` |
+Host MAUI:
 
----
+- registra a mesma base compartilhada
+- mantém uma superfície de execução nativa/híbrida
+- hoje aparenta estar menos alinhado ao catálogo web do que o host principal
 
-## Sistema de Temas
+## Estilo Arquitetural
 
-### Mecanismo de Aplicação
+O padrão predominante hoje é:
 
-Os temas são aplicados via atributo `data-theme` no elemento raiz do documento:
+- host fino
+- biblioteca compartilhada forte
+- Design System explícito
+- páginas de lab como consumidoras do DS
+- estado simples baseado em parâmetros locais e serviços scoped
 
-```html
-<html data-theme="dark">
-```
+Não há evidência atual de:
 
-Cada tema sobrescreve os tokens semânticos mantendo os tokens primitivos intactos:
+- camada de integração HTTP no frontend
+- stores globais complexas
+- arquitetura Flux/Redux
+- pipeline frontend baseada em Node
 
-```css
-[data-theme="light"] {
-  --hlx-color-bg-surface: var(--hlx-color-gray-50);
-  --hlx-color-text-default: var(--hlx-color-gray-900);
-}
+## Bootstrap e Runtime
 
-[data-theme="dark"] {
-  --hlx-color-bg-surface: var(--hlx-color-gray-900);
-  --hlx-color-text-default: var(--hlx-color-gray-100);
-}
-```
+Fluxo principal do host web:
 
-### IThemeService
+1. `Program.cs` registra `AddGaneshaDesignLab()`
+2. ativa `AddInteractiveServerComponents()`
+3. mapeia `App`
+4. `App.razor` carrega CSS compartilhado, CSS local e JS de charts
+5. `Routes.razor` adiciona o assembly compartilhado ao router
+6. `MainLayout.razor` envolve a aplicação com `GnsThemeProvider` e `GnsToastContainer`
 
-O contrato de serviço gerencia o tema ativo em runtime:
+## Arquitetura de CSS e Tokens
 
-```csharp
-public interface IThemeService
-{
-    Theme CurrentTheme { get; }
-    Task SetThemeAsync(Theme theme);
-    event Action OnThemeChanged;
-}
-```
+O projeto atual usa:
 
-Implementações separadas existem para Web (via JS interop, `localStorage`) e MAUI (via `Preferences` nativo), ambas registradas nos respectivos hosts.
+- prefixo de classes: `.gns-*`
+- prefixo de custom properties: `--gns-*`
+- CSS scoped por componente em `.razor.css`
+- folha agregadora em `src/Ganesha.DesignLab.Shared/wwwroot/css/ganesha.css`
 
----
+Organização principal em `wwwroot/css/`:
 
-## Hierarquia de Componentes
+- `settings/`
+  tokens de cor, tipografia, spacing, radius, sombras, breakpoints, tamanhos, z-index
+- `base/`
+  reset e tipografia base
+- `theme/`
+  temas light/dark
+- `utilities/`
+  utilitários
+- `pages/`
+  estilos de páginas do lab
 
-Os componentes são organizados em quatro níveis de complexidade crescente:
+## Sistema de Tema
 
-```
-Primitives
-│   Elementos base sem semântica visual própria
-│   Exemplos: HlxFocusRing, HlxVisuallyHidden, HlxPortal
-│
-└── Atoms
-    │   Componentes atômicos com responsabilidade única
-    │   Exemplos: HlxButton, HlxBadge, HlxAvatar, HlxIcon, HlxSpinner
-    │
-    └── Composites (Molecules)
-        │   Composições de atoms com lógica coordenada
-        │   Exemplos: HlxSearchBar, HlxDropdown, HlxToast, HlxModal
-        │
-        └── Pages / Layouts
-                Estruturas de página completa
-                Exemplos: AppShell, TopBar, Sidebar, PageHeader
-```
+O tema é aplicado por `data-theme` no wrapper do `GnsThemeProvider`.
 
----
+Estado atual:
+
+- temas disponíveis: `light` e `dark`
+- serviço atual: `ThemeService`
+- implementação atual: em memória, síncrona, com evento `OnThemeChanged`
+
+Arquivos-chave:
+
+- `src/Ganesha.DesignLab.Shared/Components/Infrastructure/GnsThemeProvider.razor`
+- `src/Ganesha.DesignLab.Shared/Services/ThemeService.cs`
+- `src/Ganesha.DesignLab.Shared/wwwroot/css/theme/_theme-light.css`
+- `src/Ganesha.DesignLab.Shared/wwwroot/css/theme/_theme-dark.css`
+
+## Componentes por Camada
+
+### Design System base
+
+Exemplos reais:
+
+- Actions: `GnsButton`, `GnsSwitch`
+- Form: `GnsInputText`, `GnsInputPassword`, `GnsSelect`, `GnsTextarea`, `GnsCheckbox`, `GnsRadioGroup`, `GnsRadioOption`
+- DataDisplay: `GnsAvatar`, `GnsBadge`, `GnsSectionHeader`, `GnsStatCard`, `GnsTable`, `GnsTag`
+- Feedback: `GnsAlert`, `GnsEmptyState`, `GnsLoader`, `GnsToastContainer`, `GnsToastItem`
+- Layout: `GnsContainer`, `GnsGrid`, `GnsSection`, `GnsStack`
+- Navigation: `GnsBreadcrumb`, `GnsBreadcrumbItem`, `GnsNavItem`, `GnsPagination`, `GnsTab`, `GnsTabs`
+- Overlay: `GnsDrawer`, `GnsModal`
+- Surfaces: `GnsCard`, `GnsPanel`
+- Charts: `GnsBarChart`, `GnsDonutChart`, `GnsHorizontalBarChart`, `GnsLineChart`, `GnsProgressBar`, `GnsRadialProgress`, `GnsSparkline`
+
+### Composites
+
+Exemplos reais:
+
+- `GnsAppShell`
+- `GnsPageHeader`
+- `GnsSearchFilter`
+- `GnsSidebar`
+- `GnsTopBar`
+- `GnsMetricGrid`
+- `GnsActionList`
+
+### Showcase / lab
+
+As páginas em `Components/Lab/Pages/` são consumidoras do DS e servem como catálogo e padrões de composição. Elas não devem ser tratadas automaticamente como contratos permanentes do Design System.
 
 ## Gerenciamento de Estado
 
-O Design System adota abordagem minimalista para estado, priorizando previsibilidade:
+O projeto usa um modelo simples:
 
-| Padrão | Uso |
-|--------|-----|
-| **Parâmetros Blazor** | Estado de renderização e configuração de componentes |
-| **EventCallback** | Comunicação filho → pai (preferido sobre `Action`) |
-| **Serviços Scoped** | Estado compartilhado na sessão (tema, preferências, notificações) |
-| **CascadingValue** | Contexto compartilhado dentro de árvores de componentes (ex.: formulários) |
+- estado local em componentes `.razor`
+- `EventCallback` para comunicação de eventos
+- serviços scoped para estado de UI transversal
 
-Estado **não** é gerenciado por stores globais ou padrões Flux/Redux — a simplicidade do modelo Blazor é suficiente para o escopo do Design System.
+Serviços compartilhados atuais:
 
----
+- `ThemeService`
+- `ToastService`
+- `DrawerService`
+- `ModalService`
 
-## Padrão de Registro de DI
+## Registro de DI
 
-Toda a configuração de DI é encapsulada em um método de extensão localizado em `Shared`:
+O registro compartilhado está em:
 
-```csharp
-// Ganesha.DesignLab.Shared/Extensions/ServiceCollectionExtensions.cs
-public static class ServiceCollectionExtensions
-{
-    public static IServiceCollection AddGaneshaDesignLab(
-        this IServiceCollection services)
-    {
-        services.AddScoped<IThemeService, ThemeService>();
-        services.AddScoped<INotificationService, NotificationService>();
-        // ... demais registros
-        return services;
-    }
-}
-```
+- `src/Ganesha.DesignLab.Shared/DependencyInjection/ServiceCollectionExtensions.cs`
 
-Cada host chama a extensão no seu ponto de entrada:
+Hoje a extensão registra:
 
-```csharp
-// Web → Program.cs
-builder.Services.AddGaneshaDesignLab();
+- `IThemeService`
+- `IToastService`
+- `IDrawerService`
+- `IModalService`
 
-// MAUI → MauiProgram.cs
-builder.Services.AddGaneshaDesignLab();
-```
+## Limites Atuais da Arquitetura
 
-Serviços com implementações distintas por plataforma são registrados diretamente no host, sobrescrevendo ou complementando os registros de `Shared`.
+O código atual é forte em UI reutilizável e catálogo visual, mas ainda não demonstra:
 
----
+- integração real com backend
+- domínio rico no frontend
+- suíte de testes consolidada
+- alinhamento explícito entre o catálogo web e o host MAUI
 
-## Estratégia Cross-Platform
+## Referências
 
-| Preocupação | Abordagem |
-|-------------|-----------|
-| Renderização | Blazor renderiza o mesmo `.razor` em ambas as plataformas |
-| CSS | Arquivos `.razor.css` isolam estilos por componente; tokens garantem consistência visual |
-| JS Interop | Encapsulado em serviços; implementações por plataforma quando necessário |
-| APIs Nativas | Acessadas somente nos projetos host, nunca em `Shared` |
-| Fontes e Assets | Referenciados via `wwwroot` de `Shared`, copiados pelos hosts em build |
-| Temas | `IThemeService` com implementações separadas por host |
-
-**Regra de ouro:** se o código faz referência a `Microsoft.Maui.*` ou a qualquer API de browser direta (sem abstração), ele não pertence ao projeto `Shared`.
+- `docs/architecture/frontend/00-overview.md`
+- `docs/architecture/frontend/02-architecture-map.md`
+- `docs/analysis/frontend/01-mapeamento-inicial.md`
+- `docs/analysis/frontend/02-diagnostico-arquitetural.md`

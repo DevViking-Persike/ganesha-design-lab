@@ -5,7 +5,7 @@
 <div class="gns-lab-page">
 
     @* Hero Section *@
-    <HlxSection>
+    <GnsSection>
         <div style="text-align: center; padding: var(--gns-space-12) 0 var(--gns-space-8);">
             <h1 style="font-family: var(--gns-font-display); font-size: var(--gns-text-5xl); font-weight: var(--gns-font-weight-bold); color: var(--gns-color-text-primary); margin-bottom: var(--gns-space-4); letter-spacing: var(--gns-tracking-wide);">
                 <span style="color: var(--gns-ouro-500); font-size: 1.2em;">&#x0950;</span> Ganesha Design System
@@ -15,16 +15,16 @@
                 Built with mystical tokens, accessible components, and divine patterns.
             </p>
             <div style="display: flex; gap: var(--gns-space-3); justify-content: center; flex-wrap: wrap;">
-                <HlxButton Label="Browse Components" Variant="ButtonVariant.Primary" Size="ButtonSize.Large" />
-                <HlxButton Label="View Tokens" Variant="ButtonVariant.Outline" Size="ButtonSize.Large" />
+                <GnsButton Label="Browse Components" Variant="ButtonVariant.Primary" Size="ButtonSize.Large" />
+                <GnsButton Label="View Tokens" Variant="ButtonVariant.Outline" Size="ButtonSize.Large" />
             </div>
         </div>
-    </HlxSection>
+    </GnsSection>
 
     @* Foundations Section *@
-    <HlxSection Title="Foundations" Subtitle="Design tokens and visual primitives that form the base of every component.">
-        <HlxGrid Columns="4" Gap="4">
-            <HlxCard IsHoverable="true">
+    <GnsSection Title="Foundations" Subtitle="Design tokens and visual primitives that form the base of every component.">
+        <GnsGrid Columns="4" Gap="4">
+            <GnsCard IsHoverable="true">
                 <Header><div style="padding: var(--gns-space-3) var(--gns-space-4); font-weight: var(--gns-font-weight-semibold); font-size: var(--gns-text-sm);">Colors</div></Header>
                 <ChildContent>
                     <div style="display: flex; gap: var(--gns-space-1); padding: 0 var(--gns-space-1) var(--gns-space-1);">
@@ -38,9 +38,9 @@
                     </p>
                 </ChildContent>
                 <Footer><a href="/lab/colors" style="font-size: var(--gns-text-sm); color: var(--gns-color-text-link); padding: var(--gns-space-3) var(--gns-space-4); display: block;">Explore Colors &rarr;</a></Footer>
-            </HlxCard>
+            </GnsCard>
 
-            <HlxCard IsHoverable="true">
+            <GnsCard IsHoverable="true">
                 <Header><div style="padding: var(--gns-space-3) var(--gns-space-4); font-weight: var(--gns-font-weight-semibold); font-size: var(--gns-text-sm);">Typography</div></Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-2) var(--gns-space-4);">
@@ -52,9 +52,9 @@
                     </p>
                 </ChildContent>
                 <Footer><a href="/lab/typography" style="font-size: var(--gns-text-sm); color: var(--gns-color-text-link); padding: var(--gns-space-3) var(--gns-space-4); display: block;">Explore Typography &rarr;</a></Footer>
-            </HlxCard>
+            </GnsCard>
 
-            <HlxCard IsHoverable="true">
+            <GnsCard IsHoverable="true">
                 <Header><div style="padding: var(--gns-space-3) var(--gns-space-4); font-weight: var(--gns-font-weight-semibold); font-size: var(--gns-text-sm);">Spacing</div></Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-2) var(--gns-space-4);">
@@ -71,9 +71,9 @@
                     </p>
                 </ChildContent>
                 <Footer><a href="/lab/spacing" style="font-size: var(--gns-text-sm); color: var(--gns-color-text-link); padding: var(--gns-space-3) var(--gns-space-4); display: block;">Explore Spacing &rarr;</a></Footer>
-            </HlxCard>
+            </GnsCard>
 
-            <HlxCard IsHoverable="true">
+            <GnsCard IsHoverable="true">
                 <Header><div style="padding: var(--gns-space-3) var(--gns-space-4); font-weight: var(--gns-font-weight-semibold); font-size: var(--gns-text-sm);">Shadows</div></Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-4); display: flex; justify-content: center;">
@@ -84,41 +84,41 @@
                     </p>
                 </ChildContent>
                 <Footer><a href="/lab/shadows" style="font-size: var(--gns-text-sm); color: var(--gns-color-text-link); padding: var(--gns-space-3) var(--gns-space-4); display: block;">Explore Shadows &rarr;</a></Footer>
-            </HlxCard>
-        </HlxGrid>
-    </HlxSection>
+            </GnsCard>
+        </GnsGrid>
+    </GnsSection>
 
     @* Components Section *@
-    <HlxSection Title="Components" Subtitle="Reusable UI building blocks designed for accessibility and composability.">
-        <HlxGrid Columns="3" Gap="4">
+    <GnsSection Title="Components" Subtitle="Reusable UI building blocks designed for accessibility and composability.">
+        <GnsGrid Columns="3" Gap="4">
             @foreach (var item in _componentItems)
             {
-                <HlxCard IsHoverable="true">
+                <GnsCard IsHoverable="true">
                     <div style="padding: var(--gns-space-4);">
                         <h3 style="font-size: var(--gns-text-base); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-2);">@item.Title</h3>
                         <p style="font-size: var(--gns-text-sm); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-3);">@item.Description</p>
                         <a href="@item.Href" style="font-size: var(--gns-text-sm); color: var(--gns-color-text-link);">View &rarr;</a>
                     </div>
-                </HlxCard>
+                </GnsCard>
             }
-        </HlxGrid>
-    </HlxSection>
+        </GnsGrid>
+    </GnsSection>
 
     @* Patterns Section *@
-    <HlxSection Title="Patterns" Subtitle="Full-page compositions showing how components work together in real applications.">
-        <HlxGrid Columns="3" Gap="4">
+    <GnsSection Title="Patterns" Subtitle="Full-page compositions showing how components work together in real applications.">
+        <GnsGrid Columns="3" Gap="4">
             @foreach (var item in _patternItems)
             {
-                <HlxCard IsHoverable="true">
+                <GnsCard IsHoverable="true">
                     <div style="padding: var(--gns-space-4);">
                         <h3 style="font-size: var(--gns-text-base); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-2);">@item.Title</h3>
                         <p style="font-size: var(--gns-text-sm); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-3);">@item.Description</p>
                         <a href="@item.Href" style="font-size: var(--gns-text-sm); color: var(--gns-color-text-link);">View &rarr;</a>
                     </div>
-                </HlxCard>
+                </GnsCard>
             }
-        </HlxGrid>
-    </HlxSection>
+        </GnsGrid>
+    </GnsSection>
 
 </div>
 

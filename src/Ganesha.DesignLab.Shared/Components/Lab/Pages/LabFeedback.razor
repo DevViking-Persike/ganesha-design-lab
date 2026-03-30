@@ -5,76 +5,76 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="Feedback"
+    <GnsPageHeader Title="Feedback"
                    Eyebrow="Components"
                    Description="Components that provide feedback to users: alerts, toasts, loaders, and empty states." />
 
-    <HlxSection Title="Alerts" Subtitle="Contextual feedback messages with four severity levels.">
+    <GnsSection Title="Alerts" Subtitle="Contextual feedback messages with four severity levels.">
         <div style="display: flex; flex-direction: column; gap: var(--gns-space-4);">
-            <HlxAlert Severity="AlertSeverity.Info" Title="Information">
+            <GnsAlert Severity="AlertSeverity.Info" Title="Information">
                 This is an informational alert with supporting details.
-            </HlxAlert>
-            <HlxAlert Severity="AlertSeverity.Success" Title="Success">
+            </GnsAlert>
+            <GnsAlert Severity="AlertSeverity.Success" Title="Success">
                 Your changes have been saved successfully.
-            </HlxAlert>
-            <HlxAlert Severity="AlertSeverity.Warning" Title="Warning">
+            </GnsAlert>
+            <GnsAlert Severity="AlertSeverity.Warning" Title="Warning">
                 Your trial will expire in 3 days. Please upgrade your plan.
-            </HlxAlert>
-            <HlxAlert Severity="AlertSeverity.Danger" Title="Error">
+            </GnsAlert>
+            <GnsAlert Severity="AlertSeverity.Danger" Title="Error">
                 Failed to process payment. Please check your billing details.
-            </HlxAlert>
+            </GnsAlert>
         </div>
-    </HlxSection>
+    </GnsSection>
 
-    <HlxSection Title="Dismissible Alerts" Subtitle="Alerts that users can dismiss.">
+    <GnsSection Title="Dismissible Alerts" Subtitle="Alerts that users can dismiss.">
         <div style="display: flex; flex-direction: column; gap: var(--gns-space-4);">
-            <HlxAlert Severity="AlertSeverity.Info" IsDismissible="true">
+            <GnsAlert Severity="AlertSeverity.Info" IsDismissible="true">
                 This alert can be dismissed by clicking the close button.
-            </HlxAlert>
-            <HlxAlert Severity="AlertSeverity.Success" IsDismissible="true" Title="Upload Complete">
+            </GnsAlert>
+            <GnsAlert Severity="AlertSeverity.Success" IsDismissible="true" Title="Upload Complete">
                 Your file has been uploaded and is ready for review.
-            </HlxAlert>
+            </GnsAlert>
         </div>
-    </HlxSection>
+    </GnsSection>
 
-    <HlxSection Title="Toasts" Subtitle="Temporary notifications triggered by user actions.">
+    <GnsSection Title="Toasts" Subtitle="Temporary notifications triggered by user actions.">
         <div class="gns-preview">
             <div class="gns-preview__canvas gns-preview__canvas--row">
-                <HlxButton Label="Success Toast" Variant="ButtonVariant.Primary" OnClick="@(() => ToastService.ShowSuccess("Operation completed successfully!", "Success"))" />
-                <HlxButton Label="Error Toast" Variant="ButtonVariant.Danger" OnClick="@(() => ToastService.ShowError("Something went wrong. Please try again.", "Error"))" />
-                <HlxButton Label="Warning Toast" Variant="ButtonVariant.Outline" OnClick="@(() => ToastService.ShowWarning("Your session is about to expire.", "Warning"))" />
-                <HlxButton Label="Info Toast" Variant="ButtonVariant.Secondary" OnClick="@(() => ToastService.ShowInfo("A new version is available.", "Update"))" />
+                <GnsButton Label="Success Toast" Variant="ButtonVariant.Primary" OnClick="@(() => ToastService.ShowSuccess("Operation completed successfully!", "Success"))" />
+                <GnsButton Label="Error Toast" Variant="ButtonVariant.Danger" OnClick="@(() => ToastService.ShowError("Something went wrong. Please try again.", "Error"))" />
+                <GnsButton Label="Warning Toast" Variant="ButtonVariant.Outline" OnClick="@(() => ToastService.ShowWarning("Your session is about to expire.", "Warning"))" />
+                <GnsButton Label="Info Toast" Variant="ButtonVariant.Secondary" OnClick="@(() => ToastService.ShowInfo("A new version is available.", "Update"))" />
             </div>
         </div>
-    </HlxSection>
+    </GnsSection>
 
-    <HlxSection Title="Loader" Subtitle="Loading spinners in three sizes.">
+    <GnsSection Title="Loader" Subtitle="Loading spinners in three sizes.">
         <div class="gns-preview">
             <div class="gns-preview__canvas gns-preview__canvas--row" style="align-items: center;">
-                <HlxLoader Size="LoaderSize.Small" Label="Loading..." />
-                <HlxLoader Size="LoaderSize.Medium" Label="Loading..." />
-                <HlxLoader Size="LoaderSize.Large" Label="Loading..." />
+                <GnsLoader Size="LoaderSize.Small" Label="Loading..." />
+                <GnsLoader Size="LoaderSize.Medium" Label="Loading..." />
+                <GnsLoader Size="LoaderSize.Large" Label="Loading..." />
             </div>
         </div>
         <div class="gns-preview" style="margin-top: var(--gns-space-4);">
             <div class="gns-preview__toolbar"><span class="gns-preview__toolbar-title">Without Label</span></div>
             <div class="gns-preview__canvas gns-preview__canvas--row" style="align-items: center;">
-                <HlxLoader Size="LoaderSize.Small" />
-                <HlxLoader Size="LoaderSize.Medium" />
-                <HlxLoader Size="LoaderSize.Large" />
+                <GnsLoader Size="LoaderSize.Small" />
+                <GnsLoader Size="LoaderSize.Medium" />
+                <GnsLoader Size="LoaderSize.Large" />
             </div>
         </div>
-    </HlxSection>
+    </GnsSection>
 
-    <HlxSection Title="Empty State" Subtitle="Placeholder for when no data is available.">
-        <HlxCard>
-            <HlxEmptyState Title="No projects yet"
+    <GnsSection Title="Empty State" Subtitle="Placeholder for when no data is available.">
+        <GnsCard>
+            <GnsEmptyState Title="No projects yet"
                            Description="Get started by creating your first project. It only takes a minute.">
                 <Actions>
-                    <HlxButton Label="Create Project" Variant="ButtonVariant.Primary" />
+                    <GnsButton Label="Create Project" Variant="ButtonVariant.Primary" />
                 </Actions>
-            </HlxEmptyState>
-        </HlxCard>
-    </HlxSection>
+            </GnsEmptyState>
+        </GnsCard>
+    </GnsSection>
 
 </div>

@@ -3,7 +3,7 @@
 @inject IThemeService ThemeService
 @implements IDisposable
 
-<HlxThemeProvider>
+<GnsThemeProvider>
     <div class="gns-lab-layout">
         <div class="gns-lab-layout__topbar">
             <span style="font-family: var(--gns-font-display); font-size: var(--gns-text-xl); font-weight: var(--gns-font-weight-bold); color: var(--gns-color-text-primary); letter-spacing: var(--gns-tracking-wide);">
@@ -13,7 +13,7 @@
                 <span style="font-size: var(--gns-text-sm); color: var(--gns-color-text-secondary);">
                     @(ThemeService.CurrentTheme == "dark" ? "Dark" : "Light")
                 </span>
-                <HlxSwitch Value="@_isDarkTheme" ValueChanged="HandleThemeToggle" />
+                <GnsSwitch Value="@_isDarkTheme" ValueChanged="HandleThemeToggle" />
             </div>
         </div>
 
@@ -61,9 +61,9 @@
             @Body
         </div>
     </div>
-</HlxThemeProvider>
+</GnsThemeProvider>
 
-<HlxToastContainer />
+<GnsToastContainer />
 
 @code {
     private bool _isDarkTheme;

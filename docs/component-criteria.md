@@ -2,204 +2,145 @@
 
 ## Visão Geral
 
-Este documento define os critérios para decidir quando criar um novo componente, como classificá-lo e quais requisitos ele deve atender antes de ser considerado parte do Design System.
+Este documento define quando criar um componente novo, quando evoluir um existente e onde cada artefato deve viver no codebase atual.
 
----
+O critério principal não é “ficou bonito” ou “seria legal abstrair”, e sim reuso real com contrato previsível.
 
-## Quando Criar um Novo Componente vs. Estender um Existente
+## Quando Estender um Componente Existente
 
-### Estender um componente existente quando:
+Prefira estender quando:
 
-- A variação é apenas visual (nova cor, tamanho ou espaçamento) — adicione um **modifier CSS**
-- O comportamento é idêntico mas com conteúdo diferente — use **slots** (`RenderFragment`) no componente existente
-- A diferença é de composição — construa uma **composição** usando componentes existentes sem criar um novo
-- O cenário é específico de uma única tela — implemente na página, não no Design System
+- a diferença for de variante, tamanho ou estado
+- a diferença for apenas conteúdo, rótulo ou composição simples
+- o componente existente já cobrir o comportamento principal
+- a necessidade puder ser resolvida com `RenderFragment`, enum ou parâmetro adicional sem perder coesão
 
-### Criar um novo componente quando:
+## Quando Criar um Novo Componente
 
-- Representa um padrão de UI que se repete em dois ou mais contextos distintos
-- Possui responsabilidade única e bem definida que não pertence a nenhum componente existente
-- Introduz comportamento interativo novo (não coberto por extensão de parâmetros)
-- É resultado de uma composição recorrente que merece ser encapsulada com API própria
-- Existe uma correspondência direta com um padrão reconhecido de acessibilidade (WAI-ARIA pattern)
+Crie novo componente apenas quando:
 
-### Sinais de alerta para NÃO criar um novo componente:
+- o padrão aparecer em dois ou mais contextos reais
+- houver responsabilidade própria clara
+- a solução não couber de forma saudável em um contrato existente
+- o artefato melhorar previsibilidade de uso, não apenas esconder markup
 
-- O componente seria usado em apenas um lugar
-- É um wrapper cosmético com menos de 3 parâmetros sobre um componente existente
-- Sua API duplica funcionalidade que outro componente já oferece
-- Não é claro quem seria o consumidor fora do contexto atual
+## Quando NÃO Criar
 
----
+Não crie novo componente quando:
 
-## Níveis de Complexidade de Componentes
+- o caso for específico de uma única página-lab
+- for só um wrapper cosmético de um componente existente
+- ainda não estiver claro se existe reuso real
+- a abstração servir mais ao entusiasmo de refatoração do que ao projeto
 
-### Atom (Átomo)
+## Níveis de Placement
 
-Componente com responsabilidade única e sem dependência de outros componentes do DS (exceto primitivos).
+### Base do Design System
 
-**Características:**
-- Resolve exatamente um problema de UI
-- Sem estado interno complexo (no máximo estado de hover/focus gerenciado por CSS)
-- API pequena (tipicamente 3–8 parâmetros)
-- Pode ser usado de forma isolada
+Use `Components/DesignSystem/` quando o artefato for um building block reutilizável de baixo ou médio nível.
 
-**Exemplos:** `HlxButton`, `HlxBadge`, `HlxAvatar`, `HlxIcon`, `HlxSpinner`, `HlxDivider`
+Exemplos reais:
 
-**Localização:** `Components/DesignSystem/{Categoria}/`
+- `GnsButton`
+- `GnsInputText`
+- `GnsTable`
+- `GnsAlert`
+- `GnsGrid`
+- `GnsModal`
 
----
+### Composite
 
-### Molecule (Molécula / Composite)
+Use `Components/Composites/` quando a solução encapsular uma composição recorrente de múltiplos componentes base.
 
-Composição de dois ou mais atoms que resolve um padrão de UI recorrente com lógica coordenada.
+Exemplos reais:
 
-**Características:**
-- Composto por atoms do Design System
-- Pode ter estado interno (ex.: aberto/fechado, valor selecionado)
-- API moderada (8–15 parâmetros), ou expõe slots ricos
-- Encapsula lógica de interação entre seus sub-componentes
+- `GnsAppShell`
+- `GnsPageHeader`
+- `GnsSearchFilter`
+- `GnsSidebar`
+- `GnsTopBar`
 
-**Exemplos:** `HlxDropdown`, `HlxSearchBar`, `HlxModal`, `HlxToast`, `HlxAccordion`, `HlxTabs`
+### Showcase / Página
 
-**Localização:** `Components/DesignSystem/{Categoria}/` (se pertencer claramente a uma categoria) ou `Components/Composites/`
+Mantenha na página quando o caso ainda for específico do lab ou de uma demonstração isolada.
 
----
+Exemplos:
 
-### Composite (Composto de Nível Superior)
+- blocos específicos de `LabHome`
+- exemplos ricos de dashboard
+- composições ainda não repetidas em outro contexto
 
-Estruturas de página que coordenam múltiplos componentes e definem o layout macro da aplicação.
+## Checklist de Prontidão
 
-**Características:**
-- Define a estrutura de uma região completa da UI
-- Integra-se diretamente com serviços (DI, rotas, tema)
-- API orientada a configuração estrutural, não a detalhes visuais
-- Raramente criado — cada adição é uma decisão arquitetural
+### Estrutura
 
-**Exemplos:** `HlxAppShell`, `HlxTopBar`, `HlxSidebar`, `HlxPageHeader`
+- [ ] A responsabilidade do componente é clara
+- [ ] O componente ficou na camada correta: base, composite ou showcase
+- [ ] O nome segue o padrão `Gns` + PascalCase
+- [ ] O namespace acompanha a pasta
 
-**Localização:** `Components/Composites/{NomeDoComposite}/`
+### Contrato
 
----
+- [ ] A API é pequena e previsível
+- [ ] Eventos usam `EventCallback`
+- [ ] Slots usam `RenderFragment` quando necessário
+- [ ] Variantes e tamanhos usam enums quando fizer sentido
+- [ ] `AdditionalCssClass` existe quando o componente precisa aceitar extensão controlada
 
-## Checklist de Requisitos
+### Estilo
 
-Use esta lista antes de considerar um componente pronto para o Design System. Todos os itens devem estar marcados.
+- [ ] O estilo usa tokens `--gns-*` quando houver valor estrutural
+- [ ] As classes seguem convenção `gns-` com elementos e modifiers consistentes
+- [ ] O componente funciona em `light` e `dark`
+- [ ] O arquivo `.razor.css` existe quando o componente precisa de estilo próprio
 
-### Estrutura e Organização
+### Estados
 
-- [ ] Possui **responsabilidade única e claramente definida** — faz uma coisa e faz bem
-- [ ] Nome segue o padrão `Hlx` + PascalCase (ex.: `HlxTagInput`)
-- [ ] Arquivo `.razor` está na pasta correta conforme sua categoria
-- [ ] Namespace reflete a estrutura de pastas: `Ganesha.DesignLab.Shared.Components.DesignSystem.{Categoria}`
-- [ ] Um componente por arquivo (sem múltiplos componentes no mesmo `.razor`)
-
-### CSS e Tokens
-
-- [ ] Arquivo `.razor.css` co-localizado com o componente
-- [ ] **Nenhum valor hardcoded** de cor, tamanho, espaçamento ou fonte — apenas tokens CSS (`var(--hlx-*)`)
-- [ ] Classes CSS seguem BEM com prefixo `hlx-` (ex.: `hlx-tag-input`, `hlx-tag-input__tag`, `hlx-tag-input--focused`)
-- [ ] Funciona corretamente no tema **light**
-- [ ] Funciona corretamente no tema **dark**
-
-### Parâmetros e API
-
-- [ ] Parâmetro `AdditionalCssClass` (tipo `string?`) presente e aplicado ao elemento raiz
-- [ ] `CssClassBuilder` utilizado para composição de classes (sem concatenação manual)
-- [ ] `EventCallback` (ou `EventCallback<T>`) utilizado para todos os eventos expostos — nunca `Action` ou `Func`
-- [ ] Parâmetros com nomes claros, em inglês, seguindo as convenções do projeto
-- [ ] Enums co-localizados com o componente (ou em `Models/Enums/` se compartilhados)
-
-### Estados Visuais
-
-- [ ] Estado **default** implementado
-- [ ] Estado **hover** implementado (`:hover`)
-- [ ] Estado **focus** implementado via `:focus-visible` com `HlxFocusRing` ou equivalente
-- [ ] Estado **active** implementado (`:active`) para elementos clicáveis
-- [ ] Estado **disabled** implementado: aparência desativada + `pointer-events: none` + `aria-disabled`
-- [ ] Estado **loading** implementado (quando aplicável): spinner + `aria-busy="true"`
-- [ ] Estado **error** implementado (quando aplicável): borda e texto em cor de danger
-- [ ] Estado **success** implementado (quando aplicável)
+- [ ] Estado default foi considerado
+- [ ] Hover e focus foram considerados quando aplicável
+- [ ] Active foi tratado em elementos interativos quando fizer sentido
+- [ ] Disabled foi tratado quando aplicável
+- [ ] Loading, error, success ou empty foram tratados quando aplicável
 
 ### Acessibilidade
 
-- [ ] Atributos ARIA adequados ao padrão WAI-ARIA do componente
-- [ ] Navegação por teclado funcional (`Tab`, `Enter`, `Space`, setas conforme aplicável)
-- [ ] `role` correto quando elemento HTML semântico não é suficiente
-- [ ] `tabindex` gerenciado corretamente (positivo apenas em casos excepcionais justificados)
-- [ ] Contraste de cor verificado em ambos os temas
+- [ ] Labels e atributos ARIA necessários foram tratados
+- [ ] Navegação por teclado foi considerada
+- [ ] O papel semântico está correto
+- [ ] Feedback visual de foco existe
 
-### Responsividade
+### Integração com o Lab
 
-- [ ] Comportamento em telas pequenas definido e implementado
-- [ ] Sem overflow ou quebra de layout em viewports estreitos
-- [ ] Breakpoints utilizam os tokens do Design System quando aplicável
+- [ ] Existe demonstração suficiente em `Components/Lab/Pages/`
+- [ ] O exemplo mostra os estados e variantes relevantes
 
-### Documentação e Lab
+## Árvore de Decisão Rápida
 
-- [ ] Página de Lab criada ou atualizada com exemplos do componente
-- [ ] Exemplos cobrem todas as variantes e estados relevantes
-- [ ] Parâmetros documentados com comentários XML (summary) no code-behind
-
----
-
-## Árvore de Decisão para Placement
-
-Use esta árvore para decidir onde um novo componente deve ser colocado:
-
-```
-O componente é parte do Design System (não específico de negócio)?
-│
-├── Não → Pertence ao projeto da aplicação, não ao DS
-│
-└── Sim → É uma estrutura de página (AppShell, TopBar, Sidebar)?
-    │
-    ├── Sim → Components/Composites/{Nome}/
-    │
-    └── Não → Depende de 2+ atoms do DS para funcionar?
-        │
-        ├── Sim → É recorrente o suficiente para ser molecule?
-        │   ├── Sim  → Components/DesignSystem/{Categoria}/ ou Components/Composites/
-        │   └── Não  → Implemente na página por enquanto
-        │
-        └── Não → É um atom com responsabilidade única?
-            ├── Sim → Components/DesignSystem/{Categoria}/
-            └── Não → Revisar escopo do componente
+```text
+É reutilizável fora da página atual?
+├── Não -> manter na página/showcase
+└── Sim
+    É building block base?
+    ├── Sim -> Components/DesignSystem/
+    └── Não
+        É composição recorrente de múltiplos componentes?
+        ├── Sim -> Components/Composites/
+        └── Não -> revisar escopo antes de criar
 ```
 
-### Como escolher a Categoria para um Atom/Molecule
+## Anti-padrões
 
-| Pergunta | Categoria |
-|----------|-----------|
-| Inicia uma ação do usuário? | Actions |
-| Coleta entrada de dados? | Form |
-| Exibe dados ou informações? | DataDisplay |
-| Comunica estado do sistema? | Feedback |
-| Orienta ou desloca o usuário? | Navigation |
-| Sobrepõe o conteúdo? | Overlay |
-| Contém ou agrupa conteúdo? | Surfaces |
-| Organiza elementos espacialmente? | Layout |
+| Anti-padrão | Problema | Melhor alternativa |
+|---|---|---|
+| Criar wrapper novo para trocar label/cor | Duplica contrato | Evoluir variante ou props |
+| Extrair cedo demais algo visto uma vez | Abstração prematura | Manter na página até repetir |
+| Colocar contrato novo em `Lab/Pages` | Mistura showcase com DS | Criar em `DesignSystem` ou `Composites` |
+| Hardcode visual em vez de token | Quebra consistência | Usar tokens `--gns-*` |
+| API enorme e vaga | Reduz previsibilidade | Dividir responsabilidade |
 
----
+## Referências
 
-## Processo para Adição de Novo Componente
-
-1. **Proposta**: Abrir issue descrevendo o componente, casos de uso, variantes esperadas e onde seria usado
-2. **Validação**: Confirmar que não existe componente existente que resolva o problema com extensão
-3. **Design**: Definir API (parâmetros, eventos, slots) antes de implementar
-4. **Implementação**: Seguir o checklist acima durante o desenvolvimento
-5. **Review**: Submeter PR com o componente + página de Lab + todos os itens do checklist marcados
-6. **Merge**: Aprovação de pelo menos um outro membro do time
-
----
-
-## Anti-padrões a Evitar
-
-| Anti-padrão | Problema | Alternativa |
-|-------------|---------|-------------|
-| Componente "God" com 20+ parâmetros | Viola responsabilidade única, difícil de manter | Divida em componentes menores ou use composição |
-| Prop drilling excessivo | Acoplamento desnecessário entre níveis | Use `CascadingValue` ou serviço scoped |
-| Lógica de negócio no componente | Quebra separação de responsabilidades | Mova para serviço ou para a página consumidora |
-| CSS hardcoded | Quebra o sistema de temas e tokens | Use apenas `var(--hlx-*)` |
-| Componente específico de uma tela | Não é um padrão reutilizável | Implemente na página, não no DS |
-| Duplicar funcionalidade existente | Fragmenta o DS, dificulta manutenção | Estenda o componente existente |
+- `docs/analysis/frontend/03-design-system.md`
+- `docs/analysis/frontend/04-mapa-reaproveitamento.md`
+- `.claude/rules/frontend-design-system.md`
+- `.claude/rules/frontend-reaproveitamento.md`

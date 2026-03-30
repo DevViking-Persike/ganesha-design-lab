@@ -874,11 +874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
+      "projectUniqueName": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
       "projectName": "Ganesha.DesignLab.Shared",
-      "projectPath": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
+      "projectPath": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
       "packagesPath": "/Users/persike/.nuget/packages/",
-      "outputPath": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/obj/",
+      "outputPath": "/Volumes/HDX/Dev/ganesha-ds/src/Ganesha.DesignLab.Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/persike/.nuget/NuGet/NuGet.Config"

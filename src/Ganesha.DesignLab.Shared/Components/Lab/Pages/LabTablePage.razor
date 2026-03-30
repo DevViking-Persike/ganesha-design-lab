@@ -4,37 +4,37 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="Users" Eyebrow="Patterns" Description="Full data table page with search, filters, and pagination.">
+    <GnsPageHeader Title="Users" Eyebrow="Patterns" Description="Full data table page with search, filters, and pagination.">
         <Actions>
-            <HlxButton Label="Add User" Variant="ButtonVariant.Primary" />
+            <GnsButton Label="Add User" Variant="ButtonVariant.Primary" />
         </Actions>
-    </HlxPageHeader>
+    </GnsPageHeader>
 
     @* Search and Filters *@
-    <HlxSection>
+    <GnsSection>
         <div style="display: flex; gap: var(--gns-space-4); align-items: flex-end; flex-wrap: wrap; margin-bottom: var(--gns-space-4);">
             <div style="flex: 1; min-width: 16rem;">
-                <HlxInputText Placeholder="Search users by name or email..." @bind-Value="_search" />
+                <GnsInputText Placeholder="Search users by name or email..." @bind-Value="_search" />
             </div>
             <div style="min-width: 10rem;">
-                <HlxSelect Placeholder="All Statuses" @bind-Value="_statusFilter">
+                <GnsSelect Placeholder="All Statuses" @bind-Value="_statusFilter">
                     <option value="">All Statuses</option>
                     <option value="active">Active</option>
                     <option value="inactive">Inactive</option>
                     <option value="pending">Pending</option>
-                </HlxSelect>
+                </GnsSelect>
             </div>
             <div style="min-width: 10rem;">
-                <HlxSelect Placeholder="All Roles" @bind-Value="_roleFilter">
+                <GnsSelect Placeholder="All Roles" @bind-Value="_roleFilter">
                     <option value="">All Roles</option>
                     <option value="admin">Admin</option>
                     <option value="editor">Editor</option>
                     <option value="viewer">Viewer</option>
-                </HlxSelect>
+                </GnsSelect>
             </div>
         </div>
 
-        <HlxTable TItem="UserRecord" Items="_filteredUsers" IsStriped="true" IsHoverable="true">
+        <GnsTable TItem="UserRecord" Items="_filteredUsers" IsStriped="true" IsHoverable="true">
             <HeaderTemplate>
                 <th class="gns-table__head-cell">Name</th>
                 <th class="gns-table__head-cell">Email</th>
@@ -46,7 +46,7 @@
                 <tr class="gns-table__body-row">
                     <td class="gns-table__body-cell">
                         <div style="display: flex; align-items: center; gap: var(--gns-space-3);">
-                            <HlxAvatar Initials="@user.Initials" Size="AvatarSize.Small" />
+                            <GnsAvatar Initials="@user.Initials" Size="AvatarSize.Small" />
                             <div>
                                 <div style="font-weight: var(--gns-font-weight-medium);">@user.Name</div>
                                 <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-tertiary);">Joined @user.JoinDate</div>
@@ -55,26 +55,26 @@
                     </td>
                     <td class="gns-table__body-cell" style="color: var(--gns-color-text-secondary);">@user.Email</td>
                     <td class="gns-table__body-cell">
-                        <HlxTag Label="@user.Role" Variant="@user.RoleVariant" />
+                        <GnsTag Label="@user.Role" Variant="@user.RoleVariant" />
                     </td>
                     <td class="gns-table__body-cell">
-                        <HlxBadge Severity="@user.StatusSeverity" Size="BadgeSize.Small">@user.Status</HlxBadge>
+                        <GnsBadge Severity="@user.StatusSeverity" Size="BadgeSize.Small">@user.Status</GnsBadge>
                     </td>
                     <td class="gns-table__body-cell" style="text-align: right;">
                         <div style="display: flex; gap: var(--gns-space-1); justify-content: flex-end;">
-                            <HlxButton Label="Edit" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
-                            <HlxButton Label="Delete" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
+                            <GnsButton Label="Edit" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
+                            <GnsButton Label="Delete" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
                         </div>
                     </td>
                 </tr>
             </RowTemplate>
-        </HlxTable>
+        </GnsTable>
 
         <div style="display: flex; align-items: center; justify-content: space-between; margin-top: var(--gns-space-4); flex-wrap: wrap; gap: var(--gns-space-3);">
             <span style="font-size: var(--gns-text-sm); color: var(--gns-color-text-secondary);">Showing @_filteredUsers.Count of @_allUsers.Count users</span>
-            <HlxPagination CurrentPage="@_currentPage" TotalPages="5" CurrentPageChanged="@(p => _currentPage = p)" />
+            <GnsPagination CurrentPage="@_currentPage" TotalPages="5" CurrentPageChanged="@(p => _currentPage = p)" />
         </div>
-    </HlxSection>
+    </GnsSection>
 
 </div>
 

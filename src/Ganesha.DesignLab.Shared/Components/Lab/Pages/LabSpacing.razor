@@ -4,11 +4,11 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="Spacing"
+    <GnsPageHeader Title="Spacing"
                    Eyebrow="Foundations"
                    Description="A consistent spacing scale based on a 4px (0.25rem) base unit. Used for margins, paddings, and gaps." />
 
-    <HlxSection Title="Spacing Scale" Subtitle="Core spacing tokens from 0 to 96.">
+    <GnsSection Title="Spacing Scale" Subtitle="Core spacing tokens from 0 to 96.">
         <div class="gns-spacing-scale">
             @foreach (var item in _spacingTokens)
             {
@@ -19,9 +19,9 @@
                 </div>
             }
         </div>
-    </HlxSection>
+    </GnsSection>
 
-    <HlxSection Title="Visual Reference" Subtitle="Boxes demonstrating spacing token sizes.">
+    <GnsSection Title="Visual Reference" Subtitle="Boxes demonstrating spacing token sizes.">
         <div style="display: flex; flex-wrap: wrap; gap: var(--gns-space-4); align-items: flex-end;">
             @foreach (var item in _visualTokens)
             {
@@ -31,7 +31,7 @@
                 </div>
             }
         </div>
-    </HlxSection>
+    </GnsSection>
 
 </div>
 

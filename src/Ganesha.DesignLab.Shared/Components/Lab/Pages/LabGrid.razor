@@ -6,7 +6,7 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="Grid &amp; Layout"
+    <GnsPageHeader Title="Grid &amp; Layout"
                    Eyebrow="Foundations"
                    Description="Layout primitives for building structured, responsive interfaces: CSS grid, flex stacks, containers, and sections." />
 
@@ -14,164 +14,164 @@
     @* Section 1 — Grid System                                 *@
     @* ─────────────────────────────────────────────────────── *@
 
-    <HlxSection Title="Grid System" Subtitle="HlxGrid with standard column counts using equal-width fr columns.">
+    <GnsSection Title="Grid System" Subtitle="GnsGrid with standard column counts using equal-width fr columns.">
 
         <div style="display: flex; flex-direction: column; gap: var(--gns-space-6);">
 
             @* 12 columns *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Columns=&quot;12&quot; — each box spans 1 col</p>
-                <HlxGrid Columns="12" Gap="2">
+                <GnsGrid Columns="12" Gap="2">
                     @for (int i = 0; i < 12; i++)
                     {
                         <div style="@BoxStyle("var(--gns-primary-500)")">1</div>
                     }
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
             @* 6 columns *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Columns=&quot;6&quot; — each box spans 2 effective cols</p>
-                <HlxGrid Columns="6" Gap="2">
+                <GnsGrid Columns="6" Gap="2">
                     @for (int i = 0; i < 6; i++)
                     {
                         <div style="@BoxStyle("var(--gns-primary-400)")">2</div>
                     }
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
             @* 4 columns *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Columns=&quot;4&quot; — each box spans 3 effective cols</p>
-                <HlxGrid Columns="4" Gap="2">
+                <GnsGrid Columns="4" Gap="2">
                     @for (int i = 0; i < 4; i++)
                     {
                         <div style="@BoxStyle("var(--gns-primary-300)", "5rem")">3</div>
                     }
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
             @* 3 columns *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Columns=&quot;3&quot; — each box spans 4 effective cols</p>
-                <HlxGrid Columns="3" Gap="2">
+                <GnsGrid Columns="3" Gap="2">
                     @for (int i = 0; i < 3; i++)
                     {
                         <div style="@BoxStyle("var(--gns-info-500)", "5rem")">4</div>
                     }
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
             @* 2 columns *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Columns=&quot;2&quot; — each box spans 6 effective cols</p>
-                <HlxGrid Columns="2" Gap="2">
+                <GnsGrid Columns="2" Gap="2">
                     @for (int i = 0; i < 2; i++)
                     {
                         <div style="@BoxStyle("var(--gns-success-500)", "5rem")">6</div>
                     }
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
             @* 1 column *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Columns=&quot;1&quot; — full width, spans 12 effective cols</p>
-                <HlxGrid Columns="1" Gap="2">
+                <GnsGrid Columns="1" Gap="2">
                     <div style="@BoxStyle("var(--gns-warning-500)", "5rem")">12</div>
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
         </div>
-    </HlxSection>
+    </GnsSection>
 
     @* ─────────────────────────────────────────────────────── *@
     @* Section 2 — Custom Grid Templates                       *@
     @* ─────────────────────────────────────────────────────── *@
 
-    <HlxSection Title="Custom Grid Templates" Subtitle="Using the TemplateColumns parameter for asymmetric layouts.">
+    <GnsSection Title="Custom Grid Templates" Subtitle="Using the TemplateColumns parameter for asymmetric layouts.">
 
         <div style="display: flex; flex-direction: column; gap: var(--gns-space-8);">
 
             @* Sidebar + Content *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">TemplateColumns=&quot;280px 1fr&quot; — Sidebar + Content</p>
-                <HlxGrid TemplateColumns="280px 1fr" Gap="4">
+                <GnsGrid TemplateColumns="280px 1fr" Gap="4">
                     <div style="@BoxStyle("var(--gns-primary-500)", "6rem")">280px sidebar</div>
                     <div style="@BoxStyle("var(--gns-primary-300)", "6rem")">1fr content area</div>
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
             @* Content + Sidebar *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">TemplateColumns=&quot;1fr 300px&quot; — Content + Sidebar</p>
-                <HlxGrid TemplateColumns="1fr 300px" Gap="4">
+                <GnsGrid TemplateColumns="1fr 300px" Gap="4">
                     <div style="@BoxStyle("var(--gns-info-500)", "6rem")">1fr content area</div>
                     <div style="@BoxStyle("var(--gns-primary-500)", "6rem")">300px sidebar</div>
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
             @* Holy Grail *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">TemplateColumns=&quot;200px 1fr 200px&quot; — Holy Grail (left · main · right)</p>
-                <HlxGrid TemplateColumns="200px 1fr 200px" Gap="4">
+                <GnsGrid TemplateColumns="200px 1fr 200px" Gap="4">
                     <div style="@BoxStyle("var(--gns-primary-500)", "6rem")">200px left</div>
                     <div style="@BoxStyle("var(--gns-success-500)", "6rem")">1fr main</div>
                     <div style="@BoxStyle("var(--gns-primary-500)", "6rem")">200px right</div>
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
             @* Dashboard 2fr 1fr *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">TemplateColumns=&quot;2fr 1fr&quot; — Dashboard (2/3 + 1/3)</p>
-                <HlxGrid TemplateColumns="2fr 1fr" Gap="4">
+                <GnsGrid TemplateColumns="2fr 1fr" Gap="4">
                     <div style="@BoxStyle("var(--gns-warning-500)", "6rem")">2fr main panel</div>
                     <div style="@BoxStyle("var(--gns-danger-500)", "6rem")">1fr side panel</div>
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
             @* Equal thirds with large gap *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Columns=&quot;3&quot; Gap=&quot;6&quot; — Equal thirds with wide gap</p>
-                <HlxGrid Columns="3" Gap="6">
+                <GnsGrid Columns="3" Gap="6">
                     <div style="@BoxStyle("var(--gns-primary-400)", "6rem")">1fr</div>
                     <div style="@BoxStyle("var(--gns-primary-400)", "6rem")">1fr</div>
                     <div style="@BoxStyle("var(--gns-primary-400)", "6rem")">1fr</div>
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
         </div>
-    </HlxSection>
+    </GnsSection>
 
     @* ─────────────────────────────────────────────────────── *@
     @* Section 3 — Stack (Flex)                                *@
     @* ─────────────────────────────────────────────────────── *@
 
-    <HlxSection Title="Stack (Flex)" Subtitle="HlxStack for flex-based horizontal and vertical arrangements.">
+    <GnsSection Title="Stack (Flex)" Subtitle="GnsStack for flex-based horizontal and vertical arrangements.">
 
         <div style="display: flex; flex-direction: column; gap: var(--gns-space-8);">
 
             @* Horizontal *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Direction=Horizontal Gap=&quot;4&quot;</p>
-                <HlxStack Direction="StackDirection.Horizontal" Gap="4">
+                <GnsStack Direction="StackDirection.Horizontal" Gap="4">
                     <div style="@BoxStyle("var(--gns-primary-500)") flex: 1;">Item 1</div>
                     <div style="@BoxStyle("var(--gns-primary-400)") flex: 1;">Item 2</div>
                     <div style="@BoxStyle("var(--gns-primary-300)") flex: 1;">Item 3</div>
                     <div style="@BoxStyle("var(--gns-info-500)") flex: 1;">Item 4</div>
                     <div style="@BoxStyle("var(--gns-success-500)") flex: 1;">Item 5</div>
-                </HlxStack>
+                </GnsStack>
             </div>
 
             @* Vertical *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Direction=Vertical Gap=&quot;3&quot;</p>
-                <HlxStack Direction="StackDirection.Vertical" Gap="3">
+                <GnsStack Direction="StackDirection.Vertical" Gap="3">
                     <div style="@BoxStyle("var(--gns-primary-500)")">Item 1</div>
                     <div style="@BoxStyle("var(--gns-primary-400)")">Item 2</div>
                     <div style="@BoxStyle("var(--gns-primary-300)")">Item 3</div>
                     <div style="@BoxStyle("var(--gns-info-500)")">Item 4</div>
                     <div style="@BoxStyle("var(--gns-success-500)")">Item 5</div>
-                </HlxStack>
+                </GnsStack>
             </div>
 
             @* Alignment variants *@
@@ -182,44 +182,44 @@
                     <div>
                         <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Align=Start</p>
                         <div style="border: 1px dashed var(--gns-color-border-default); border-radius: var(--gns-radius-md); padding: var(--gns-space-3);">
-                            <HlxStack Direction="StackDirection.Horizontal" Gap="3" Align="ContentAlignment.Start">
+                            <GnsStack Direction="StackDirection.Horizontal" Gap="3" Align="ContentAlignment.Start">
                                 <div style="@BoxStyle("var(--gns-primary-500)", "3rem") width: 5rem;">A</div>
                                 <div style="@BoxStyle("var(--gns-primary-400)", "3rem") width: 5rem;">B</div>
                                 <div style="@BoxStyle("var(--gns-primary-300)", "3rem") width: 5rem;">C</div>
-                            </HlxStack>
+                            </GnsStack>
                         </div>
                     </div>
 
                     <div>
                         <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Align=Center</p>
                         <div style="border: 1px dashed var(--gns-color-border-default); border-radius: var(--gns-radius-md); padding: var(--gns-space-3);">
-                            <HlxStack Direction="StackDirection.Horizontal" Gap="3" Align="ContentAlignment.Center">
+                            <GnsStack Direction="StackDirection.Horizontal" Gap="3" Align="ContentAlignment.Center">
                                 <div style="@BoxStyle("var(--gns-info-500)", "3rem") width: 5rem;">A</div>
                                 <div style="@BoxStyle("var(--gns-info-500)", "3rem") width: 5rem;">B</div>
                                 <div style="@BoxStyle("var(--gns-info-500)", "3rem") width: 5rem;">C</div>
-                            </HlxStack>
+                            </GnsStack>
                         </div>
                     </div>
 
                     <div>
                         <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Align=End</p>
                         <div style="border: 1px dashed var(--gns-color-border-default); border-radius: var(--gns-radius-md); padding: var(--gns-space-3);">
-                            <HlxStack Direction="StackDirection.Horizontal" Gap="3" Align="ContentAlignment.End">
+                            <GnsStack Direction="StackDirection.Horizontal" Gap="3" Align="ContentAlignment.End">
                                 <div style="@BoxStyle("var(--gns-success-500)", "3rem") width: 5rem;">A</div>
                                 <div style="@BoxStyle("var(--gns-success-500)", "3rem") width: 5rem;">B</div>
                                 <div style="@BoxStyle("var(--gns-success-500)", "3rem") width: 5rem;">C</div>
-                            </HlxStack>
+                            </GnsStack>
                         </div>
                     </div>
 
                     <div>
                         <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Align=SpaceBetween</p>
                         <div style="border: 1px dashed var(--gns-color-border-default); border-radius: var(--gns-radius-md); padding: var(--gns-space-3);">
-                            <HlxStack Direction="StackDirection.Horizontal" Gap="3" Align="ContentAlignment.SpaceBetween">
+                            <GnsStack Direction="StackDirection.Horizontal" Gap="3" Align="ContentAlignment.SpaceBetween">
                                 <div style="@BoxStyle("var(--gns-warning-500)", "3rem") width: 5rem;">A</div>
                                 <div style="@BoxStyle("var(--gns-warning-500)", "3rem") width: 5rem;">B</div>
                                 <div style="@BoxStyle("var(--gns-warning-500)", "3rem") width: 5rem;">C</div>
-                            </HlxStack>
+                            </GnsStack>
                         </div>
                     </div>
 
@@ -229,98 +229,98 @@
             @* Wrapping *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Direction=Horizontal Wrap=&quot;true&quot; — items wrap onto new lines</p>
-                <HlxStack Direction="StackDirection.Horizontal" Gap="3" Wrap="true">
+                <GnsStack Direction="StackDirection.Horizontal" Gap="3" Wrap="true">
                     @foreach (var label in new[] { "Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta", "Iota", "Kappa", "Lambda", "Mu", "Nu", "Xi" })
                     {
                         <div style="@BoxStyle("var(--gns-primary-400)", "3rem") width: 6rem;">@label</div>
                     }
-                </HlxStack>
+                </GnsStack>
             </div>
 
             @* Nested stacks *@
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Nested — horizontal stack containing two vertical stacks</p>
-                <HlxStack Direction="StackDirection.Horizontal" Gap="6">
+                <GnsStack Direction="StackDirection.Horizontal" Gap="6">
                     <div style="flex: 1;">
                         <p style="font-size: var(--gns-text-xs); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Left column</p>
-                        <HlxStack Direction="StackDirection.Vertical" Gap="2">
+                        <GnsStack Direction="StackDirection.Vertical" Gap="2">
                             <div style="@BoxStyle("var(--gns-primary-500)")">L1</div>
                             <div style="@BoxStyle("var(--gns-primary-400)")">L2</div>
                             <div style="@BoxStyle("var(--gns-primary-300)")">L3</div>
-                        </HlxStack>
+                        </GnsStack>
                     </div>
                     <div style="flex: 1;">
                         <p style="font-size: var(--gns-text-xs); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Right column</p>
-                        <HlxStack Direction="StackDirection.Vertical" Gap="2">
+                        <GnsStack Direction="StackDirection.Vertical" Gap="2">
                             <div style="@BoxStyle("var(--gns-success-500)")">R1</div>
                             <div style="@BoxStyle("var(--gns-success-500)", "3rem")">R2 (taller)</div>
                             <div style="@BoxStyle("var(--gns-success-500)")">R3</div>
-                        </HlxStack>
+                        </GnsStack>
                     </div>
-                </HlxStack>
+                </GnsStack>
             </div>
 
         </div>
-    </HlxSection>
+    </GnsSection>
 
     @* ─────────────────────────────────────────────────────── *@
     @* Section 4 — Container Sizes                             *@
     @* ─────────────────────────────────────────────────────── *@
 
-    <HlxSection Title="Container Sizes" Subtitle="HlxContainer centers content with a max-width constraint. Each box below fills the container width.">
+    <GnsSection Title="Container Sizes" Subtitle="GnsContainer centers content with a max-width constraint. Each box below fills the container width.">
 
         <div style="display: flex; flex-direction: column; gap: var(--gns-space-6);">
 
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Size=Sm — max-width 640px</p>
-                <HlxContainer Size="ContainerSize.Sm">
+                <GnsContainer Size="ContainerSize.Sm">
                     <div style="@BoxStyle("var(--gns-primary-500)", "3.5rem")">Sm · 640px</div>
-                </HlxContainer>
+                </GnsContainer>
             </div>
 
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Size=Md — max-width 768px</p>
-                <HlxContainer Size="ContainerSize.Md">
+                <GnsContainer Size="ContainerSize.Md">
                     <div style="@BoxStyle("var(--gns-primary-400)", "3.5rem")">Md · 768px</div>
-                </HlxContainer>
+                </GnsContainer>
             </div>
 
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Size=Lg — max-width 1024px</p>
-                <HlxContainer Size="ContainerSize.Lg">
+                <GnsContainer Size="ContainerSize.Lg">
                     <div style="@BoxStyle("var(--gns-primary-300)", "3.5rem")">Lg · 1024px</div>
-                </HlxContainer>
+                </GnsContainer>
             </div>
 
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Size=Default — max-width 1280px</p>
-                <HlxContainer Size="ContainerSize.Default">
+                <GnsContainer Size="ContainerSize.Default">
                     <div style="@BoxStyle("var(--gns-info-500)", "3.5rem")">Default · 1280px</div>
-                </HlxContainer>
+                </GnsContainer>
             </div>
 
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Size=Xl — max-width 1440px</p>
-                <HlxContainer Size="ContainerSize.Xl">
+                <GnsContainer Size="ContainerSize.Xl">
                     <div style="@BoxStyle("var(--gns-success-500)", "3.5rem")">Xl · 1440px</div>
-                </HlxContainer>
+                </GnsContainer>
             </div>
 
             <div>
                 <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Size=Full — max-width 100%</p>
-                <HlxContainer Size="ContainerSize.Full">
+                <GnsContainer Size="ContainerSize.Full">
                     <div style="@BoxStyle("var(--gns-warning-500)", "3.5rem")">Full · 100%</div>
-                </HlxContainer>
+                </GnsContainer>
             </div>
 
         </div>
-    </HlxSection>
+    </GnsSection>
 
     @* ─────────────────────────────────────────────────────── *@
     @* Section 5 — Composition Examples                        *@
     @* ─────────────────────────────────────────────────────── *@
 
-    <HlxSection Title="Composition Examples" Subtitle="Real-world layout patterns built from grid and stack primitives.">
+    <GnsSection Title="Composition Examples" Subtitle="Real-world layout patterns built from grid and stack primitives.">
 
         <div style="display: flex; flex-direction: column; gap: var(--gns-space-10);">
 
@@ -328,87 +328,87 @@
             <div>
                 <p style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-1);">Dashboard Layout</p>
                 <p style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-3);">Main chart on the left, summary cards stacked on the right.</p>
-                <HlxGrid TemplateColumns="2fr 1fr" Gap="4">
-                    <HlxCard>
+                <GnsGrid TemplateColumns="2fr 1fr" Gap="4">
+                    <GnsCard>
                         <div style="padding: var(--gns-space-4);">
                             <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-3);">Revenue Overview</div>
                             <div style="@BoxStyle("var(--gns-primary-300)", "10rem")">Chart placeholder</div>
                         </div>
-                    </HlxCard>
-                    <HlxStack Direction="StackDirection.Vertical" Gap="3">
-                        <HlxCard>
+                    </GnsCard>
+                    <GnsStack Direction="StackDirection.Vertical" Gap="3">
+                        <GnsCard>
                             <div style="padding: var(--gns-space-4);">
                                 <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-1);">Total Users</div>
                                 <div style="font-size: var(--gns-text-2xl); font-weight: var(--gns-font-weight-bold); color: var(--gns-primary-500);">24,891</div>
                             </div>
-                        </HlxCard>
-                        <HlxCard>
+                        </GnsCard>
+                        <GnsCard>
                             <div style="padding: var(--gns-space-4);">
                                 <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-1);">Monthly Revenue</div>
                                 <div style="font-size: var(--gns-text-2xl); font-weight: var(--gns-font-weight-bold); color: var(--gns-success-600);">$142,500</div>
                             </div>
-                        </HlxCard>
-                        <HlxCard>
+                        </GnsCard>
+                        <GnsCard>
                             <div style="padding: var(--gns-space-4);">
                                 <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-1);">Pending Orders</div>
                                 <div style="font-size: var(--gns-text-2xl); font-weight: var(--gns-font-weight-bold); color: var(--gns-warning-600);">318</div>
                             </div>
-                        </HlxCard>
-                    </HlxStack>
-                </HlxGrid>
+                        </GnsCard>
+                    </GnsStack>
+                </GnsGrid>
             </div>
 
             @* Card Grid *@
             <div>
                 <p style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-1);">Card Grid</p>
                 <p style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-3);">4-column grid of uniform cards — good for product listings or feature blocks.</p>
-                <HlxGrid Columns="4" Gap="4">
+                <GnsGrid Columns="4" Gap="4">
                     @foreach (var item in _featureCards)
                     {
-                        <HlxCard IsHoverable="true">
+                        <GnsCard IsHoverable="true">
                             <div style="padding: var(--gns-space-4);">
                                 <div style="@BoxStyle(item.Color, "2.5rem") margin-bottom: var(--gns-space-3); border-radius: var(--gns-radius-sm);">@item.Icon</div>
                                 <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-1);">@item.Title</div>
                                 <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); line-height: var(--gns-leading-relaxed);">@item.Description</div>
                             </div>
-                        </HlxCard>
+                        </GnsCard>
                     }
-                </HlxGrid>
+                </GnsGrid>
             </div>
 
             @* Form Layout *@
             <div>
                 <p style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-1);">Form Layout</p>
                 <p style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-3);">2-column grid for label/field pairs — labels on left, inputs on right.</p>
-                <HlxCard>
+                <GnsCard>
                     <div style="padding: var(--gns-space-5);">
-                        <HlxStack Direction="StackDirection.Vertical" Gap="4">
+                        <GnsStack Direction="StackDirection.Vertical" Gap="4">
                             @foreach (var field in _formFields)
                             {
-                                <HlxGrid Columns="2" Gap="4">
+                                <GnsGrid Columns="2" Gap="4">
                                     <div style="display: flex; align-items: center; justify-content: flex-end; padding-right: var(--gns-space-2);">
                                         <span style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-medium); color: var(--gns-color-text-secondary);">@field.Label</span>
                                     </div>
                                     <div style="height: 2.5rem; border: 1px solid var(--gns-color-border-default); border-radius: var(--gns-radius-md); background: var(--gns-color-surface-raised); display: flex; align-items: center; padding: 0 var(--gns-space-3);">
                                         <span style="font-size: var(--gns-text-sm); color: var(--gns-color-text-tertiary);">@field.Placeholder</span>
                                     </div>
-                                </HlxGrid>
+                                </GnsGrid>
                             }
                             <div style="display: flex; justify-content: flex-end; gap: var(--gns-space-2); padding-top: var(--gns-space-2);">
-                                <HlxButton Label="Cancel" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
-                                <HlxButton Label="Save Changes" Variant="ButtonVariant.Primary" Size="ButtonSize.Small" />
+                                <GnsButton Label="Cancel" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
+                                <GnsButton Label="Save Changes" Variant="ButtonVariant.Primary" Size="ButtonSize.Small" />
                             </div>
-                        </HlxStack>
+                        </GnsStack>
                     </div>
-                </HlxCard>
+                </GnsCard>
             </div>
 
             @* Sidebar Layout *@
             <div>
                 <p style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-1);">Sidebar Layout</p>
                 <p style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-3);">Fixed nav on the left, scrollable content on the right.</p>
-                <HlxGrid TemplateColumns="240px 1fr" Gap="4">
-                    <HlxCard>
+                <GnsGrid TemplateColumns="240px 1fr" Gap="4">
+                    <GnsCard>
                         <div style="padding: var(--gns-space-3);">
                             <div style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; padding: var(--gns-space-2) var(--gns-space-3); margin-bottom: var(--gns-space-1);">Navigation</div>
                             @foreach (var navItem in _navItems)
@@ -418,45 +418,45 @@
                                 </div>
                             }
                         </div>
-                    </HlxCard>
-                    <HlxCard>
+                    </GnsCard>
+                    <GnsCard>
                         <div style="padding: var(--gns-space-5);">
                             <div style="font-size: var(--gns-text-lg); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-4);">General Settings</div>
-                            <HlxStack Direction="StackDirection.Vertical" Gap="4">
+                            <GnsStack Direction="StackDirection.Vertical" Gap="4">
                                 <div style="height: 2rem; background: var(--gns-color-surface-subtle); border-radius: var(--gns-radius-md); width: 60%;"></div>
                                 <div style="height: 2rem; background: var(--gns-color-surface-subtle); border-radius: var(--gns-radius-md); width: 80%;"></div>
                                 <div style="height: 2rem; background: var(--gns-color-surface-subtle); border-radius: var(--gns-radius-md); width: 45%;"></div>
                                 <div style="height: 2rem; background: var(--gns-color-surface-subtle); border-radius: var(--gns-radius-md); width: 70%;"></div>
-                            </HlxStack>
+                            </GnsStack>
                         </div>
-                    </HlxCard>
-                </HlxGrid>
+                    </GnsCard>
+                </GnsGrid>
             </div>
 
         </div>
-    </HlxSection>
+    </GnsSection>
 
     @* ─────────────────────────────────────────────────────── *@
     @* Section 6 — Gap Scale                                   *@
     @* ─────────────────────────────────────────────────────── *@
 
-    <HlxSection Title="Gap Scale" Subtitle="The same 4-column grid with different gap values. Shows the visual impact of spacing tokens.">
+    <GnsSection Title="Gap Scale" Subtitle="The same 4-column grid with different gap values. Shows the visual impact of spacing tokens.">
 
         <div style="display: flex; flex-direction: column; gap: var(--gns-space-8);">
             @foreach (var gap in _gapValues)
             {
                 <div>
                     <p style="font-size: var(--gns-text-xs); font-family: var(--gns-font-mono); color: var(--gns-color-text-tertiary); margin-bottom: var(--gns-space-2);">Gap=&quot;@gap&quot; — --gns-space-@gap</p>
-                    <HlxGrid Columns="4" Gap="@gap">
+                    <GnsGrid Columns="4" Gap="@gap">
                         <div style="@BoxStyle("var(--gns-primary-500)", "3.5rem")">A</div>
                         <div style="@BoxStyle("var(--gns-primary-400)", "3.5rem")">B</div>
                         <div style="@BoxStyle("var(--gns-primary-300)", "3.5rem")">C</div>
                         <div style="@BoxStyle("var(--gns-info-500)", "3.5rem")">D</div>
-                    </HlxGrid>
+                    </GnsGrid>
                 </div>
             }
         </div>
-    </HlxSection>
+    </GnsSection>
 
 </div>
 

@@ -4,61 +4,61 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="Create User" Eyebrow="Patterns" Description="Registration and edit form with multiple field types and validation.">
+    <GnsPageHeader Title="Create User" Eyebrow="Patterns" Description="Registration and edit form with multiple field types and validation.">
         <Breadcrumb>
-            <HlxBreadcrumb>
-                <HlxBreadcrumbItem Label="Dashboard" Href="/lab" />
-                <HlxBreadcrumbItem Label="Users" Href="/lab/table-page" />
-                <HlxBreadcrumbItem Label="Create User" IsActive="true" />
-            </HlxBreadcrumb>
+            <GnsBreadcrumb>
+                <GnsBreadcrumbItem Label="Dashboard" Href="/lab" />
+                <GnsBreadcrumbItem Label="Users" Href="/lab/table-page" />
+                <GnsBreadcrumbItem Label="Create User" IsActive="true" />
+            </GnsBreadcrumb>
         </Breadcrumb>
-    </HlxPageHeader>
+    </GnsPageHeader>
 
-    <HlxCard>
+    <GnsCard>
         <div style="padding: var(--gns-space-8); max-width: 40rem;">
 
             <h3 style="font-size: var(--gns-text-lg); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-1);">Personal Information</h3>
             <p style="font-size: var(--gns-text-sm); color: var(--gns-color-text-secondary); margin-bottom: var(--gns-space-6);">Fill in the user details below. Fields marked with * are required.</p>
 
             <div style="display: flex; flex-direction: column; gap: var(--gns-space-5);">
-                <HlxGrid TemplateColumns="1fr 1fr" Gap="4">
-                    <HlxInputText Label="First Name" Placeholder="John" IsRequired="true" @bind-Value="_firstName" />
-                    <HlxInputText Label="Last Name" Placeholder="Doe" IsRequired="true" @bind-Value="_lastName" />
-                </HlxGrid>
+                <GnsGrid TemplateColumns="1fr 1fr" Gap="4">
+                    <GnsInputText Label="First Name" Placeholder="John" IsRequired="true" @bind-Value="_firstName" />
+                    <GnsInputText Label="Last Name" Placeholder="Doe" IsRequired="true" @bind-Value="_lastName" />
+                </GnsGrid>
 
-                <HlxInputText Label="Email Address" Placeholder="john.doe@example.com" IsRequired="true" Type="email" @bind-Value="_email" HelperText="This will be used for login credentials." />
+                <GnsInputText Label="Email Address" Placeholder="john.doe@example.com" IsRequired="true" Type="email" @bind-Value="_email" HelperText="This will be used for login credentials." />
 
-                <HlxInputPassword Label="Password" Placeholder="At least 8 characters" IsRequired="true" @bind-Value="_password" HelperText="Must include uppercase, lowercase, number, and special character." />
+                <GnsInputPassword Label="Password" Placeholder="At least 8 characters" IsRequired="true" @bind-Value="_password" HelperText="Must include uppercase, lowercase, number, and special character." />
 
-                <HlxSelect Label="Role" Placeholder="Select a role" IsRequired="true" @bind-Value="_role">
+                <GnsSelect Label="Role" Placeholder="Select a role" IsRequired="true" @bind-Value="_role">
                     <option value="admin">Administrator</option>
                     <option value="editor">Editor</option>
                     <option value="viewer">Viewer</option>
                     <option value="contributor">Contributor</option>
-                </HlxSelect>
+                </GnsSelect>
 
-                <HlxTextarea Label="Bio" Placeholder="Tell us about this user..." Rows="4" @bind-Value="_bio" HelperText="A short biography visible on the user's profile page." />
+                <GnsTextarea Label="Bio" Placeholder="Tell us about this user..." Rows="4" @bind-Value="_bio" HelperText="A short biography visible on the user's profile page." />
 
                 <div style="border-top: 1px solid var(--gns-color-border-default); padding-top: var(--gns-space-5);">
                     <h4 style="font-size: var(--gns-text-base); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-4);">Preferences</h4>
                     <div style="display: flex; flex-direction: column; gap: var(--gns-space-3);">
-                        <HlxCheckbox Label="Send email notifications for important updates" @bind-Value="_emailNotif" />
-                        <HlxCheckbox Label="Include user in weekly digest email" @bind-Value="_weeklyDigest" />
+                        <GnsCheckbox Label="Send email notifications for important updates" @bind-Value="_emailNotif" />
+                        <GnsCheckbox Label="Include user in weekly digest email" @bind-Value="_weeklyDigest" />
                     </div>
                 </div>
 
                 <div style="border-top: 1px solid var(--gns-color-border-default); padding-top: var(--gns-space-5);">
-                    <HlxSwitch Label="I accept the Terms of Service and Privacy Policy" @bind-Value="_termsAccepted" />
+                    <GnsSwitch Label="I accept the Terms of Service and Privacy Policy" @bind-Value="_termsAccepted" />
                 </div>
 
                 <div style="display: flex; gap: var(--gns-space-3); justify-content: flex-end; border-top: 1px solid var(--gns-color-border-default); padding-top: var(--gns-space-6);">
-                    <HlxButton Label="Cancel" Variant="ButtonVariant.Ghost" />
-                    <HlxButton Label="Save User" Variant="ButtonVariant.Primary" />
+                    <GnsButton Label="Cancel" Variant="ButtonVariant.Ghost" />
+                    <GnsButton Label="Save User" Variant="ButtonVariant.Primary" />
                 </div>
             </div>
 
         </div>
-    </HlxCard>
+    </GnsCard>
 
 </div>
 

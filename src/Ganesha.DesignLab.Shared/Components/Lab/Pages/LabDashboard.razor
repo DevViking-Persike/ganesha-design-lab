@@ -4,35 +4,35 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="Dashboard" Eyebrow="Patterns" Description="A realistic dashboard layout with metrics, data tables, and notification panels.">
+    <GnsPageHeader Title="Dashboard" Eyebrow="Patterns" Description="A realistic dashboard layout with metrics, data tables, and notification panels.">
         <Actions>
-            <HlxSelect @bind-Value="_dateRange">
+            <GnsSelect @bind-Value="_dateRange">
                 <option value="7d">Last 7 days</option>
                 <option value="30d">Last 30 days</option>
                 <option value="90d">Last 90 days</option>
                 <option value="1y">Last year</option>
-            </HlxSelect>
+            </GnsSelect>
         </Actions>
-    </HlxPageHeader>
+    </GnsPageHeader>
 
     @* Metric Cards *@
-    <HlxSection>
-        <HlxGrid Columns="4" Gap="4">
-            <HlxStatCard Title="Revenue" Value="$128,430" Trend="+14.2%" TrendDirection="TrendDirection.Up" Description="vs previous period" />
-            <HlxStatCard Title="Active Users" Value="8,492" Trend="+5.8%" TrendDirection="TrendDirection.Up" Description="currently online: 342" />
-            <HlxStatCard Title="Orders" Value="3,847" Trend="-2.3%" TrendDirection="TrendDirection.Down" Description="vs previous period" />
-            <HlxStatCard Title="Conversion" Value="4.62%" Trend="+0.8%" TrendDirection="TrendDirection.Up" Description="goal: 5.0%" />
-        </HlxGrid>
-    </HlxSection>
+    <GnsSection>
+        <GnsGrid Columns="4" Gap="4">
+            <GnsStatCard Title="Revenue" Value="$128,430" Trend="+14.2%" TrendDirection="TrendDirection.Up" Description="vs previous period" />
+            <GnsStatCard Title="Active Users" Value="8,492" Trend="+5.8%" TrendDirection="TrendDirection.Up" Description="currently online: 342" />
+            <GnsStatCard Title="Orders" Value="3,847" Trend="-2.3%" TrendDirection="TrendDirection.Down" Description="vs previous period" />
+            <GnsStatCard Title="Conversion" Value="4.62%" Trend="+0.8%" TrendDirection="TrendDirection.Up" Description="goal: 5.0%" />
+        </GnsGrid>
+    </GnsSection>
 
     @* Recent Orders Table *@
-    <HlxSection Title="Recent Orders" Subtitle="Latest orders placed by customers.">
+    <GnsSection Title="Recent Orders" Subtitle="Latest orders placed by customers.">
         <Actions>
-            <HlxButton Label="Export" Variant="ButtonVariant.Outline" Size="ButtonSize.Small" />
-            <HlxButton Label="View All" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
+            <GnsButton Label="Export" Variant="ButtonVariant.Outline" Size="ButtonSize.Small" />
+            <GnsButton Label="View All" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
         </Actions>
         <ChildContent>
-            <HlxTable TItem="OrderRecord" Items="_orders" IsHoverable="true">
+            <GnsTable TItem="OrderRecord" Items="_orders" IsHoverable="true">
                 <HeaderTemplate>
                     <th class="gns-table__head-cell">Order ID</th>
                     <th class="gns-table__head-cell">Customer</th>
@@ -46,36 +46,36 @@
                         <td class="gns-table__body-cell" style="font-family: var(--gns-font-mono); font-size: var(--gns-text-xs);">@order.Id</td>
                         <td class="gns-table__body-cell">
                             <div style="display: flex; align-items: center; gap: var(--gns-space-2);">
-                                <HlxAvatar Initials="@order.CustomerInitials" Size="AvatarSize.Small" />
+                                <GnsAvatar Initials="@order.CustomerInitials" Size="AvatarSize.Small" />
                                 <span>@order.Customer</span>
                             </div>
                         </td>
                         <td class="gns-table__body-cell">@order.Product</td>
                         <td class="gns-table__body-cell" style="font-weight: var(--gns-font-weight-medium);">@order.Amount.ToString("C")</td>
                         <td class="gns-table__body-cell">
-                            <HlxBadge Severity="@order.StatusSeverity" Size="BadgeSize.Small">@order.Status</HlxBadge>
+                            <GnsBadge Severity="@order.StatusSeverity" Size="BadgeSize.Small">@order.Status</GnsBadge>
                         </td>
                         <td class="gns-table__body-cell" style="color: var(--gns-color-text-secondary);">@order.Date</td>
                     </tr>
                 </RowTemplate>
-            </HlxTable>
+            </GnsTable>
         </ChildContent>
-    </HlxSection>
+    </GnsSection>
 
     @* Notifications *@
-    <HlxSection Title="Notifications" Subtitle="Recent system alerts and updates.">
+    <GnsSection Title="Notifications" Subtitle="Recent system alerts and updates.">
         <div style="display: flex; flex-direction: column; gap: var(--gns-space-3);">
-            <HlxAlert Severity="AlertSeverity.Warning" IsDismissible="true" Title="Server Load Warning">
+            <GnsAlert Severity="AlertSeverity.Warning" IsDismissible="true" Title="Server Load Warning">
                 CPU usage has exceeded 85% on production server us-east-1. Consider scaling up.
-            </HlxAlert>
-            <HlxAlert Severity="AlertSeverity.Success" IsDismissible="true">
+            </GnsAlert>
+            <GnsAlert Severity="AlertSeverity.Success" IsDismissible="true">
                 Deployment v2.4.1 completed successfully across all regions.
-            </HlxAlert>
-            <HlxAlert Severity="AlertSeverity.Info" IsDismissible="true">
+            </GnsAlert>
+            <GnsAlert Severity="AlertSeverity.Info" IsDismissible="true">
                 Scheduled maintenance window: Saturday 2:00 AM - 4:00 AM UTC.
-            </HlxAlert>
+            </GnsAlert>
         </div>
-    </HlxSection>
+    </GnsSection>
 
 </div>
 

@@ -4,12 +4,12 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="Colors"
+    <GnsPageHeader Title="Colors"
                    Eyebrow="Foundations"
                    Description="Primitive color scales and semantic aliases that form the visual identity of the design system." />
 
     @* Primary Scale *@
-    <HlxSection Title="Primary Scale" Subtitle="The brand color scale from 50 to 950.">
+    <GnsSection Title="Primary Scale" Subtitle="The brand color scale from 50 to 950.">
         <div class="gns-swatch-grid">
             @foreach (var swatch in _primarySwatches)
             {
@@ -23,10 +23,10 @@
                 </div>
             }
         </div>
-    </HlxSection>
+    </GnsSection>
 
     @* Gray Scale *@
-    <HlxSection Title="Gray Scale" Subtitle="Neutral palette with a cool blue-gray undertone.">
+    <GnsSection Title="Gray Scale" Subtitle="Neutral palette with a cool blue-gray undertone.">
         <div class="gns-swatch-grid">
             @foreach (var swatch in _graySwatches)
             {
@@ -40,10 +40,10 @@
                 </div>
             }
         </div>
-    </HlxSection>
+    </GnsSection>
 
     @* Semantic Colors *@
-    <HlxSection Title="Semantic Colors" Subtitle="Status and feedback color scales.">
+    <GnsSection Title="Semantic Colors" Subtitle="Status and feedback color scales.">
         <h3 style="font-size: var(--gns-text-lg); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-4); color: var(--gns-color-text-primary);">Success</h3>
         <div class="gns-swatch-grid" style="margin-bottom: var(--gns-space-8);">
             @foreach (var swatch in _successSwatches)
@@ -99,10 +99,10 @@
                 </div>
             }
         </div>
-    </HlxSection>
+    </GnsSection>
 
     @* Semantic Surface/Text Tokens *@
-    <HlxSection Title="Semantic Tokens" Subtitle="Context-aware tokens for backgrounds, surfaces, text, and borders.">
+    <GnsSection Title="Semantic Tokens" Subtitle="Context-aware tokens for backgrounds, surfaces, text, and borders.">
         <table class="gns-token-table">
             <thead>
                 <tr>
@@ -122,7 +122,7 @@
                 }
             </tbody>
         </table>
-    </HlxSection>
+    </GnsSection>
 
 </div>
 

@@ -4,80 +4,80 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="Navigation"
+    <GnsPageHeader Title="Navigation"
                    Eyebrow="Components"
                    Description="Components for navigating within the application: tabs, breadcrumbs, pagination, and nav items." />
 
-    <HlxSection Title="Tabs" Subtitle="Tabbed interface for organizing content into sections.">
-        <HlxCard>
-            <HlxTabs @bind-ActiveIndex="_tabIndex">
-                <HlxTab Title="Overview">
+    <GnsSection Title="Tabs" Subtitle="Tabbed interface for organizing content into sections.">
+        <GnsCard>
+            <GnsTabs @bind-ActiveIndex="_tabIndex">
+                <GnsTab Title="Overview">
                     <div style="padding: var(--gns-space-6);">
                         <h3 style="font-size: var(--gns-text-lg); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-2);">Project Overview</h3>
                         <p style="color: var(--gns-color-text-secondary);">This is the overview tab content showing general project information and key metrics.</p>
                     </div>
-                </HlxTab>
-                <HlxTab Title="Activity">
+                </GnsTab>
+                <GnsTab Title="Activity">
                     <div style="padding: var(--gns-space-6);">
                         <h3 style="font-size: var(--gns-text-lg); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-2);">Recent Activity</h3>
                         <p style="color: var(--gns-color-text-secondary);">Shows the latest actions and events related to the project.</p>
                     </div>
-                </HlxTab>
-                <HlxTab Title="Settings">
+                </GnsTab>
+                <GnsTab Title="Settings">
                     <div style="padding: var(--gns-space-6);">
                         <h3 style="font-size: var(--gns-text-lg); font-weight: var(--gns-font-weight-semibold); margin-bottom: var(--gns-space-2);">Project Settings</h3>
                         <p style="color: var(--gns-color-text-secondary);">Configure project preferences, notifications, and access controls.</p>
                     </div>
-                </HlxTab>
-                <HlxTab Title="Disabled" IsDisabled="true">
+                </GnsTab>
+                <GnsTab Title="Disabled" IsDisabled="true">
                     <div style="padding: var(--gns-space-6);">Disabled content</div>
-                </HlxTab>
-            </HlxTabs>
-        </HlxCard>
-    </HlxSection>
+                </GnsTab>
+            </GnsTabs>
+        </GnsCard>
+    </GnsSection>
 
-    <HlxSection Title="Breadcrumb" Subtitle="Hierarchical navigation trail.">
+    <GnsSection Title="Breadcrumb" Subtitle="Hierarchical navigation trail.">
         <div class="gns-preview">
             <div class="gns-preview__canvas" style="flex-direction: column; gap: var(--gns-space-6); align-items: flex-start;">
-                <HlxBreadcrumb>
-                    <HlxBreadcrumbItem Label="Home" Href="/lab" />
-                    <HlxBreadcrumbItem Label="Components" Href="/lab/navigation" />
-                    <HlxBreadcrumbItem Label="Breadcrumb" IsActive="true" />
-                </HlxBreadcrumb>
+                <GnsBreadcrumb>
+                    <GnsBreadcrumbItem Label="Home" Href="/lab" />
+                    <GnsBreadcrumbItem Label="Components" Href="/lab/navigation" />
+                    <GnsBreadcrumbItem Label="Breadcrumb" IsActive="true" />
+                </GnsBreadcrumb>
 
-                <HlxBreadcrumb Separator="&gt;">
-                    <HlxBreadcrumbItem Label="Dashboard" Href="/lab" />
-                    <HlxBreadcrumbItem Label="Users" Href="/lab" />
-                    <HlxBreadcrumbItem Label="John Doe" Href="/lab" />
-                    <HlxBreadcrumbItem Label="Edit Profile" IsActive="true" />
-                </HlxBreadcrumb>
+                <GnsBreadcrumb Separator="&gt;">
+                    <GnsBreadcrumbItem Label="Dashboard" Href="/lab" />
+                    <GnsBreadcrumbItem Label="Users" Href="/lab" />
+                    <GnsBreadcrumbItem Label="John Doe" Href="/lab" />
+                    <GnsBreadcrumbItem Label="Edit Profile" IsActive="true" />
+                </GnsBreadcrumb>
             </div>
         </div>
-    </HlxSection>
+    </GnsSection>
 
-    <HlxSection Title="Pagination" Subtitle="Navigate through pages of data.">
+    <GnsSection Title="Pagination" Subtitle="Navigate through pages of data.">
         <div class="gns-preview">
             <div class="gns-preview__canvas" style="flex-direction: column; gap: var(--gns-space-6);">
-                <HlxPagination CurrentPage="@_currentPage" TotalPages="10" CurrentPageChanged="@(p => _currentPage = p)" />
+                <GnsPagination CurrentPage="@_currentPage" TotalPages="10" CurrentPageChanged="@(p => _currentPage = p)" />
                 <div style="font-size: var(--gns-text-sm); color: var(--gns-color-text-secondary);">Current page: @_currentPage</div>
             </div>
         </div>
-    </HlxSection>
+    </GnsSection>
 
-    <HlxSection Title="Nav Items" Subtitle="Sidebar navigation items with expandable children.">
+    <GnsSection Title="Nav Items" Subtitle="Sidebar navigation items with expandable children.">
         <div class="gns-preview">
             <div class="gns-preview__canvas" style="max-width: 16rem; width: 100%; flex-direction: column; align-items: stretch; gap: 0;">
-                <HlxNavItem Label="Dashboard" Href="/lab" IsActive="true" />
-                <HlxNavItem Label="Analytics" Href="/lab" />
-                <HlxNavItem Label="Users" IsExpanded="true">
-                    <HlxNavItem Label="All Users" Href="/lab" />
-                    <HlxNavItem Label="Roles" Href="/lab" />
-                    <HlxNavItem Label="Permissions" Href="/lab" />
-                </HlxNavItem>
-                <HlxNavItem Label="Settings" Href="/lab" Badge="New" />
+                <GnsNavItem Label="Dashboard" Href="/lab" IsActive="true" />
+                <GnsNavItem Label="Analytics" Href="/lab" />
+                <GnsNavItem Label="Users" IsExpanded="true">
+                    <GnsNavItem Label="All Users" Href="/lab" />
+                    <GnsNavItem Label="Roles" Href="/lab" />
+                    <GnsNavItem Label="Permissions" Href="/lab" />
+                </GnsNavItem>
+                <GnsNavItem Label="Settings" Href="/lab" Badge="New" />
             </div>
         </div>
-    </HlxSection>
+    </GnsSection>
 
 </div>
 

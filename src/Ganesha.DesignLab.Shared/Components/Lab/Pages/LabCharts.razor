@@ -5,19 +5,19 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="Charts"
+    <GnsPageHeader Title="Charts"
                    Eyebrow="Components"
                    Description="Data visualization components for Blazor: bar charts, line charts, donut charts, sparklines, and progress indicators." />
 
     @* ─────────────────────────────────────────────────────────────────
        Section 1 — Bar Charts
        ───────────────────────────────────────────────────────────────── *@
-    <HlxSection Title="Bar Charts" Subtitle="Vertical and horizontal bar charts for categorical comparisons.">
+    <GnsSection Title="Bar Charts" Subtitle="Vertical and horizontal bar charts for categorical comparisons.">
 
-        <HlxGrid Columns="2" Gap="6">
+        <GnsGrid Columns="2" Gap="6">
 
             @* Vertical Bar Chart *@
-            <HlxCard>
+            <GnsCard>
                 <Header>
                     <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
                         <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Monthly Revenue</div>
@@ -26,16 +26,16 @@
                 </Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-5);">
-                        <HlxBarChart Data="_monthlyRevenue"
+                        <GnsBarChart Data="_monthlyRevenue"
                                      Height="300"
                                      ShowLabels="true"
                                      ShowValues="true" />
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
             @* Horizontal Bar Chart *@
-            <HlxCard>
+            <GnsCard>
                 <Header>
                     <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
                         <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Top 5 Products by Sales</div>
@@ -44,26 +44,26 @@
                 </Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-5);">
-                        <HlxHorizontalBarChart Data="_topProducts"
+                        <GnsHorizontalBarChart Data="_topProducts"
                                                BarHeight="32"
                                                ShowValues="true" />
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
-        </HlxGrid>
+        </GnsGrid>
 
-    </HlxSection>
+    </GnsSection>
 
     @* ─────────────────────────────────────────────────────────────────
        Section 2 — Line Charts & Sparklines
        ───────────────────────────────────────────────────────────────── *@
-    <HlxSection Title="Line Charts" Subtitle="Trend lines and area charts for time-series data.">
+    <GnsSection Title="Line Charts" Subtitle="Trend lines and area charts for time-series data.">
 
-        <HlxGrid Columns="2" Gap="6">
+        <GnsGrid Columns="2" Gap="6">
 
             @* Single-series line *@
-            <HlxCard>
+            <GnsCard>
                 <Header>
                     <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
                         <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Weekly Visitors</div>
@@ -72,7 +72,7 @@
                 </Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-5);">
-                        <HlxLineChart Series="_weeklyVisitorsSeries"
+                        <GnsLineChart Series="_weeklyVisitorsSeries"
                                       Labels="_weekLabels"
                                       Height="300"
                                       ShowArea="true"
@@ -80,10 +80,10 @@
                                       ShowGrid="true" />
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
             @* Multi-series line with area *@
-            <HlxCard>
+            <GnsCard>
                 <Header>
                     <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
                         <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Revenue vs Expenses</div>
@@ -92,7 +92,7 @@
                 </Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-5);">
-                        <HlxLineChart Series="_revenueVsExpenses"
+                        <GnsLineChart Series="_revenueVsExpenses"
                                       Labels="_monthLabels"
                                       Height="300"
                                       ShowArea="true"
@@ -100,88 +100,88 @@
                                       ShowGrid="true" />
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
-        </HlxGrid>
+        </GnsGrid>
 
         @* Sparkline Stat Cards *@
         <div style="margin-top: var(--gns-space-6);">
-            <HlxGrid Columns="4" Gap="4">
+            <GnsGrid Columns="4" Gap="4">
 
-                <HlxCard>
+                <GnsCard>
                     <ChildContent>
                         <div style="padding: var(--gns-space-4);">
                             <div style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-secondary); text-transform: uppercase; letter-spacing: var(--gns-tracking-wide); margin-bottom: var(--gns-space-1);">Revenue</div>
                             <div style="font-size: var(--gns-text-2xl); font-weight: var(--gns-font-weight-bold); color: var(--gns-color-text-primary);">$84.2K</div>
                             <div style="font-size: var(--gns-text-xs); color: var(--gns-success-600); margin-bottom: var(--gns-space-3);">+12.4% vs last month</div>
-                            <HlxSparkline Values="_sparkRevenue"
+                            <GnsSparkline Values="_sparkRevenue"
                                           Width="180"
                                           Height="40"
                                           Color="var(--gns-success-500)"
                                           ShowArea="true" />
                         </div>
                     </ChildContent>
-                </HlxCard>
+                </GnsCard>
 
-                <HlxCard>
+                <GnsCard>
                     <ChildContent>
                         <div style="padding: var(--gns-space-4);">
                             <div style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-secondary); text-transform: uppercase; letter-spacing: var(--gns-tracking-wide); margin-bottom: var(--gns-space-1);">Users</div>
                             <div style="font-size: var(--gns-text-2xl); font-weight: var(--gns-font-weight-bold); color: var(--gns-color-text-primary);">12,847</div>
                             <div style="font-size: var(--gns-text-xs); color: var(--gns-success-600); margin-bottom: var(--gns-space-3);">+8.1% vs last month</div>
-                            <HlxSparkline Values="_sparkUsers"
+                            <GnsSparkline Values="_sparkUsers"
                                           Width="180"
                                           Height="40"
                                           Color="var(--gns-primary-500)"
                                           ShowArea="true" />
                         </div>
                     </ChildContent>
-                </HlxCard>
+                </GnsCard>
 
-                <HlxCard>
+                <GnsCard>
                     <ChildContent>
                         <div style="padding: var(--gns-space-4);">
                             <div style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-secondary); text-transform: uppercase; letter-spacing: var(--gns-tracking-wide); margin-bottom: var(--gns-space-1);">Orders</div>
                             <div style="font-size: var(--gns-text-2xl); font-weight: var(--gns-font-weight-bold); color: var(--gns-color-text-primary);">3,421</div>
                             <div style="font-size: var(--gns-text-xs); color: var(--gns-danger-600); margin-bottom: var(--gns-space-3);">-2.3% vs last month</div>
-                            <HlxSparkline Values="_sparkOrders"
+                            <GnsSparkline Values="_sparkOrders"
                                           Width="180"
                                           Height="40"
                                           Color="var(--gns-warning-500)"
                                           ShowArea="true" />
                         </div>
                     </ChildContent>
-                </HlxCard>
+                </GnsCard>
 
-                <HlxCard>
+                <GnsCard>
                     <ChildContent>
                         <div style="padding: var(--gns-space-4);">
                             <div style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-secondary); text-transform: uppercase; letter-spacing: var(--gns-tracking-wide); margin-bottom: var(--gns-space-1);">Conversion</div>
                             <div style="font-size: var(--gns-text-2xl); font-weight: var(--gns-font-weight-bold); color: var(--gns-color-text-primary);">4.82%</div>
                             <div style="font-size: var(--gns-text-xs); color: var(--gns-success-600); margin-bottom: var(--gns-space-3);">+0.6% vs last month</div>
-                            <HlxSparkline Values="_sparkConversion"
+                            <GnsSparkline Values="_sparkConversion"
                                           Width="180"
                                           Height="40"
                                           Color="var(--gns-info-500)"
                                           ShowArea="true" />
                         </div>
                     </ChildContent>
-                </HlxCard>
+                </GnsCard>
 
-            </HlxGrid>
+            </GnsGrid>
         </div>
 
-    </HlxSection>
+    </GnsSection>
 
     @* ─────────────────────────────────────────────────────────────────
        Section 3 — Donut Charts
        ───────────────────────────────────────────────────────────────── *@
-    <HlxSection Title="Donut Charts" Subtitle="Ring charts for part-to-whole relationships.">
+    <GnsSection Title="Donut Charts" Subtitle="Ring charts for part-to-whole relationships.">
 
-        <HlxGrid Columns="2" Gap="6">
+        <GnsGrid Columns="2" Gap="6">
 
             @* Budget Allocation *@
-            <HlxCard>
+            <GnsCard>
                 <Header>
                     <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
                         <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Budget Allocation</div>
@@ -190,7 +190,7 @@
                 </Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-5); display: flex; justify-content: center;">
-                        <HlxDonutChart Data="_budgetAllocation"
+                        <GnsDonutChart Data="_budgetAllocation"
                                        Size="240"
                                        StrokeWidth="36"
                                        CenterLabel="$4.2M"
@@ -198,10 +198,10 @@
                                        ShowLegend="true" />
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
             @* Task Status *@
-            <HlxCard>
+            <GnsCard>
                 <Header>
                     <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
                         <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Task Status</div>
@@ -210,7 +210,7 @@
                 </Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-5); display: flex; justify-content: center;">
-                        <HlxDonutChart Data="_taskStatus"
+                        <GnsDonutChart Data="_taskStatus"
                                        Size="240"
                                        StrokeWidth="36"
                                        CenterLabel="148"
@@ -218,21 +218,21 @@
                                        ShowLegend="true" />
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
-        </HlxGrid>
+        </GnsGrid>
 
-    </HlxSection>
+    </GnsSection>
 
     @* ─────────────────────────────────────────────────────────────────
        Section 4 — Progress Indicators
        ───────────────────────────────────────────────────────────────── *@
-    <HlxSection Title="Progress Indicators" Subtitle="Linear and radial progress components with variants and sizes.">
+    <GnsSection Title="Progress Indicators" Subtitle="Linear and radial progress components with variants and sizes.">
 
-        <HlxGrid Columns="2" Gap="6">
+        <GnsGrid Columns="2" Gap="6">
 
             @* Linear Progress — Variants *@
-            <HlxCard>
+            <GnsCard>
                 <Header>
                     <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
                         <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Variants</div>
@@ -241,17 +241,17 @@
                 </Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-5); display: flex; flex-direction: column; gap: var(--gns-space-4);">
-                        <HlxProgressBar Value="64" Label="Storage Used" ShowValue="true" Variant="ProgressBarVariant.Default" Size="ProgressBarSize.Medium" IsStriped="false" />
-                        <HlxProgressBar Value="87" Label="Sales Goal" ShowValue="true" Variant="ProgressBarVariant.Success" Size="ProgressBarSize.Medium" IsStriped="false" />
-                        <HlxProgressBar Value="51" Label="Budget Remaining" ShowValue="true" Variant="ProgressBarVariant.Warning" Size="ProgressBarSize.Medium" IsStriped="false" />
-                        <HlxProgressBar Value="93" Label="Error Rate" ShowValue="true" Variant="ProgressBarVariant.Danger" Size="ProgressBarSize.Medium" IsStriped="false" />
-                        <HlxProgressBar Value="38" Label="Bandwidth" ShowValue="true" Variant="ProgressBarVariant.Info" Size="ProgressBarSize.Medium" IsStriped="false" />
+                        <GnsProgressBar Value="64" Label="Storage Used" ShowValue="true" Variant="ProgressBarVariant.Default" Size="ProgressBarSize.Medium" IsStriped="false" />
+                        <GnsProgressBar Value="87" Label="Sales Goal" ShowValue="true" Variant="ProgressBarVariant.Success" Size="ProgressBarSize.Medium" IsStriped="false" />
+                        <GnsProgressBar Value="51" Label="Budget Remaining" ShowValue="true" Variant="ProgressBarVariant.Warning" Size="ProgressBarSize.Medium" IsStriped="false" />
+                        <GnsProgressBar Value="93" Label="Error Rate" ShowValue="true" Variant="ProgressBarVariant.Danger" Size="ProgressBarSize.Medium" IsStriped="false" />
+                        <GnsProgressBar Value="38" Label="Bandwidth" ShowValue="true" Variant="ProgressBarVariant.Info" Size="ProgressBarSize.Medium" IsStriped="false" />
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
             @* Sizes + Striped *@
-            <HlxCard>
+            <GnsCard>
                 <Header>
                     <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
                         <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Sizes & Striped</div>
@@ -260,23 +260,23 @@
                 </Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-5); display: flex; flex-direction: column; gap: var(--gns-space-4);">
-                        <HlxProgressBar Value="45" Label="Small" ShowValue="true" Variant="ProgressBarVariant.Default" Size="ProgressBarSize.Small" IsStriped="false" />
-                        <HlxProgressBar Value="62" Label="Medium" ShowValue="true" Variant="ProgressBarVariant.Default" Size="ProgressBarSize.Medium" IsStriped="false" />
-                        <HlxProgressBar Value="78" Label="Large" ShowValue="true" Variant="ProgressBarVariant.Default" Size="ProgressBarSize.Large" IsStriped="false" />
+                        <GnsProgressBar Value="45" Label="Small" ShowValue="true" Variant="ProgressBarVariant.Default" Size="ProgressBarSize.Small" IsStriped="false" />
+                        <GnsProgressBar Value="62" Label="Medium" ShowValue="true" Variant="ProgressBarVariant.Default" Size="ProgressBarSize.Medium" IsStriped="false" />
+                        <GnsProgressBar Value="78" Label="Large" ShowValue="true" Variant="ProgressBarVariant.Default" Size="ProgressBarSize.Large" IsStriped="false" />
                         <div style="margin-top: var(--gns-space-2);">
                             <div style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-secondary); text-transform: uppercase; letter-spacing: var(--gns-tracking-wide); margin-bottom: var(--gns-space-3);">Striped</div>
-                            <HlxProgressBar Value="55" Label="Uploading Files" ShowValue="true" Variant="ProgressBarVariant.Info" Size="ProgressBarSize.Medium" IsStriped="true" />
+                            <GnsProgressBar Value="55" Label="Uploading Files" ShowValue="true" Variant="ProgressBarVariant.Info" Size="ProgressBarSize.Medium" IsStriped="true" />
                         </div>
-                        <HlxProgressBar Value="72" Label="Processing" ShowValue="true" Variant="ProgressBarVariant.Success" Size="ProgressBarSize.Large" IsStriped="true" />
+                        <GnsProgressBar Value="72" Label="Processing" ShowValue="true" Variant="ProgressBarVariant.Success" Size="ProgressBarSize.Large" IsStriped="true" />
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
-        </HlxGrid>
+        </GnsGrid>
 
         @* Radial Progress *@
         <div style="margin-top: var(--gns-space-6);">
-            <HlxCard>
+            <GnsCard>
                 <Header>
                     <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
                         <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Radial Progress</div>
@@ -286,28 +286,28 @@
                 <ChildContent>
                     <div style="padding: var(--gns-space-6); display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: var(--gns-space-6);">
                         <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gns-space-3);">
-                            <HlxRadialProgress Value="72"
+                            <GnsRadialProgress Value="72"
                                                Size="100"
                                                StrokeWidth="10"
                                                Label="CPU"
                                                Variant="ProgressBarVariant.Warning" />
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gns-space-3);">
-                            <HlxRadialProgress Value="45"
+                            <GnsRadialProgress Value="45"
                                                Size="100"
                                                StrokeWidth="10"
                                                Label="Memory"
                                                Variant="ProgressBarVariant.Success" />
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gns-space-3);">
-                            <HlxRadialProgress Value="88"
+                            <GnsRadialProgress Value="88"
                                                Size="100"
                                                StrokeWidth="10"
                                                Label="Disk"
                                                Variant="ProgressBarVariant.Danger" />
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gns-space-3);">
-                            <HlxRadialProgress Value="23"
+                            <GnsRadialProgress Value="23"
                                                Size="100"
                                                StrokeWidth="10"
                                                Label="Network"
@@ -315,20 +315,20 @@
                         </div>
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
         </div>
 
-    </HlxSection>
+    </GnsSection>
 
     @* ─────────────────────────────────────────────────────────────────
        Section 5 — Dashboard Composition
        ───────────────────────────────────────────────────────────────── *@
-    <HlxSection Title="Dashboard Composition" Subtitle="A realistic mini-dashboard combining multiple chart types in a cohesive layout.">
+    <GnsSection Title="Dashboard Composition" Subtitle="A realistic mini-dashboard combining multiple chart types in a cohesive layout.">
 
         @* Top row — 4 stat cards with sparklines *@
-        <HlxGrid Columns="4" Gap="4">
+        <GnsGrid Columns="4" Gap="4">
 
-            <HlxCard>
+            <GnsCard>
                 <ChildContent>
                     <div style="padding: var(--gns-space-4);">
                         <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: var(--gns-space-3);">
@@ -338,13 +338,13 @@
                             </div>
                             <span style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-success-600); background: var(--gns-success-50); padding: var(--gns-space-1) var(--gns-space-2); border-radius: var(--gns-radius-full);">+14.2%</span>
                         </div>
-                        <HlxSparkline Values="_dashSparkRevenue" Width="160" Height="36" Color="var(--gns-success-500)" ShowArea="true" />
+                        <GnsSparkline Values="_dashSparkRevenue" Width="160" Height="36" Color="var(--gns-success-500)" ShowArea="true" />
                         <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-tertiary); margin-top: var(--gns-space-2);">vs $112.4K last month</div>
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
-            <HlxCard>
+            <GnsCard>
                 <ChildContent>
                     <div style="padding: var(--gns-space-4);">
                         <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: var(--gns-space-3);">
@@ -354,13 +354,13 @@
                             </div>
                             <span style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-success-600); background: var(--gns-success-50); padding: var(--gns-space-1) var(--gns-space-2); border-radius: var(--gns-radius-full);">+5.8%</span>
                         </div>
-                        <HlxSparkline Values="_dashSparkUsers" Width="160" Height="36" Color="var(--gns-primary-500)" ShowArea="true" />
+                        <GnsSparkline Values="_dashSparkUsers" Width="160" Height="36" Color="var(--gns-primary-500)" ShowArea="true" />
                         <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-tertiary); margin-top: var(--gns-space-2);">342 online right now</div>
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
-            <HlxCard>
+            <GnsCard>
                 <ChildContent>
                     <div style="padding: var(--gns-space-4);">
                         <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: var(--gns-space-3);">
@@ -370,13 +370,13 @@
                             </div>
                             <span style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-danger-600); background: var(--gns-danger-50); padding: var(--gns-space-1) var(--gns-space-2); border-radius: var(--gns-radius-full);">-2.3%</span>
                         </div>
-                        <HlxSparkline Values="_dashSparkOrders" Width="160" Height="36" Color="var(--gns-warning-500)" ShowArea="true" />
+                        <GnsSparkline Values="_dashSparkOrders" Width="160" Height="36" Color="var(--gns-warning-500)" ShowArea="true" />
                         <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-tertiary); margin-top: var(--gns-space-2);">vs 3,937 last month</div>
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
-            <HlxCard>
+            <GnsCard>
                 <ChildContent>
                     <div style="padding: var(--gns-space-4);">
                         <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: var(--gns-space-3);">
@@ -386,19 +386,19 @@
                             </div>
                             <span style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-success-600); background: var(--gns-success-50); padding: var(--gns-space-1) var(--gns-space-2); border-radius: var(--gns-radius-full);">+0.8%</span>
                         </div>
-                        <HlxSparkline Values="_dashSparkConversion" Width="160" Height="36" Color="var(--gns-info-500)" ShowArea="true" />
+                        <GnsSparkline Values="_dashSparkConversion" Width="160" Height="36" Color="var(--gns-info-500)" ShowArea="true" />
                         <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-tertiary); margin-top: var(--gns-space-2);">Goal: 5.0%</div>
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
 
-        </HlxGrid>
+        </GnsGrid>
 
         @* Middle row — Line chart (2/3) + Donut chart (1/3) *@
         <div style="margin-top: var(--gns-space-5);">
-            <HlxGrid TemplateColumns="2fr 1fr" Gap="5">
+            <GnsGrid TemplateColumns="2fr 1fr" Gap="5">
 
-                <HlxCard>
+                <GnsCard>
                     <Header>
                         <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle); display: flex; justify-content: space-between; align-items: center;">
                             <div>
@@ -419,7 +419,7 @@
                     </Header>
                     <ChildContent>
                         <div style="padding: var(--gns-space-5);">
-                            <HlxLineChart Series="_dashRevenueSeries"
+                            <GnsLineChart Series="_dashRevenueSeries"
                                           Labels="_dashMonthLabels"
                                           Height="300"
                                           ShowArea="true"
@@ -427,9 +427,9 @@
                                           ShowGrid="true" />
                         </div>
                     </ChildContent>
-                </HlxCard>
+                </GnsCard>
 
-                <HlxCard>
+                <GnsCard>
                     <Header>
                         <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
                             <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Traffic Sources</div>
@@ -438,7 +438,7 @@
                     </Header>
                     <ChildContent>
                         <div style="padding: var(--gns-space-5); display: flex; justify-content: center;">
-                            <HlxDonutChart Data="_trafficSources"
+                            <GnsDonutChart Data="_trafficSources"
                                            Size="200"
                                            StrokeWidth="32"
                                            CenterLabel="100%"
@@ -446,34 +446,34 @@
                                            ShowLegend="true" />
                         </div>
                     </ChildContent>
-                </HlxCard>
+                </GnsCard>
 
-            </HlxGrid>
+            </GnsGrid>
         </div>
 
         @* Bottom row — Horizontal bar chart *@
         <div style="margin-top: var(--gns-space-5);">
-            <HlxCard>
+            <GnsCard>
                 <Header>
                     <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle); display: flex; justify-content: space-between; align-items: center;">
                         <div>
                             <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Top Revenue Sources</div>
                             <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">Revenue by product line, current quarter ($ thousands)</div>
                         </div>
-                        <HlxButton Label="Full Report" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
+                        <GnsButton Label="Full Report" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
                     </div>
                 </Header>
                 <ChildContent>
                     <div style="padding: var(--gns-space-5);">
-                        <HlxHorizontalBarChart Data="_dashProductRevenue"
+                        <GnsHorizontalBarChart Data="_dashProductRevenue"
                                                BarHeight="30"
                                                ShowValues="true" />
                     </div>
                 </ChildContent>
-            </HlxCard>
+            </GnsCard>
         </div>
 
-    </HlxSection>
+    </GnsSection>
 
 </div>
 

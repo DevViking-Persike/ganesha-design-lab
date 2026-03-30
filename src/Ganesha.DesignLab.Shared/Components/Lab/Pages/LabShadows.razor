@@ -4,11 +4,11 @@
 
 <div class="gns-lab-page">
 
-    <HlxPageHeader Title="Shadows"
+    <GnsPageHeader Title="Shadows"
                    Eyebrow="Foundations"
                    Description="Elevation scale for creating depth and visual hierarchy." />
 
-    <HlxSection Title="Elevation Scale" Subtitle="From subtle to dramatic shadow levels.">
+    <GnsSection Title="Elevation Scale" Subtitle="From subtle to dramatic shadow levels.">
         <div class="gns-shadow-scale">
             @foreach (var shadow in _shadows)
             {
@@ -19,9 +19,9 @@
                 </div>
             }
         </div>
-    </HlxSection>
+    </GnsSection>
 
-    <HlxSection Title="Component Shadows" Subtitle="Semantic shadow tokens mapped to specific component roles.">
+    <GnsSection Title="Component Shadows" Subtitle="Semantic shadow tokens mapped to specific component roles.">
         <table class="gns-token-table">
             <thead>
                 <tr><th>Token</th><th>Maps To</th><th>Usage</th></tr>
@@ -35,7 +35,7 @@
                 <tr><td class="gns-token-table__name">--gns-shadow-input</td><td class="gns-token-table__value">shadow-inner</td><td>Input fields inset</td></tr>
             </tbody>
         </table>
-    </HlxSection>
+    </GnsSection>
 
 </div>
 

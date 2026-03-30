@@ -5,7 +5,7 @@
 <div style="min-height: calc(100vh - var(--gns-size-topbar-height)); display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--gns-primary-600) 0%, var(--gns-primary-900) 100%); padding: var(--gns-space-8);">
 
     <div style="width: 100%; max-width: 24rem;">
-        <HlxCard>
+        <GnsCard>
             <div style="padding: var(--gns-space-8);">
 
                 @* Brand/Logo *@
@@ -21,15 +21,15 @@
 
                 @* Login Form *@
                 <div style="display: flex; flex-direction: column; gap: var(--gns-space-5);">
-                    <HlxInputText Label="Email address" Placeholder="you@example.com" Type="email" @bind-Value="_authEmail" />
-                    <HlxInputPassword Label="Password" Placeholder="Enter your password" @bind-Value="_authPassword" />
+                    <GnsInputText Label="Email address" Placeholder="you@example.com" Type="email" @bind-Value="_authEmail" />
+                    <GnsInputPassword Label="Password" Placeholder="Enter your password" @bind-Value="_authPassword" />
 
                     <div style="display: flex; align-items: center; justify-content: space-between;">
-                        <HlxCheckbox Label="Remember me" @bind-Value="_rememberMe" />
+                        <GnsCheckbox Label="Remember me" @bind-Value="_rememberMe" />
                         <a href="/lab/auth" style="font-size: var(--gns-text-sm); color: var(--gns-color-text-link); text-decoration: none;">Forgot password?</a>
                     </div>
 
-                    <HlxButton Label="Sign In" Variant="ButtonVariant.Primary" Size="ButtonSize.Large" AdditionalCssClass="gns-w-full" />
+                    <GnsButton Label="Sign In" Variant="ButtonVariant.Primary" Size="ButtonSize.Large" AdditionalCssClass="gns-w-full" />
                 </div>
 
                 @* Divider *@
@@ -41,8 +41,8 @@
 
                 @* Social Login Buttons *@
                 <div style="display: flex; gap: var(--gns-space-3);">
-                    <HlxButton Label="Google" Variant="ButtonVariant.Outline" AdditionalCssClass="gns-w-full" />
-                    <HlxButton Label="GitHub" Variant="ButtonVariant.Outline" AdditionalCssClass="gns-w-full" />
+                    <GnsButton Label="Google" Variant="ButtonVariant.Outline" AdditionalCssClass="gns-w-full" />
+                    <GnsButton Label="GitHub" Variant="ButtonVariant.Outline" AdditionalCssClass="gns-w-full" />
                 </div>
 
                 @* Sign Up Link *@
@@ -52,7 +52,7 @@
                 </p>
 
             </div>
-        </HlxCard>
+        </GnsCard>
     </div>
 
 </div>

@@ -1,0 +1,307 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property.RootNamespace = Ganesha.DesignLab.Shared
+build_property.RootNamespace = Ganesha.DesignLab.Shared
+build_property.ProjectDir = /Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Infrastructure/HlxThemeProvider.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9JbmZyYXN0cnVjdHVyZS9IbHhUaGVtZVByb3ZpZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabAuth.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiQXV0aC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabButtons.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiQnV0dG9ucy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabCharts.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiQ2hhcnRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabColors.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiQ29sb3JzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabDataDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiRGF0YURpc3BsYXkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabFeedback.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiRmVlZGJhY2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabFormPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiRm9ybVBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabForms.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiRm9ybXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiR3JpZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabHome.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabNavigation.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiTmF2aWdhdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabOverlays.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiT3ZlcmxheXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabShadows.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiU2hhZG93cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabSpacing.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiU3BhY2luZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabSurfaces.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiU3VyZmFjZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabTablePage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiVGFibGVQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Pages/LabTypography.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvUGFnZXMvTGFiVHlwb2dyYXBoeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Composites/ActionList/HlxActionList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db21wb3NpdGVzL0FjdGlvbkxpc3QvSGx4QWN0aW9uTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-05xzkm9a9n
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Composites/ActionList/HlxActionListItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db21wb3NpdGVzL0FjdGlvbkxpc3QvSGx4QWN0aW9uTGlzdEl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-108ywpilro
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Composites/AppShell/HlxAppShell.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db21wb3NpdGVzL0FwcFNoZWxsL0hseEFwcFNoZWxsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-tsfc8p6lz5
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Composites/MetricCard/HlxMetricGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db21wb3NpdGVzL01ldHJpY0NhcmQvSGx4TWV0cmljR3JpZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-t1r3j3yuq7
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Composites/PageHeader/HlxPageHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db21wb3NpdGVzL1BhZ2VIZWFkZXIvSGx4UGFnZUhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-b8bc3t9jep
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Composites/SearchFilter/HlxSearchFilter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db21wb3NpdGVzL1NlYXJjaEZpbHRlci9IbHhTZWFyY2hGaWx0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-8jdskcr5fs
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Composites/Sidebar/HlxSidebar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db21wb3NpdGVzL1NpZGViYXIvSGx4U2lkZWJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-h1w1nof0hl
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Composites/TopBar/HlxTopBar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Db21wb3NpdGVzL1RvcEJhci9IbHhUb3BCYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-wog96hmbnd
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Actions/HlxButton.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vQWN0aW9ucy9IbHhCdXR0b24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-r5ysw5jn1u
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Actions/HlxSwitch.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vQWN0aW9ucy9IbHhTd2l0Y2gucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-q4s20vlvyb
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Charts/HlxBarChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vQ2hhcnRzL0hseEJhckNoYXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-e1m90nemxe
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Charts/HlxDonutChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vQ2hhcnRzL0hseERvbnV0Q2hhcnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-z53xs29k4r
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Charts/HlxHorizontalBarChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vQ2hhcnRzL0hseEhvcml6b250YWxCYXJDaGFydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-kzvcnbys98
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Charts/HlxLineChart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vQ2hhcnRzL0hseExpbmVDaGFydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-xdd6m0ricy
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Charts/HlxProgressBar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vQ2hhcnRzL0hseFByb2dyZXNzQmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ymudkkwt41
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Charts/HlxRadialProgress.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vQ2hhcnRzL0hseFJhZGlhbFByb2dyZXNzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-y0586jx0sv
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Charts/HlxSparkline.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vQ2hhcnRzL0hseFNwYXJrbGluZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-cgnjizlpau
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/DataDisplay/HlxAvatar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRGF0YURpc3BsYXkvSGx4QXZhdGFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-9ge5bc56hp
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/DataDisplay/HlxBadge.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRGF0YURpc3BsYXkvSGx4QmFkZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ohzv27z5os
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/DataDisplay/HlxSectionHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRGF0YURpc3BsYXkvSGx4U2VjdGlvbkhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-b0359mglgx
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/DataDisplay/HlxStatCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRGF0YURpc3BsYXkvSGx4U3RhdENhcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-lwls5tjxlc
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/DataDisplay/HlxTable.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRGF0YURpc3BsYXkvSGx4VGFibGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-7xjbo1bh1x
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/DataDisplay/HlxTag.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRGF0YURpc3BsYXkvSGx4VGFnLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-8n0s5j2nx6
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Feedback/HlxAlert.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRmVlZGJhY2svSGx4QWxlcnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-lrmkbf3ufx
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Feedback/HlxEmptyState.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRmVlZGJhY2svSGx4RW1wdHlTdGF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-gna8mojr3z
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Feedback/HlxLoader.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRmVlZGJhY2svSGx4TG9hZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-pfay34hdwh
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Feedback/HlxToastContainer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRmVlZGJhY2svSGx4VG9hc3RDb250YWluZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-8h1mud6jk8
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Feedback/HlxToastItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRmVlZGJhY2svSGx4VG9hc3RJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-t8497zclmh
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Form/HlxCheckbox.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRm9ybS9IbHhDaGVja2JveC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-hq2677trwp
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Form/HlxInputPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRm9ybS9IbHhJbnB1dFBhc3N3b3JkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-dtpcqvaeni
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Form/HlxInputText.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRm9ybS9IbHhJbnB1dFRleHQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-jw2kvgoe8n
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Form/HlxRadioGroup.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRm9ybS9IbHhSYWRpb0dyb3VwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-xxbav6ocro
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Form/HlxRadioOption.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRm9ybS9IbHhSYWRpb09wdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-rh1ws8b8lz
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Form/HlxSelect.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRm9ybS9IbHhTZWxlY3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-0g7635khxl
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Form/HlxTextarea.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vRm9ybS9IbHhUZXh0YXJlYS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-vnuqlg561b
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Layout/HlxContainer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vTGF5b3V0L0hseENvbnRhaW5lci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-33i6jpp48q
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Layout/HlxGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vTGF5b3V0L0hseEdyaWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4cs02c94xp
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Layout/HlxSection.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vTGF5b3V0L0hseFNlY3Rpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xyvka4745q
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Layout/HlxStack.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vTGF5b3V0L0hseFN0YWNrLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-694par8s8x
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Navigation/HlxBreadcrumb.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vTmF2aWdhdGlvbi9IbHhCcmVhZGNydW1iLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-emzy07jze8
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Navigation/HlxBreadcrumbItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vTmF2aWdhdGlvbi9IbHhCcmVhZGNydW1iSXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-de3h7w5e1b
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Navigation/HlxNavItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vTmF2aWdhdGlvbi9IbHhOYXZJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-jgqk6vgc2g
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Navigation/HlxPagination.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vTmF2aWdhdGlvbi9IbHhQYWdpbmF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-z5x5vebh0x
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Navigation/HlxTab.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vTmF2aWdhdGlvbi9IbHhUYWIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ingunu1pcq
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Navigation/HlxTabs.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vTmF2aWdhdGlvbi9IbHhUYWJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-m6x0rf28i8
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Overlay/HlxDrawer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vT3ZlcmxheS9IbHhEcmF3ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6v0o05rzoc
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Overlay/HlxModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vT3ZlcmxheS9IbHhNb2RhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-11nbkd7n87
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Surfaces/HlxCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vU3VyZmFjZXMvSGx4Q2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-1ng9m2ss9h
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/DesignSystem/Surfaces/HlxPanel.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9EZXNpZ25TeXN0ZW0vU3VyZmFjZXMvSGx4UGFuZWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-bgqfk0hyez
+
+[/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Components/Lab/Layout/LabLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYWIvTGF5b3V0L0xhYkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-jdbet4j2mh

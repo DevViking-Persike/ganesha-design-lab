@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Ganesha.DesignLab.Maui/Ganesha.DesignLab.Maui.csproj" />
+    <Project Path="src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj" />
+    <Project Path="src/Ganesha.DesignLab.Web/Ganesha.DesignLab.Web.csproj" />
+  </Folder>
+</Solution>

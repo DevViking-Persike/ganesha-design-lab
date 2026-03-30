@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XDSeHup45S8=",
+  "success": true,
+  "projectFilePath": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Web/Ganesha.DesignLab.Web.csproj",
+  "expectedPackageFiles": [
+    "/Users/persike/.nuget/packages/microsoft.aspnetcore.app.internal.assets/10.0.3/microsoft.aspnetcore.app.internal.assets.10.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

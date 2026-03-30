@@ -1,0 +1,80 @@
+@page "/lab/feedback"
+@namespace Ganesha.DesignLab.Shared.Components.Lab.Pages
+@layout Ganesha.DesignLab.Shared.Components.Lab.Layout.LabLayout
+@inject IToastService ToastService
+
+<div class="gns-lab-page">
+
+    <HlxPageHeader Title="Feedback"
+                   Eyebrow="Components"
+                   Description="Components that provide feedback to users: alerts, toasts, loaders, and empty states." />
+
+    <HlxSection Title="Alerts" Subtitle="Contextual feedback messages with four severity levels.">
+        <div style="display: flex; flex-direction: column; gap: var(--gns-space-4);">
+            <HlxAlert Severity="AlertSeverity.Info" Title="Information">
+                This is an informational alert with supporting details.
+            </HlxAlert>
+            <HlxAlert Severity="AlertSeverity.Success" Title="Success">
+                Your changes have been saved successfully.
+            </HlxAlert>
+            <HlxAlert Severity="AlertSeverity.Warning" Title="Warning">
+                Your trial will expire in 3 days. Please upgrade your plan.
+            </HlxAlert>
+            <HlxAlert Severity="AlertSeverity.Danger" Title="Error">
+                Failed to process payment. Please check your billing details.
+            </HlxAlert>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Dismissible Alerts" Subtitle="Alerts that users can dismiss.">
+        <div style="display: flex; flex-direction: column; gap: var(--gns-space-4);">
+            <HlxAlert Severity="AlertSeverity.Info" IsDismissible="true">
+                This alert can be dismissed by clicking the close button.
+            </HlxAlert>
+            <HlxAlert Severity="AlertSeverity.Success" IsDismissible="true" Title="Upload Complete">
+                Your file has been uploaded and is ready for review.
+            </HlxAlert>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Toasts" Subtitle="Temporary notifications triggered by user actions.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas gns-preview__canvas--row">
+                <HlxButton Label="Success Toast" Variant="ButtonVariant.Primary" OnClick="@(() => ToastService.ShowSuccess("Operation completed successfully!", "Success"))" />
+                <HlxButton Label="Error Toast" Variant="ButtonVariant.Danger" OnClick="@(() => ToastService.ShowError("Something went wrong. Please try again.", "Error"))" />
+                <HlxButton Label="Warning Toast" Variant="ButtonVariant.Outline" OnClick="@(() => ToastService.ShowWarning("Your session is about to expire.", "Warning"))" />
+                <HlxButton Label="Info Toast" Variant="ButtonVariant.Secondary" OnClick="@(() => ToastService.ShowInfo("A new version is available.", "Update"))" />
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Loader" Subtitle="Loading spinners in three sizes.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas gns-preview__canvas--row" style="align-items: center;">
+                <HlxLoader Size="LoaderSize.Small" Label="Loading..." />
+                <HlxLoader Size="LoaderSize.Medium" Label="Loading..." />
+                <HlxLoader Size="LoaderSize.Large" Label="Loading..." />
+            </div>
+        </div>
+        <div class="gns-preview" style="margin-top: var(--gns-space-4);">
+            <div class="gns-preview__toolbar"><span class="gns-preview__toolbar-title">Without Label</span></div>
+            <div class="gns-preview__canvas gns-preview__canvas--row" style="align-items: center;">
+                <HlxLoader Size="LoaderSize.Small" />
+                <HlxLoader Size="LoaderSize.Medium" />
+                <HlxLoader Size="LoaderSize.Large" />
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Empty State" Subtitle="Placeholder for when no data is available.">
+        <HlxCard>
+            <HlxEmptyState Title="No projects yet"
+                           Description="Get started by creating your first project. It only takes a minute.">
+                <Actions>
+                    <HlxButton Label="Create Project" Variant="ButtonVariant.Primary" />
+                </Actions>
+            </HlxEmptyState>
+        </HlxCard>
+    </HlxSection>
+
+</div>

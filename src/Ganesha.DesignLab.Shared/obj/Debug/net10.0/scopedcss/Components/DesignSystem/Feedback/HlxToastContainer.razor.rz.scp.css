@@ -1,0 +1,95 @@
+/* =============================================================================
+   HlxToastContainer — Scoped Styles
+   ============================================================================= */
+
+.gns-toast-container[b-8h1mud6jk8] {
+    position: fixed;
+    z-index: var(--gns-z-toast, 9000);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gns-space-2);
+    pointer-events: none;
+    padding: var(--gns-space-4);
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.gns-toast-container > :global(*)[b-8h1mud6jk8] {
+    pointer-events: all;
+}
+
+/* ----------------------------------------------------------------------------
+   POSITION VARIANTS
+---------------------------------------------------------------------------- */
+.gns-toast-container--top-right[b-8h1mud6jk8] {
+    top: 0;
+    right: 0;
+    align-items: flex-end;
+}
+
+.gns-toast-container--top-left[b-8h1mud6jk8] {
+    top: 0;
+    left: 0;
+    align-items: flex-start;
+}
+
+.gns-toast-container--bottom-right[b-8h1mud6jk8] {
+    bottom: 0;
+    right: 0;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+}
+
+.gns-toast-container--bottom-left[b-8h1mud6jk8] {
+    bottom: 0;
+    left: 0;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+}
+
+.gns-toast-container--top-center[b-8h1mud6jk8] {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+.gns-toast-container--bottom-center[b-8h1mud6jk8] {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+/* ----------------------------------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .gns-toast-container[b-8h1mud6jk8] {
+        padding: var(--gns-space-3);
+        right: 0;
+        left: 0;
+        align-items: stretch;
+    }
+
+    .gns-toast-container--top-right[b-8h1mud6jk8],
+    .gns-toast-container--top-left[b-8h1mud6jk8],
+    .gns-toast-container--top-center[b-8h1mud6jk8] {
+        top: 0;
+        bottom: auto;
+        transform: none;
+        left: 0;
+        right: 0;
+    }
+
+    .gns-toast-container--bottom-right[b-8h1mud6jk8],
+    .gns-toast-container--bottom-left[b-8h1mud6jk8],
+    .gns-toast-container--bottom-center[b-8h1mud6jk8] {
+        bottom: 0;
+        top: auto;
+        transform: none;
+        left: 0;
+        right: 0;
+    }
+}

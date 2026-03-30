@@ -1,0 +1,97 @@
+{
+  "Files": [
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/obj/Debug/net10.0/scopedcss/projectbundle/Ganesha.DesignLab.Shared.bundle.scp.css",
+      "PackagePath": "staticwebassets/Ganesha.DesignLab.Shared.17kbc6mzer.bundle.scp.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/base/_reset.css",
+      "PackagePath": "staticwebassets/css/base/_reset.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/base/_typography.css",
+      "PackagePath": "staticwebassets/css/base/_typography.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/ganesha.css",
+      "PackagePath": "staticwebassets/css/ganesha.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/pages/_lab.css",
+      "PackagePath": "staticwebassets/css/pages/_lab.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-borders.css",
+      "PackagePath": "staticwebassets/css/settings/_tokens-borders.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-breakpoints.css",
+      "PackagePath": "staticwebassets/css/settings/_tokens-breakpoints.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-color.css",
+      "PackagePath": "staticwebassets/css/settings/_tokens-color.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-radius.css",
+      "PackagePath": "staticwebassets/css/settings/_tokens-radius.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-shadows.css",
+      "PackagePath": "staticwebassets/css/settings/_tokens-shadows.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-sizes.css",
+      "PackagePath": "staticwebassets/css/settings/_tokens-sizes.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-spacing.css",
+      "PackagePath": "staticwebassets/css/settings/_tokens-spacing.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-typography.css",
+      "PackagePath": "staticwebassets/css/settings/_tokens-typography.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-z-index.css",
+      "PackagePath": "staticwebassets/css/settings/_tokens-z-index.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/theme/_theme-dark.css",
+      "PackagePath": "staticwebassets/css/theme/_theme-dark.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/theme/_theme-light.css",
+      "PackagePath": "staticwebassets/css/theme/_theme-light.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/css/utilities/_utilities.css",
+      "PackagePath": "staticwebassets/css/utilities/_utilities.css"
+    },
+    {
+      "Id": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/wwwroot/js/ganesha-charts.js",
+      "PackagePath": "staticwebassets/js/ganesha-charts.js"
+    },
+    {
+      "Id": "obj/Debug/net10.0/staticwebassets/msbuild.Ganesha.DesignLab.Shared.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net10.0/staticwebassets/msbuild.Ganesha.DesignLab.Shared.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net10.0/staticwebassets/msbuild.build.Ganesha.DesignLab.Shared.props",
+      "PackagePath": "build\\Ganesha.DesignLab.Shared.props"
+    },
+    {
+      "Id": "obj/Debug/net10.0/staticwebassets/msbuild.buildMultiTargeting.Ganesha.DesignLab.Shared.props",
+      "PackagePath": "buildMultiTargeting\\Ganesha.DesignLab.Shared.props"
+    },
+    {
+      "Id": "obj/Debug/net10.0/staticwebassets/msbuild.buildTransitive.Ganesha.DesignLab.Shared.props",
+      "PackagePath": "buildTransitive\\Ganesha.DesignLab.Shared.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

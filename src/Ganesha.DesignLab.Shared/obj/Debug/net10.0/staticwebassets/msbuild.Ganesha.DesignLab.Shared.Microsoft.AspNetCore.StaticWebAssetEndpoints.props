@@ -1,0 +1,220 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/base/_reset.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\base\_reset.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ImLl2aLkMcZsmBM2oNVTy9GmX2ZnQk1KiD4bkAMyfvk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"9139"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ImLl2aLkMcZsmBM2oNVTy9GmX2ZnQk1KiD4bkAMyfvk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/base/_reset.u9o15j6qx7.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\base\_reset.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u9o15j6qx7"},{"Name":"integrity","Value":"sha256-ImLl2aLkMcZsmBM2oNVTy9GmX2ZnQk1KiD4bkAMyfvk="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/base/_reset.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9139"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022ImLl2aLkMcZsmBM2oNVTy9GmX2ZnQk1KiD4bkAMyfvk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/base/_typography.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\base\_typography.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-NCDRz6msB49E3kTz\u002BvHftHj63be1nd2BZKZ\u002BTCI/jVA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"10889"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022NCDRz6msB49E3kTz\u002BvHftHj63be1nd2BZKZ\u002BTCI/jVA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/base/_typography.o3rsktgiue.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\base\_typography.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"o3rsktgiue"},{"Name":"integrity","Value":"sha256-NCDRz6msB49E3kTz\u002BvHftHj63be1nd2BZKZ\u002BTCI/jVA="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/base/_typography.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10889"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022NCDRz6msB49E3kTz\u002BvHftHj63be1nd2BZKZ\u002BTCI/jVA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/ganesha.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\ganesha.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-a166YOUh7H3GGS3OtlPilk65ednam84xnezM0Z9vgtk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4198"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022a166YOUh7H3GGS3OtlPilk65ednam84xnezM0Z9vgtk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/ganesha.hpspofl1qu.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\ganesha.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"hpspofl1qu"},{"Name":"integrity","Value":"sha256-a166YOUh7H3GGS3OtlPilk65ednam84xnezM0Z9vgtk="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/ganesha.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4198"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022a166YOUh7H3GGS3OtlPilk65ednam84xnezM0Z9vgtk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/pages/_lab.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\pages\_lab.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Wcnfy8kmI9MizWQzrDDWIhIp9B95fs6QfV/FmaoTCWw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"25181"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Wcnfy8kmI9MizWQzrDDWIhIp9B95fs6QfV/FmaoTCWw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/pages/_lab.tn82hw4fkg.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\pages\_lab.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tn82hw4fkg"},{"Name":"integrity","Value":"sha256-Wcnfy8kmI9MizWQzrDDWIhIp9B95fs6QfV/FmaoTCWw="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/pages/_lab.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"25181"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Wcnfy8kmI9MizWQzrDDWIhIp9B95fs6QfV/FmaoTCWw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-borders.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-borders.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-nKNUNKnu0SqXwVtDrZg7F6XrngqtMgtfRZosF4jpydc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3215"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022nKNUNKnu0SqXwVtDrZg7F6XrngqtMgtfRZosF4jpydc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-borders.o3eon2o7uz.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-borders.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"o3eon2o7uz"},{"Name":"integrity","Value":"sha256-nKNUNKnu0SqXwVtDrZg7F6XrngqtMgtfRZosF4jpydc="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/settings/_tokens-borders.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3215"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022nKNUNKnu0SqXwVtDrZg7F6XrngqtMgtfRZosF4jpydc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-breakpoints.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-breakpoints.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-zuMrJvlFy/rk9q2UlDwRIxVEiQD1duOiZSU4GScB8js="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4282"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zuMrJvlFy/rk9q2UlDwRIxVEiQD1duOiZSU4GScB8js=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-breakpoints.u91vgh10g4.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-breakpoints.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u91vgh10g4"},{"Name":"integrity","Value":"sha256-zuMrJvlFy/rk9q2UlDwRIxVEiQD1duOiZSU4GScB8js="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/settings/_tokens-breakpoints.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4282"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022zuMrJvlFy/rk9q2UlDwRIxVEiQD1duOiZSU4GScB8js=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-color.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-color.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RdrJHdnIUIMjhxdmsNtuk9PzlgmgQXpcoiVv1ROMO2o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"12878"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RdrJHdnIUIMjhxdmsNtuk9PzlgmgQXpcoiVv1ROMO2o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-color.dadw7u7nfo.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-color.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dadw7u7nfo"},{"Name":"integrity","Value":"sha256-RdrJHdnIUIMjhxdmsNtuk9PzlgmgQXpcoiVv1ROMO2o="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/settings/_tokens-color.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12878"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022RdrJHdnIUIMjhxdmsNtuk9PzlgmgQXpcoiVv1ROMO2o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-radius.62vqbh8nm7.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-radius.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"62vqbh8nm7"},{"Name":"integrity","Value":"sha256-vi4U6KM\u002BFxoAMMgTIDFlNKRXagpaaqoJnJCivhFIx44="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/settings/_tokens-radius.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2389"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vi4U6KM\u002BFxoAMMgTIDFlNKRXagpaaqoJnJCivhFIx44=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-radius.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-radius.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vi4U6KM\u002BFxoAMMgTIDFlNKRXagpaaqoJnJCivhFIx44="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2389"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vi4U6KM\u002BFxoAMMgTIDFlNKRXagpaaqoJnJCivhFIx44=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-shadows.69mp0jceth.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-shadows.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"69mp0jceth"},{"Name":"integrity","Value":"sha256-Fld2RRU29iPewJVvfzCC8XQCEnVVCGOM/wnOlDuqA9M="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/settings/_tokens-shadows.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4002"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Fld2RRU29iPewJVvfzCC8XQCEnVVCGOM/wnOlDuqA9M=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-shadows.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-shadows.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Fld2RRU29iPewJVvfzCC8XQCEnVVCGOM/wnOlDuqA9M="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4002"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Fld2RRU29iPewJVvfzCC8XQCEnVVCGOM/wnOlDuqA9M=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-sizes.2mjhxc6pd4.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-sizes.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2mjhxc6pd4"},{"Name":"integrity","Value":"sha256-io7VYgcnUJMUc0MUst3kOcNRG23pkOdn9SmXmpsWniA="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/settings/_tokens-sizes.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6499"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022io7VYgcnUJMUc0MUst3kOcNRG23pkOdn9SmXmpsWniA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-sizes.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-sizes.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-io7VYgcnUJMUc0MUst3kOcNRG23pkOdn9SmXmpsWniA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6499"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022io7VYgcnUJMUc0MUst3kOcNRG23pkOdn9SmXmpsWniA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-spacing.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-spacing.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gs7fpRM5pP5Zppm9VxMR7MOlgwIcwSacVJO51J56NWk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4697"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022gs7fpRM5pP5Zppm9VxMR7MOlgwIcwSacVJO51J56NWk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-spacing.q22ct7ocpa.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-spacing.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"q22ct7ocpa"},{"Name":"integrity","Value":"sha256-gs7fpRM5pP5Zppm9VxMR7MOlgwIcwSacVJO51J56NWk="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/settings/_tokens-spacing.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4697"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022gs7fpRM5pP5Zppm9VxMR7MOlgwIcwSacVJO51J56NWk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-typography.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-typography.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pnNHn4XeBWjAzFzZzKWXEvPmORy6R2GNqaSON044kNE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6513"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pnNHn4XeBWjAzFzZzKWXEvPmORy6R2GNqaSON044kNE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-typography.ymmb118mqs.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-typography.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ymmb118mqs"},{"Name":"integrity","Value":"sha256-pnNHn4XeBWjAzFzZzKWXEvPmORy6R2GNqaSON044kNE="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/settings/_tokens-typography.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6513"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pnNHn4XeBWjAzFzZzKWXEvPmORy6R2GNqaSON044kNE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-z-index.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-z-index.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-n8jLTRYQb\u002BljdW0feMXyNlEnSHSHz2iksru/0034HY0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2607"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022n8jLTRYQb\u002BljdW0feMXyNlEnSHSHz2iksru/0034HY0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/settings/_tokens-z-index.j79cfcnmz7.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\settings\_tokens-z-index.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"j79cfcnmz7"},{"Name":"integrity","Value":"sha256-n8jLTRYQb\u002BljdW0feMXyNlEnSHSHz2iksru/0034HY0="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/settings/_tokens-z-index.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2607"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022n8jLTRYQb\u002BljdW0feMXyNlEnSHSHz2iksru/0034HY0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/theme/_theme-dark.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\theme\_theme-dark.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vWLQS6VDZit2XiwVx1y3y5Vw9bmRHGhV95LFU6lKp0I="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"9617"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vWLQS6VDZit2XiwVx1y3y5Vw9bmRHGhV95LFU6lKp0I=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/theme/_theme-dark.lqw4koz3nb.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\theme\_theme-dark.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lqw4koz3nb"},{"Name":"integrity","Value":"sha256-vWLQS6VDZit2XiwVx1y3y5Vw9bmRHGhV95LFU6lKp0I="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/theme/_theme-dark.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9617"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022vWLQS6VDZit2XiwVx1y3y5Vw9bmRHGhV95LFU6lKp0I=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/theme/_theme-light.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\theme\_theme-light.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-9PrpKuAgWeM9kbnEMNvIKaehMl0JZEFccHcvg01UiFk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"7574"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229PrpKuAgWeM9kbnEMNvIKaehMl0JZEFccHcvg01UiFk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/theme/_theme-light.gx0x0mua2h.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\theme\_theme-light.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gx0x0mua2h"},{"Name":"integrity","Value":"sha256-9PrpKuAgWeM9kbnEMNvIKaehMl0JZEFccHcvg01UiFk="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/theme/_theme-light.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7574"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229PrpKuAgWeM9kbnEMNvIKaehMl0JZEFccHcvg01UiFk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/utilities/_utilities.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\utilities\_utilities.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-mtpeZpGh5pklBR5SHg7\u002BTkVyzq2RKqjqj1iniVNsuHM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"24732"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022mtpeZpGh5pklBR5SHg7\u002BTkVyzq2RKqjqj1iniVNsuHM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/css/utilities/_utilities.m1ms0zpuyk.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\utilities\_utilities.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"m1ms0zpuyk"},{"Name":"integrity","Value":"sha256-mtpeZpGh5pklBR5SHg7\u002BTkVyzq2RKqjqj1iniVNsuHM="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/css/utilities/_utilities.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"24732"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022mtpeZpGh5pklBR5SHg7\u002BTkVyzq2RKqjqj1iniVNsuHM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:14 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.17kbc6mzer.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Ganesha.DesignLab.Shared.17kbc6mzer.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"17kbc6mzer"},{"Name":"integrity","Value":"sha256-A0EMnuX72KnHkIiieUH\u002Bmost8xdPazNtYTPGZSBPkoE="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"159783"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022A0EMnuX72KnHkIiieUH\u002Bmost8xdPazNtYTPGZSBPkoE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:17 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Ganesha.DesignLab.Shared.17kbc6mzer.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-A0EMnuX72KnHkIiieUH\u002Bmost8xdPazNtYTPGZSBPkoE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"159783"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022A0EMnuX72KnHkIiieUH\u002Bmost8xdPazNtYTPGZSBPkoE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 01:03:17 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/js/ganesha-charts.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\ganesha-charts.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XsFWUilSsXJklO67SMX0MlNf4gFV8fEOUhF85C1N5MU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"12009"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022XsFWUilSsXJklO67SMX0MlNf4gFV8fEOUhF85C1N5MU=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 00:52:34 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Ganesha.DesignLab.Shared/js/ganesha-charts.uc5dhl0l7e.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\ganesha-charts.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"uc5dhl0l7e"},{"Name":"integrity","Value":"sha256-XsFWUilSsXJklO67SMX0MlNf4gFV8fEOUhF85C1N5MU="},{"Name":"label","Value":"_content/Ganesha.DesignLab.Shared/js/ganesha-charts.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12009"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022XsFWUilSsXJklO67SMX0MlNf4gFV8fEOUhF85C1N5MU=\u0022"},{"Name":"Last-Modified","Value":"Mon, 30 Mar 2026 00:52:34 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

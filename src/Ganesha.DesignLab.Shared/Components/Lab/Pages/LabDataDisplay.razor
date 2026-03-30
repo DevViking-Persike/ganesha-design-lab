@@ -1,0 +1,121 @@
+@page "/lab/data-display"
+@namespace Ganesha.DesignLab.Shared.Components.Lab.Pages
+@layout Ganesha.DesignLab.Shared.Components.Lab.Layout.LabLayout
+
+<div class="gns-lab-page">
+
+    <HlxPageHeader Title="Data Display"
+                   Eyebrow="Components"
+                   Description="Components for presenting data: badges, tags, avatars, stat cards, section headers, and tables." />
+
+    <HlxSection Title="Badges" Subtitle="Small status indicators with severity variants.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas gns-preview__canvas--row">
+                <HlxBadge Severity="BadgeSeverity.Default">Default</HlxBadge>
+                <HlxBadge Severity="BadgeSeverity.Primary">Primary</HlxBadge>
+                <HlxBadge Severity="BadgeSeverity.Success">Success</HlxBadge>
+                <HlxBadge Severity="BadgeSeverity.Warning">Warning</HlxBadge>
+                <HlxBadge Severity="BadgeSeverity.Danger">Danger</HlxBadge>
+                <HlxBadge Severity="BadgeSeverity.Info">Info</HlxBadge>
+            </div>
+        </div>
+        <div class="gns-preview" style="margin-top: var(--gns-space-4);">
+            <div class="gns-preview__toolbar"><span class="gns-preview__toolbar-title">Sizes</span></div>
+            <div class="gns-preview__canvas gns-preview__canvas--row" style="align-items: center;">
+                <HlxBadge Severity="BadgeSeverity.Primary" Size="BadgeSize.Small">Small</HlxBadge>
+                <HlxBadge Severity="BadgeSeverity.Primary" Size="BadgeSize.Medium">Medium</HlxBadge>
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Tags" Subtitle="Labeled tokens with optional remove action.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas gns-preview__canvas--row">
+                <HlxTag Label="Default" Variant="TagVariant.Default" />
+                <HlxTag Label="Primary" Variant="TagVariant.Primary" />
+                <HlxTag Label="Success" Variant="TagVariant.Success" />
+                <HlxTag Label="Warning" Variant="TagVariant.Warning" />
+                <HlxTag Label="Danger" Variant="TagVariant.Danger" />
+                <HlxTag Label="Info" Variant="TagVariant.Info" />
+                <HlxTag Label="Outline" Variant="TagVariant.Outline" />
+            </div>
+        </div>
+        <div class="gns-preview" style="margin-top: var(--gns-space-4);">
+            <div class="gns-preview__toolbar"><span class="gns-preview__toolbar-title">Removable</span></div>
+            <div class="gns-preview__canvas gns-preview__canvas--row">
+                <HlxTag Label="React" Variant="TagVariant.Primary" IsRemovable="true" />
+                <HlxTag Label="Blazor" Variant="TagVariant.Info" IsRemovable="true" />
+                <HlxTag Label="TypeScript" Variant="TagVariant.Success" IsRemovable="true" />
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Avatar" Subtitle="User representation with image, initials, or fallback icon.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas gns-preview__canvas--row" style="align-items: center;">
+                <HlxAvatar Initials="JS" Size="AvatarSize.Small" />
+                <HlxAvatar Initials="AB" Size="AvatarSize.Medium" />
+                <HlxAvatar Initials="CD" Size="AvatarSize.Large" />
+                <HlxAvatar Initials="EF" Size="AvatarSize.XLarge" />
+                <HlxAvatar Size="AvatarSize.Large" />
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Stat Cards" Subtitle="Key metric display with trend indicators.">
+        <HlxGrid Columns="4" Gap="4">
+            <HlxStatCard Title="Revenue" Value="$48,352" Trend="+12.5%" TrendDirection="TrendDirection.Up" Description="vs last month" />
+            <HlxStatCard Title="Users" Value="2,847" Trend="+8.2%" TrendDirection="TrendDirection.Up" Description="active users" />
+            <HlxStatCard Title="Orders" Value="1,234" Trend="-3.1%" TrendDirection="TrendDirection.Down" Description="vs last month" />
+            <HlxStatCard Title="Conversion" Value="3.24%" Trend="0.0%" TrendDirection="TrendDirection.Neutral" Description="no change" />
+        </HlxGrid>
+    </HlxSection>
+
+    <HlxSection Title="Section Header" Subtitle="Header for content sections with optional actions.">
+        <HlxSectionHeader Title="Recent Activity" Subtitle="A summary of the latest actions in your workspace.">
+            <Actions>
+                <HlxButton Label="View All" Variant="ButtonVariant.Ghost" Size="ButtonSize.Small" />
+            </Actions>
+        </HlxSectionHeader>
+    </HlxSection>
+
+    <HlxSection Title="Table" Subtitle="Data table with striped, hoverable, and compact options.">
+        <HlxTable TItem="ProductRecord" Items="_products" IsStriped="true">
+            <HeaderTemplate>
+                <th class="gns-table__head-cell">Product</th>
+                <th class="gns-table__head-cell">Category</th>
+                <th class="gns-table__head-cell">Price</th>
+                <th class="gns-table__head-cell">Stock</th>
+                <th class="gns-table__head-cell">Status</th>
+            </HeaderTemplate>
+            <RowTemplate Context="product">
+                <tr class="gns-table__body-row">
+                    <td class="gns-table__body-cell">@product.Name</td>
+                    <td class="gns-table__body-cell">@product.Category</td>
+                    <td class="gns-table__body-cell">@product.Price.ToString("C")</td>
+                    <td class="gns-table__body-cell">@product.Stock</td>
+                    <td class="gns-table__body-cell">
+                        <HlxBadge Severity="@(product.Stock > 0 ? BadgeSeverity.Success : BadgeSeverity.Danger)" Size="BadgeSize.Small">
+                            @(product.Stock > 0 ? "In Stock" : "Out of Stock")
+                        </HlxBadge>
+                    </td>
+                </tr>
+            </RowTemplate>
+        </HlxTable>
+    </HlxSection>
+
+</div>
+
+@code {
+    private record ProductRecord(string Name, string Category, decimal Price, int Stock);
+
+    private static readonly IReadOnlyList<ProductRecord> _products =
+    [
+        new("Wireless Mouse", "Electronics", 29.99m, 142),
+        new("Mechanical Keyboard", "Electronics", 89.99m, 56),
+        new("USB-C Hub", "Accessories", 49.99m, 0),
+        new("Monitor Stand", "Furniture", 79.99m, 23),
+        new("Webcam HD", "Electronics", 59.99m, 87),
+        new("Desk Lamp", "Furniture", 34.99m, 15),
+    ];
+}

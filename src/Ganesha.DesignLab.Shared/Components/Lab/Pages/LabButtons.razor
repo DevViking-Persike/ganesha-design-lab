@@ -1,0 +1,97 @@
+@page "/lab/buttons"
+@namespace Ganesha.DesignLab.Shared.Components.Lab.Pages
+@layout Ganesha.DesignLab.Shared.Components.Lab.Layout.LabLayout
+
+<div class="gns-lab-page">
+
+    <HlxPageHeader Title="Buttons"
+                   Eyebrow="Components"
+                   Description="Interactive elements for triggering actions. Available in multiple variants, sizes, and states." />
+
+    <HlxSection Title="Variants" Subtitle="Five visual variants for different emphasis levels.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas gns-preview__canvas--row">
+                <HlxButton Label="Primary" Variant="ButtonVariant.Primary" />
+                <HlxButton Label="Secondary" Variant="ButtonVariant.Secondary" />
+                <HlxButton Label="Outline" Variant="ButtonVariant.Outline" />
+                <HlxButton Label="Ghost" Variant="ButtonVariant.Ghost" />
+                <HlxButton Label="Danger" Variant="ButtonVariant.Danger" />
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Sizes" Subtitle="Small, medium (default), and large.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas gns-preview__canvas--row" style="align-items: center;">
+                <HlxButton Label="Small" Size="ButtonSize.Small" />
+                <HlxButton Label="Medium" Size="ButtonSize.Medium" />
+                <HlxButton Label="Large" Size="ButtonSize.Large" />
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="With Icons" Subtitle="Buttons can include icons on the left or right.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas gns-preview__canvas--row">
+                <HlxButton Label="Save" IconLeft="gns-icon-check" />
+                <HlxButton Label="Next" IconRight="gns-icon-arrow-right" Variant="ButtonVariant.Secondary" />
+                <HlxButton IconLeft="gns-icon-plus" Variant="ButtonVariant.Outline" />
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Loading States" Subtitle="Indicates an ongoing action. Disables interaction.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas gns-preview__canvas--row">
+                <HlxButton Label="Saving..." IsLoading="true" Variant="ButtonVariant.Primary" />
+                <HlxButton Label="Processing..." IsLoading="true" Variant="ButtonVariant.Secondary" />
+                <HlxButton Label="Deleting..." IsLoading="true" Variant="ButtonVariant.Danger" />
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Disabled States" Subtitle="Non-interactive state for unavailable actions.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas gns-preview__canvas--row">
+                <HlxButton Label="Primary" Variant="ButtonVariant.Primary" IsDisabled="true" />
+                <HlxButton Label="Secondary" Variant="ButtonVariant.Secondary" IsDisabled="true" />
+                <HlxButton Label="Outline" Variant="ButtonVariant.Outline" IsDisabled="true" />
+                <HlxButton Label="Ghost" Variant="ButtonVariant.Ghost" IsDisabled="true" />
+                <HlxButton Label="Danger" Variant="ButtonVariant.Danger" IsDisabled="true" />
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Button Group" Subtitle="Common button grouping patterns.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas" style="flex-direction: column; align-items: flex-start; gap: var(--gns-space-6);">
+                <div style="display: flex; gap: var(--gns-space-3);">
+                    <HlxButton Label="Cancel" Variant="ButtonVariant.Ghost" />
+                    <HlxButton Label="Save Draft" Variant="ButtonVariant.Outline" />
+                    <HlxButton Label="Publish" Variant="ButtonVariant.Primary" />
+                </div>
+                <div style="display: flex; gap: var(--gns-space-3);">
+                    <HlxButton Label="Delete" Variant="ButtonVariant.Danger" />
+                    <HlxButton Label="Cancel" Variant="ButtonVariant.Ghost" />
+                </div>
+            </div>
+        </div>
+    </HlxSection>
+
+    <HlxSection Title="Size Matrix" Subtitle="Every variant at every size.">
+        <div class="gns-preview">
+            <div class="gns-preview__canvas" style="flex-direction: column; gap: var(--gns-space-4); align-items: flex-start;">
+                @foreach (var variant in Enum.GetValues<ButtonVariant>())
+                {
+                    <div style="display: flex; gap: var(--gns-space-3); align-items: center;">
+                        <span style="width: 5rem; font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-tertiary); text-transform: uppercase;">@variant</span>
+                        <HlxButton Label="Small" Variant="@variant" Size="ButtonSize.Small" />
+                        <HlxButton Label="Medium" Variant="@variant" Size="ButtonSize.Medium" />
+                        <HlxButton Label="Large" Variant="@variant" Size="ButtonSize.Large" />
+                    </div>
+                }
+            </div>
+        </div>
+    </HlxSection>
+
+</div>

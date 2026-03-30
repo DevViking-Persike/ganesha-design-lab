@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "hF1UnQASTvA=",
+  "success": true,
+  "projectFilePath": "/Volumes/HDX/Dev/teste-ia-frontend/claude/src/Ganesha.DesignLab.Shared/Ganesha.DesignLab.Shared.csproj",
+  "expectedPackageFiles": [
+    "/Users/persike/.nuget/packages/microsoft.aspnetcore.authorization/10.0.3/microsoft.aspnetcore.authorization.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.aspnetcore.components/10.0.3/microsoft.aspnetcore.components.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.aspnetcore.components.analyzers/10.0.3/microsoft.aspnetcore.components.analyzers.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.aspnetcore.components.forms/10.0.3/microsoft.aspnetcore.components.forms.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.aspnetcore.components.web/10.0.3/microsoft.aspnetcore.components.web.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.aspnetcore.metadata/10.0.3/microsoft.aspnetcore.metadata.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.configuration/10.0.3/microsoft.extensions.configuration.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.3/microsoft.extensions.configuration.abstractions.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.configuration.binder/10.0.3/microsoft.extensions.configuration.binder.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.dependencyinjection/10.0.3/microsoft.extensions.dependencyinjection.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.3/microsoft.extensions.dependencyinjection.abstractions.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.diagnostics/10.0.3/microsoft.extensions.diagnostics.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.diagnostics.abstractions/10.0.3/microsoft.extensions.diagnostics.abstractions.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.3/microsoft.extensions.logging.abstractions.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.options/10.0.3/microsoft.extensions.options.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.options.configurationextensions/10.0.3/microsoft.extensions.options.configurationextensions.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.primitives/10.0.3/microsoft.extensions.primitives.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.extensions.validation/10.0.3/microsoft.extensions.validation.10.0.3.nupkg.sha512",
+    "/Users/persike/.nuget/packages/microsoft.jsinterop/10.0.3/microsoft.jsinterop.10.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

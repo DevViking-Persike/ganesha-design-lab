@@ -1,6 +1,6 @@
 .DS_Store
-bin/
-obj/
+**/bin/
+**/obj/
 *.user
 .vs/
 scripts/.logs/

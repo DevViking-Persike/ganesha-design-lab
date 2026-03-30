@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/Ganesha.DesignLab.Shared.props" />
-</Project>

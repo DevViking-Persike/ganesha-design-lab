@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../buildMultiTargeting/Ganesha.DesignLab.Shared.props" />
-</Project>

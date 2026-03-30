@@ -1,0 +1,9 @@
+.git/
+.claude/
+docs/
+tests/
+scripts/
+**/bin/
+**/obj/
+.DS_Store
+*.md

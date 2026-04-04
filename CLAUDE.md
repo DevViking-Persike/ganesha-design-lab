@@ -26,6 +26,13 @@ O frontend principal roda em `src/Ganesha.DesignLab.Web` e consome a biblioteca 
 - `docs/analysis/frontend/03-design-system.md`
 - `.claude/rules/frontend-*.md`
 
+## Fluxo eficiente com Codex
+
+- Para subir a aplicação localmente, use `./scripts/full-stack/start-all.sh`.
+- Para revisar drift documental e governança, siga `.claude/commands/review-documentacao-e-governanca.md`.
+- Para validar uma rodada antes de merge, siga `.claude/commands/quality-gate.md`.
+- Evite fluxos manuais paralelos quando já existir script ou command oficial no repositório.
+
 ## Riscos de alteração
 
 - Não há suíte de testes frontend hoje.

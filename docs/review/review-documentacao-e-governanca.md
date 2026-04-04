@@ -1,100 +1,125 @@
 # Contexto da Revisão
 
-Revisão executada em 2026-03-29 após a geração da nova documentação operacional e arquitetural de frontend, rules, commands e ADRs. O objetivo foi verificar aderência entre código real, documentação antiga do repositório e os novos artefatos criados nesta rodada.
+Revisão atualizada em 2026-04-04 após a consolidação dos charts do design system, a padronização de execução local por `scripts/full-stack/` e a limpeza dos artefatos locais de referência usados durante a exploração visual.
 
 ## Escopo Revisado
 
 - `CLAUDE.md`
 - `AGENTS.md`
-- `docs/adrs/`
-- `docs/analysis/frontend/`
-- `docs/architecture/frontend/`
+- `docs/review/`
+- `docs/architecture.md`
+- `docs/design-system.md`
+- `docs/conventions.md`
 - `.claude/commands/`
-- `.claude/rules/`
-- documentação antiga:
-  `docs/architecture.md`
-  `docs/design-system.md`
-  `docs/conventions.md`
-  `docs/component-criteria.md`
+- `scripts/README.md`
 - código de referência:
   `src/Ganesha.DesignLab.Web/**`
   `src/Ganesha.DesignLab.Shared/**`
 
 ## Inconsistências Críticas
 
-## [CRÍTICA] Documentação antiga ainda descreve prefixo `hlx-` e contratos que não correspondem ao código atual
-
-**Arquivos envolvidos:** `docs/architecture.md`, `docs/design-system.md`, `docs/conventions.md`, `src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-color.css`, `src/Ganesha.DesignLab.Shared/Components/DesignSystem/Actions/GnsButton.razor`
-**Tipo:** Drift documental
-**Impacto:** Quem seguir a documentação antiga pode implementar classes, tokens e contratos incompatíveis com o codebase real.
-**Evidência:** A documentação antiga usa `hlx-` e `--hlx-*`, enquanto o código usa `gns-` e `--gns-*`. Exemplos concretos em `docs/architecture.md` e `docs/conventions.md`, contrastando com `src/Ganesha.DesignLab.Shared/wwwroot/css/settings/_tokens-color.css`.
-**Correção sugerida:** Atualizar ou aposentar a documentação antiga, deixando claro que os documentos em `docs/architecture/frontend/` e `docs/analysis/frontend/` são a referência atual.
-**Prioridade:** Agora
-
-## [CRÍTICA] Documentação antiga enumera componentes e contratos não implementados
-
-**Arquivos envolvidos:** `docs/design-system.md`, `docs/conventions.md`, `src/Ganesha.DesignLab.Shared/Components/DesignSystem/`, `src/Ganesha.DesignLab.Shared/Components/Composites/`
-**Tipo:** Drift documental
-**Impacto:** Pode induzir criação de código contra componentes inexistentes, revisão errada de PR e expectativa falsa sobre cobertura do Design System.
-**Evidência:** `docs/design-system.md` cita `GnsIconButton`, `GnsLinkButton`, `GnsFormField`, `GnsList`, `GnsCodeBlock`, `GnsStepper`, `GnsAccordion`, `GnsTooltip`, `GnsPopover`, `GnsDropdown`, `GnsDivider`, `GnsSpacer`, `GnsContentArea`, `GnsUserMenu` e `GnsNotificationCenter`, mas esses artefatos não aparecem no inventário real de `src/Ganesha.DesignLab.Shared/Components/DesignSystem/` e `src/Ganesha.DesignLab.Shared/Components/Composites/`.
-**Correção sugerida:** Remover da documentação o que não existe ou marcar explicitamente como roadmap, não como estado atual.
-**Prioridade:** Agora
+Nenhuma encontrada na revisão atual.
 
 ## Inconsistências Moderadas
 
-## [MODERADA] Documentação antiga descreve `IThemeService` assíncrono e persistido, mas o código atual usa serviço síncrono em memória
+## [MODERADA] Relatórios de review precisam ser mantidos como artefatos vivos
 
-**Arquivos envolvidos:** `docs/architecture.md`, `src/Ganesha.DesignLab.Shared/Abstractions/Services/IThemeService.cs`, `src/Ganesha.DesignLab.Shared/Services/ThemeService.cs`
-**Tipo:** Drift documental
-**Impacto:** Pode induzir decisões erradas sobre persistência, testes e responsabilidades dos hosts.
-**Evidência:** `docs/architecture.md` descreve `SetThemeAsync(Theme theme)` e persistência via `localStorage`/`Preferences`, mas o código atual expõe `SetTheme(string theme)` e `ToggleTheme()` sem persistência.
-**Correção sugerida:** Atualizar a seção de tema para refletir o serviço realmente implementado.
-**Prioridade:** Próximo ciclo
-
-## [MODERADA] A nova governança existe, mas ainda não está referenciada pelos documentos antigos centrais
-
-**Arquivos envolvidos:** `CLAUDE.md`, `AGENTS.md`, `docs/architecture.md`, `docs/design-system.md`, `.claude/commands/`, `.claude/rules/`
-**Tipo:** Governança duplicada
-**Impacto:** O repositório fica com duas fontes concorrentes de orientação: documentação antiga ampla e nova governança operacional mais aderente.
-**Evidência:** `CLAUDE.md` e `AGENTS.md` apontam para a nova estrutura, mas `docs/architecture.md` e `docs/design-system.md` seguem como documentos centrais sem aviso de desatualização.
-**Correção sugerida:** Adicionar aviso de superseded/atualização nos documentos antigos ou alinhar seu conteúdo.
-**Prioridade:** Próximo ciclo
+**Arquivos envolvidos:** `docs/review/quality-gate.md`, `docs/review/review-documentacao-e-governanca.md`  
+**Tipo:** Drift de governança  
+**Impacto:** Quando o repositório evolui, o review antigo pode continuar correto como histórico, mas incorreto como retrato do estado atual. Isso gera leitura errada de pendências já resolvidas.  
+**Evidência:** A versão anterior destes relatórios ainda apontava drift crítico em `docs/architecture.md`, `docs/design-system.md` e `docs/conventions.md`, mas os documentos centrais já estavam alinhados ao código atual.  
+**Correção sugerida:** Atualizar os relatórios em rodadas estruturais relevantes e deixar claro quando um review é snapshot histórico versus estado corrente.  
+**Prioridade:** Próximo ciclo contínuo
 
 ## Melhorias de Clareza
 
-## [BAIXA] Falta trilha explícita para os prompts/commands de qualidade ainda não materializados
+## [BAIXA] Falta uma trilha curta e explícita de operação eficiente com Codex em um único bloco
 
-**Arquivos envolvidos:** `CLAUDE.md`, `AGENTS.md`, `.claude/commands/`
-**Tipo:** Artefato faltante
-**Impacto:** Baixo agora, mas reduz previsibilidade de revisão futura.
-**Evidência:** Nesta rodada foram criados `quality-gate`, `review-documentacao-e-governanca` e `propose-improvements`, mas ainda não existem commands equivalentes para `code-review`, `review-testes`, `review-loop`, `review-performance`, `review-seguranca` e `setup-scripts`.
-**Correção sugerida:** Completar esses commands conforme necessidade operacional real.
-**Prioridade:** Quando tocar a área
+**Arquivos envolvidos:** `CLAUDE.md`, `AGENTS.md`, `scripts/README.md`, `.claude/commands/`  
+**Tipo:** Clareza operacional  
+**Impacto:** Baixo, mas reduz eficiência quando alguém novo no repositório tenta descobrir como analisar, validar e subir a stack sem cair em fluxo manual.  
+**Evidência:** As peças já existem, mas estavam distribuídas entre docs diferentes.  
+**Correção sugerida:** Consolidar no onboarding operacional um fluxo mínimo:
 
-## Aderência e Lacunas de ADR
+1. Ler `AGENTS.md` e `CLAUDE.md`
+2. Subir a stack com `./scripts/full-stack/start-all.sh`
+3. Usar `.claude/commands/review-documentacao-e-governanca.md` para drift documental
+4. Usar `.claude/commands/quality-gate.md` antes de merge
+5. Priorizar scripts oficiais em vez de `dotnet run` ad-hoc
 
-- Os ADRs recém-criados em `docs/adrs/ADR-0001-*` até `ADR-0005-*` estão coerentes com a arquitetura identificada e com a nova governança.
-- Não foi encontrado conflito direto entre os novos ADRs e o código atual.
-- Há uma lacuna potencial futura para a decisão sobre o papel do host MAUI, caso ele passe a divergir intencionalmente do host web.
+**Prioridade:** Agora
+
+## Aderência Atual ao Código
+
+Os documentos centrais revisados estão coerentes com o repositório atual:
+
+- `docs/architecture.md`
+- `docs/design-system.md`
+- `docs/conventions.md`
+- `CLAUDE.md`
+- `AGENTS.md`
+- `.claude/commands/quality-gate.md`
+- `.claude/commands/review-documentacao-e-governanca.md`
+- `.claude/commands/setup-scripts.md`
+
+## Comandos e Governança Operacional
+
+Os seguintes comandos já existem e reduzem a necessidade de fluxo manual disperso:
+
+- `quality-gate`
+- `review-documentacao-e-governanca`
+- `setup-scripts`
+- `propose-improvements`
+- `fe-*`
+
+Isso fecha parcialmente a lacuna reportada na revisão anterior, que citava commands ausentes já materializados no repositório.
+
+## Fluxo Recomendado Para Uso Mais Eficiente do Codex
+
+### Antes de editar
+
+- Ler `AGENTS.md` e `CLAUDE.md`
+- Ler os docs-alvo em `docs/architecture/frontend/` e `docs/analysis/frontend/`
+- Verificar `.claude/rules/frontend-*.md`
+
+### Para subir a aplicação
+
+- Usar `./scripts/full-stack/start-all.sh`
+- Evitar `dotnet run` manual como fluxo padrão de validação local
+
+### Para revisar documentação e governança
+
+- Usar o command `review-documentacao-e-governanca`
+- Atualizar `docs/review/` quando a rodada alterar estrutura, scripts ou fluxo operacional
+
+### Para encerrar rodada
+
+- Usar o command `quality-gate`
+- Registrar o que foi validado, o que não foi validado e o risco residual
 
 ## Documentação Que Continua Correta
 
 - `docs/analysis/frontend/*`
 - `docs/architecture/frontend/*`
+- `docs/architecture.md`
+- `docs/design-system.md`
+- `docs/conventions.md`
 - `CLAUDE.md`
 - `AGENTS.md`
 - `.claude/rules/frontend-*.md`
 - `.claude/commands/fe-*.md`
-- os ADRs recém-criados em `docs/adrs/`
+- `.claude/commands/quality-gate.md`
+- `.claude/commands/review-documentacao-e-governanca.md`
+- `.claude/commands/setup-scripts.md`
 
-## Riscos de Drift Residual
+## Riscos Residuais
 
-- Documentação antiga ainda pode ser lida antes da nova, por estar em caminhos mais curtos na raiz de `docs/`.
-- Como ainda não há suíte de testes, parte da governança continua dependente de disciplina manual.
-- O working tree já tinha mudanças estruturais em andamento; isso aumenta a chance de os documentos antigos ficarem mais desatualizados ainda.
+- Ainda não há suíte de testes frontend para sustentar futuras rodadas com segurança.
+- O host MAUI segue com menor cobertura documental e operacional do que o host web.
+- Parte da eficiência com Codex ainda depende de disciplina do time para usar o fluxo oficial.
 
 ## Ações Recomendadas
 
-1. Corrigir primeiro `docs/architecture.md`, `docs/design-system.md` e `docs/conventions.md`.
-2. Marcar explicitamente documentos antigos que ainda não foram harmonizados.
-3. Completar os commands de qualidade restantes se eles forem entrar no fluxo normal do time.
+1. Tratar `docs/review/` como artefato corrente e revalidar em rodadas estruturais.
+2. Consolidar no onboarding do projeto o fluxo mínimo de operação com Codex.
+3. Criar a primeira suíte de testes para contratos visuais e de comportamento críticos.

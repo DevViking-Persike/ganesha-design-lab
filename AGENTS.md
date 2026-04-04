@@ -10,6 +10,13 @@ The main frontend host is `src/Ganesha.DesignLab.Web`. The reusable UI system li
 - Default entrypoint: `./scripts/full-stack/start-all.sh`
 - Avoid running the frontend directly with ad-hoc `dotnet run` when the goal is to validate the app locally.
 
+## Codex Efficiency
+
+- Read `AGENTS.md`, `CLAUDE.md` and the relevant docs before changing code.
+- For documentation drift, use the review flow described in `.claude/commands/review-documentacao-e-governanca.md`.
+- Before merge or handoff, use the validation flow described in `.claude/commands/quality-gate.md`.
+- Prefer repository scripts and existing commands over ad-hoc local procedures.
+
 ## Architecture
 
 - Keep the web host thin.

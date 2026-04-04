@@ -518,7 +518,33 @@
     </GnsSection>
 
     @* ─────────────────────────────────────────────────────────────────
-       Section 6 — Dashboard Composition
+       Section 6 — Planning Timeline
+       ───────────────────────────────────────────────────────────────── *@
+    <GnsSection Title="Planning Timeline" Subtitle="Project delivery timeline with grouped workstreams, progress bars, sticky calendar headers, and day-by-day planning.">
+
+        <GnsCard>
+            <Header>
+                <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
+                    <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Project Delivery Timeline</div>
+                    <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">Reusable planning composite for roadmaps, implementations, and staged deliveries.</div>
+                </div>
+            </Header>
+            <ChildContent>
+                <div style="padding: var(--gns-space-5);">
+                    <GnsProjectTimeline Title="Detailed project schedule"
+                                        Subtitle="Monthly view with workstreams, tasks, progress, and a current-day marker."
+                                        Tasks="_timelineTasks"
+                                        Categories="_timelineCategories"
+                                        Today="@(new DateOnly(2026, 4, 4))"
+                                        CultureName="en-US" />
+                </div>
+            </ChildContent>
+        </GnsCard>
+
+    </GnsSection>
+
+    @* ─────────────────────────────────────────────────────────────────
+       Section 7 — Dashboard Composition
        ───────────────────────────────────────────────────────────────── *@
     <GnsSection Title="Dashboard Composition" Subtitle="A realistic mini-dashboard combining multiple chart types in a cohesive layout.">
 
@@ -830,7 +856,34 @@
         new("Decide", "04", "Act on the trend and anomalies", "var(--gns-warning-500)"),
     ];
 
-    // ── Section 6: Dashboard Composition ──────────────────────────────
+    // ── Section 6: Planning Timeline ─────────────────────────────────
+
+    private static readonly IReadOnlyList<ProjectTimelineCategory> _timelineCategories =
+    [
+        new("Planning", "var(--gns-primary-500)"),
+        new("Design", "var(--gns-violet-500)"),
+        new("Infrastructure", "var(--gns-warning-500)"),
+        new("Development", "var(--gns-success-500)"),
+        new("QA & Delivery", "var(--gns-danger-500)")
+    ];
+
+    private static readonly IReadOnlyList<ProjectTimelineTask> _timelineTasks =
+    [
+        new(1, "Scope definition", new DateOnly(2026, 3, 28), new DateOnly(2026, 3, 31), 100, "Planning"),
+        new(2, "Requirements mapping", new DateOnly(2026, 3, 30), new DateOnly(2026, 4, 3), 92, "Planning"),
+        new(3, "Low-fidelity wireframes", new DateOnly(2026, 4, 1), new DateOnly(2026, 4, 4), 100, "Design"),
+        new(4, "High-fidelity interface", new DateOnly(2026, 4, 3), new DateOnly(2026, 4, 10), 64, "Design"),
+        new(5, "Data model definition", new DateOnly(2026, 4, 5), new DateOnly(2026, 4, 8), 45, "Infrastructure"),
+        new(6, "Server provisioning", new DateOnly(2026, 4, 7), new DateOnly(2026, 4, 11), 24, "Infrastructure"),
+        new(7, "CI/CD pipeline", new DateOnly(2026, 4, 10), new DateOnly(2026, 4, 14), 12, "Infrastructure"),
+        new(8, "Repository bootstrap", new DateOnly(2026, 4, 8), new DateOnly(2026, 4, 10), 100, "Development"),
+        new(9, "Core API implementation", new DateOnly(2026, 4, 11), new DateOnly(2026, 4, 24), 22, "Development"),
+        new(10, "Authentication integration", new DateOnly(2026, 4, 15), new DateOnly(2026, 4, 21), 8, "Development"),
+        new(11, "Unit testing", new DateOnly(2026, 4, 22), new DateOnly(2026, 4, 28), 0, "QA & Delivery"),
+        new(12, "Staging deployment", new DateOnly(2026, 4, 29), new DateOnly(2026, 5, 1), 0, "QA & Delivery")
+    ];
+
+    // ── Section 7: Dashboard Composition ──────────────────────────────
 
     private static readonly IReadOnlyList<double> _dashSparkRevenue =
         [92.1, 97.4, 88.6, 103.2, 95.8, 108.4, 112.0, 107.3, 115.6, 119.2, 122.8, 128.4];

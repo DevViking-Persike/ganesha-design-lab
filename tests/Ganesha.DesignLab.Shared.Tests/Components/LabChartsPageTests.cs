@@ -16,6 +16,7 @@ public sealed class LabChartsPageTests : TestContext
         Assert.Contains("Donut Charts", cut.Markup);
         Assert.Contains("Progress Indicators", cut.Markup);
         Assert.Contains("Infographic Charts", cut.Markup);
+        Assert.Contains("Planning Timeline", cut.Markup);
     }
 
     [Fact]
@@ -26,5 +27,6 @@ public sealed class LabChartsPageTests : TestContext
         Assert.Contains("Gauge Charts", cut.Markup);
         Assert.Contains("Quarterly Revenue by Region", cut.Markup);
         Assert.Contains("Funnel Variations", cut.Markup);
+        Assert.Contains("Project Delivery Timeline", cut.Markup);
     }
 }

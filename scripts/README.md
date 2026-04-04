@@ -41,10 +41,20 @@ Se a mesma variável existir nos dois arquivos, o valor de `.env.development` pr
 
 ## Uso
 
+Use os scripts de `scripts/full-stack/` como caminho padrão para subir a aplicação localmente. O entrypoint padrão do repositório é:
+
 ```bash
+./scripts/full-stack/start-all.sh
+```
+
+Evite subir o frontend manualmente com `dotnet run` quando a intenção for validar a stack local.
+
+## Exemplos
+
+```bash
+./scripts/full-stack/start-all.sh
 ./scripts/start-frontend.sh
 ./scripts/start-tests.sh
-./scripts/full-stack/start-all.sh
 ```
 
 ## Logs e PIDs

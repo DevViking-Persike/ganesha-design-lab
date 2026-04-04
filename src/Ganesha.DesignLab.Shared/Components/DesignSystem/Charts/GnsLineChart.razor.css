@@ -21,18 +21,18 @@
 /* ----------------------------------------------------------------------------
    GRID
 ---------------------------------------------------------------------------- */
-.gns-line-chart__grid-h,
-.gns-line-chart__grid-v {
+::deep .gns-line-chart__grid-h,
+::deep .gns-line-chart__grid-v {
     stroke: var(--gns-color-border-default, #E0DBE8);
     stroke-width: 1;
     stroke-dasharray: 4 4;
 }
 
 /* ----------------------------------------------------------------------------
-   AXIS LABELS
+   AXIS LABELS (::deep needed — SVG <text> rendered via MarkupString)
 ---------------------------------------------------------------------------- */
-.gns-line-chart__y-label,
-.gns-line-chart__x-label {
+::deep .gns-line-chart__y-label,
+::deep .gns-line-chart__x-label {
     font-family: var(--gns-font-sans, system-ui, sans-serif);
     font-size: 12px;
     fill: var(--gns-color-text-muted, #857B94);

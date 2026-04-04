@@ -21,23 +21,23 @@
 /* ----------------------------------------------------------------------------
    GRID
 ---------------------------------------------------------------------------- */
-.gns-bar-chart__grid-line {
+::deep .gns-bar-chart__grid-line {
     stroke: var(--gns-color-border-default, #E0DBE8);
     stroke-width: 1;
     stroke-dasharray: 4 4;
 }
 
 /* ----------------------------------------------------------------------------
-   AXIS LABELS
+   AXIS LABELS (::deep needed — SVG <text> rendered via MarkupString)
 ---------------------------------------------------------------------------- */
-.gns-bar-chart__y-label {
+::deep .gns-bar-chart__y-label {
     font-family: var(--gns-font-sans, system-ui, sans-serif);
     font-size: 12px;
     fill: var(--gns-color-text-muted, #857B94);
     pointer-events: none;
 }
 
-.gns-bar-chart__x-label {
+::deep .gns-bar-chart__x-label {
     font-family: var(--gns-font-sans, system-ui, sans-serif);
     font-size: 12px;
     fill: var(--gns-color-text-secondary, #665C76);
@@ -47,7 +47,7 @@
 /* ----------------------------------------------------------------------------
    VALUE LABELS (above bars)
 ---------------------------------------------------------------------------- */
-.gns-bar-chart__value-label {
+::deep .gns-bar-chart__value-label {
     font-family: var(--gns-font-sans, system-ui, sans-serif);
     font-size: 12px;
     font-weight: 500;
@@ -72,7 +72,7 @@
     opacity: 0.8;
 }
 
-.gns-bar-chart__bar-group:hover .gns-bar-chart__value-label {
+::deep .gns-bar-chart__bar-group:hover .gns-bar-chart__value-label {
     font-weight: 700;
     fill: var(--gns-color-text-primary, #221C2E);
 }

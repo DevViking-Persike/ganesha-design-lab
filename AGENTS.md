@@ -4,6 +4,12 @@
 
 The main frontend host is `src/Ganesha.DesignLab.Web`. The reusable UI system lives in `src/Ganesha.DesignLab.Shared`.
 
+## Run Policy
+
+- Whenever you need to run the local stack, use the scripts in `scripts/full-stack/`.
+- Default entrypoint: `./scripts/full-stack/start-all.sh`
+- Avoid running the frontend directly with ad-hoc `dotnet run` when the goal is to validate the app locally.
+
 ## Architecture
 
 - Keep the web host thin.

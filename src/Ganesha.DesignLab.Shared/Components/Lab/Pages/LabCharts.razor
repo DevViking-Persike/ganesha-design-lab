@@ -7,7 +7,7 @@
 
     <GnsPageHeader Title="Charts"
                    Eyebrow="Components"
-                   Description="Data visualization components for Blazor: bar charts, line charts, donut charts, sparklines, and progress indicators." />
+                   Description="Reusable data visualization components for the design system: base charts, infographic-style charts, and dashboard patterns." />
 
     @* ─────────────────────────────────────────────────────────────────
        Section 1 — Bar Charts
@@ -321,7 +321,204 @@
     </GnsSection>
 
     @* ─────────────────────────────────────────────────────────────────
-       Section 5 — Dashboard Composition
+       Section 5 — Infographic Charts (NEW)
+       ───────────────────────────────────────────────────────────────── *@
+    <GnsSection Title="Infographic Charts" Subtitle="Reusable design-system components for infographic-style data visualization: pie, gauge, funnel, process, stacked bar, and bubble charts.">
+
+        <GnsGrid Columns="2" Gap="6">
+
+            @* Pie Chart with Gradient *@
+            <GnsCard>
+                <Header>
+                    <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
+                        <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Market Share</div>
+                        <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">Gradient pie chart — Q1 2026</div>
+                    </div>
+                </Header>
+                <ChildContent>
+                    <div style="padding: var(--gns-space-5); display: flex; justify-content: center;">
+                        <GnsPieChart Data="_pieMarketShare"
+                                     Size="240"
+                                     ShowGradient="true"
+                                     ShowLegend="true" />
+                    </div>
+                </ChildContent>
+            </GnsCard>
+
+            @* Pie Chart without Gradient *@
+            <GnsCard>
+                <Header>
+                    <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
+                        <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Expense Breakdown</div>
+                        <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">Flat pie chart — Operating costs</div>
+                    </div>
+                </Header>
+                <ChildContent>
+                    <div style="padding: var(--gns-space-5); display: flex; justify-content: center;">
+                        <GnsPieChart Data="_pieExpenses"
+                                     Size="240"
+                                     ShowGradient="false"
+                                     ShowLegend="true" />
+                    </div>
+                </ChildContent>
+            </GnsCard>
+
+        </GnsGrid>
+
+        @* Gauge Charts *@
+        <div style="margin-top: var(--gns-space-6);">
+            <GnsCard>
+                <Header>
+                    <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
+                        <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Gauge Charts</div>
+                        <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">Semi-circle gauges for KPI monitoring</div>
+                    </div>
+                </Header>
+                <ChildContent>
+                    <div style="padding: var(--gns-space-6); display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; gap: var(--gns-space-6);">
+                        <GnsGaugeChart Value="73" MaxValue="100"
+                                       Size="200" StrokeWidth="18"
+                                       Label="Performance"
+                                       StartColor="#3F51B5" EndColor="#00BCD4" />
+
+                        <GnsGaugeChart Value="42" MaxValue="100"
+                                       Size="200" StrokeWidth="18"
+                                       Label="Capacity"
+                                       StartColor="#FFC107" EndColor="#F44336" />
+
+                        <GnsGaugeChart Value="89" MaxValue="100"
+                                       Size="200" StrokeWidth="18"
+                                       Label="Uptime"
+                                       ValueLabel="99.9%"
+                                       StartColor="#4CAF50" EndColor="#8BC34A" />
+                    </div>
+                </ChildContent>
+            </GnsCard>
+        </div>
+
+        @* Funnel Chart + Stacked Bar side by side *@
+        <div style="margin-top: var(--gns-space-6);">
+            <GnsGrid Columns="2" Gap="6">
+
+                @* Funnel Chart *@
+                <GnsCard>
+                    <Header>
+                        <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
+                            <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Sales Funnel</div>
+                            <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">Lead-to-close conversion pipeline</div>
+                        </div>
+                    </Header>
+                    <ChildContent>
+                        <div style="padding: var(--gns-space-5); display: flex; justify-content: center;">
+                            <GnsFunnelChart Data="_funnelData"
+                                            Width="380"
+                                            StepHeight="52" />
+                        </div>
+                    </ChildContent>
+                </GnsCard>
+
+                @* Stacked Bar Chart *@
+                <GnsCard>
+                    <Header>
+                        <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
+                            <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Quarterly Revenue by Region</div>
+                            <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">Stacked bar chart — $ thousands</div>
+                        </div>
+                    </Header>
+                    <ChildContent>
+                        <div style="padding: var(--gns-space-5);">
+                            <GnsStackedBarChart Series="_stackedSeries"
+                                                Labels="_stackedLabels"
+                                                Height="300"
+                                                ShowLabels="true"
+                                                ShowLegend="true" />
+                        </div>
+                    </ChildContent>
+                </GnsCard>
+
+            </GnsGrid>
+        </div>
+
+        @* Multiple funnel examples *@
+        <div style="margin-top: var(--gns-space-6);">
+            <GnsCard>
+                <Header>
+                    <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
+                        <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Funnel Variations</div>
+                        <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">The component should support more than one pipeline: sales, hiring, and customer support.</div>
+                    </div>
+                </Header>
+                <ChildContent>
+                    <div style="padding: var(--gns-space-5); display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--gns-space-5); align-items: start;">
+                        <div style="display: flex; flex-direction: column; gap: var(--gns-space-3); align-items: center;">
+                            <div style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary); text-transform: uppercase; letter-spacing: var(--gns-tracking-wide);">Sales</div>
+                            <GnsFunnelChart Data="_funnelData"
+                                            Width="220"
+                                            StepHeight="40" />
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: var(--gns-space-3); align-items: center;">
+                            <div style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary); text-transform: uppercase; letter-spacing: var(--gns-tracking-wide);">Hiring</div>
+                            <GnsFunnelChart Data="_hiringFunnelData"
+                                            Width="220"
+                                            StepHeight="40" />
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: var(--gns-space-3); align-items: center;">
+                            <div style="font-size: var(--gns-text-xs); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary); text-transform: uppercase; letter-spacing: var(--gns-tracking-wide);">Support</div>
+                            <GnsFunnelChart Data="_supportFunnelData"
+                                            Width="220"
+                                            StepHeight="40" />
+                        </div>
+                    </div>
+                </ChildContent>
+            </GnsCard>
+        </div>
+
+        @* Process / Arrow Flow Chart *@
+        <div style="margin-top: var(--gns-space-6);">
+            <GnsCard>
+                <Header>
+                    <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
+                        <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Process Flow</div>
+                        <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">Arrow-based infographic process chart</div>
+                    </div>
+                </Header>
+                <ChildContent>
+                    <div style="padding: var(--gns-space-5);">
+                        <GnsProcessChart Steps="_processSteps" />
+                    </div>
+                </ChildContent>
+            </GnsCard>
+        </div>
+
+        @* Line Chart with Area Gradient *@
+        <div style="margin-top: var(--gns-space-6);">
+            <GnsCard>
+                <Header>
+                    <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
+                        <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Revenue Trend (Gradient Area)</div>
+                        <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">Line chart with gradient fill — 6-month revenue trend</div>
+                    </div>
+                </Header>
+                <ChildContent>
+                    <div style="padding: var(--gns-space-5);">
+                        <GnsLineChart Series="_revenueVsExpenses"
+                                      Labels="_monthLabels"
+                                      Height="300"
+                                      ShowArea="true"
+                                      ShowAreaGradient="true"
+                                      ShowDots="true"
+                                      ShowGrid="true" />
+                    </div>
+                </ChildContent>
+            </GnsCard>
+        </div>
+
+    </GnsSection>
+
+    @* ─────────────────────────────────────────────────────────────────
+       Section 6 — Dashboard Composition
        ───────────────────────────────────────────────────────────────── *@
     <GnsSection Title="Dashboard Composition" Subtitle="A realistic mini-dashboard combining multiple chart types in a cohesive layout.">
 
@@ -473,6 +670,23 @@
             </GnsCard>
         </div>
 
+        @* Bubble chart — Market Analysis *@
+        <div style="margin-top: var(--gns-space-5);">
+            <GnsCard>
+                <Header>
+                    <div style="padding: var(--gns-space-4) var(--gns-space-5); border-bottom: 1px solid var(--gns-color-border-subtle);">
+                        <div style="font-size: var(--gns-text-sm); font-weight: var(--gns-font-weight-semibold); color: var(--gns-color-text-primary);">Market Analysis</div>
+                        <div style="font-size: var(--gns-text-xs); color: var(--gns-color-text-secondary); margin-top: var(--gns-space-1);">Revenue (X) vs Growth % (Y) — bubble size = customer base</div>
+                    </div>
+                </Header>
+                <ChildContent>
+                    <div style="padding: var(--gns-space-5);">
+                        <GnsBubbleChart Data="_marketAnalysis" Height="420" />
+                    </div>
+                </ChildContent>
+            </GnsCard>
+        </div>
+
     </GnsSection>
 
 </div>
@@ -550,7 +764,73 @@
         new("Pending",     23, "var(--gns-color-border-default)"),
     ];
 
-    // ── Section 5: Dashboard Composition ──────────────────────────────
+    // ── Section 5: Infographic Charts ─────────────────────────────────
+
+    private static readonly IReadOnlyList<ChartDataPoint> _pieMarketShare =
+    [
+        new("Platform", 38, "var(--gns-primary-500)"),
+        new("Services", 24, "var(--gns-info-500)"),
+        new("Partners", 18, "var(--gns-success-500)"),
+        new("SMB", 12, "var(--gns-warning-500)"),
+        new("Other", 8, "var(--gns-rosa-300)"),
+    ];
+
+    private static readonly IReadOnlyList<ChartDataPoint> _pieExpenses =
+    [
+        new("Payroll", 42, "var(--gns-primary-500)"),
+        new("Infra", 21, "var(--gns-violet-500)"),
+        new("Marketing", 17, "var(--gns-warning-500)"),
+        new("Support", 12, "var(--gns-success-500)"),
+        new("Ops", 8, "var(--gns-danger-500)"),
+    ];
+
+    private static readonly IReadOnlyList<ChartDataPoint> _funnelData =
+    [
+        new("Visitors", 18_400, "var(--gns-primary-500)"),
+        new("Leads", 7_260, "var(--gns-info-500)"),
+        new("Qualified", 2_940, "var(--gns-success-500)"),
+        new("Proposal", 1_140, "var(--gns-warning-500)"),
+        new("Closed", 420, "var(--gns-danger-500)"),
+    ];
+
+    private static readonly IReadOnlyList<ChartDataPoint> _hiringFunnelData =
+    [
+        new("Applicants", 1_260, "var(--gns-violet-500)"),
+        new("Screened", 420, "var(--gns-info-500)"),
+        new("Interviews", 164, "var(--gns-success-500)"),
+        new("Finalists", 48, "var(--gns-warning-500)"),
+        new("Offers", 12, "var(--gns-danger-500)"),
+    ];
+
+    private static readonly IReadOnlyList<ChartDataPoint> _supportFunnelData =
+    [
+        new("Tickets", 3_920, "var(--gns-primary-500)"),
+        new("Triaged", 2_870, "var(--gns-info-500)"),
+        new("In Progress", 1_140, "var(--gns-warning-500)"),
+        new("Resolved", 760, "var(--gns-success-500)"),
+        new("Escalated", 96, "var(--gns-danger-500)"),
+    ];
+
+    private static readonly IReadOnlyList<string> _stackedLabels =
+        ["Q1", "Q2", "Q3", "Q4"];
+
+    private static readonly IReadOnlyList<ChartSeries> _stackedSeries =
+    [
+        new("North America", [180, 220, 260, 310], "var(--gns-primary-500)"),
+        new("Europe", [130, 160, 180, 210], "var(--gns-info-500)"),
+        new("LATAM", [90, 120, 135, 168], "var(--gns-success-500)"),
+        new("APAC", [70, 95, 124, 152], "var(--gns-warning-500)"),
+    ];
+
+    private static readonly IReadOnlyList<ProcessStep> _processSteps =
+    [
+        new("Discover", "01", "Audience and data mapping", "var(--gns-primary-500)"),
+        new("Model", "02", "Structure signals into metrics", "var(--gns-info-500)"),
+        new("Design", "03", "Turn metrics into visual stories", "var(--gns-success-500)"),
+        new("Decide", "04", "Act on the trend and anomalies", "var(--gns-warning-500)"),
+    ];
+
+    // ── Section 6: Dashboard Composition ──────────────────────────────
 
     private static readonly IReadOnlyList<double> _dashSparkRevenue =
         [92.1, 97.4, 88.6, 103.2, 95.8, 108.4, 112.0, 107.3, 115.6, 119.2, 122.8, 128.4];
@@ -590,5 +870,19 @@
         new("Marketplace Add-ons", 97.8),
         new("API & Integrations",  72.4),
         new("Professional Services", 54.1),
+    ];
+
+    // ── Bubble Chart: Market Analysis ─────────────────────────────────
+
+    private static readonly IReadOnlyList<BubbleDataPoint> _marketAnalysis =
+    [
+        new("Enterprise Suite",  X: 384,  Y: 28,  Size: 1240, "var(--gns-primary-500)"),
+        new("Pro Subscriptions", X: 218,  Y: 42,  Size: 3860, "var(--gns-info-500)"),
+        new("Team Licenses",     X: 163,  Y: 65,  Size: 8200, "var(--gns-success-500)"),
+        new("Marketplace",       X: 98,   Y: 87,  Size: 2100, "var(--gns-warning-500)"),
+        new("API & Integrations",X: 72,   Y: 34,  Size: 640,  "var(--gns-violet-500)"),
+        new("Prof. Services",    X: 54,   Y: 12,  Size: 420,  "var(--gns-danger-500)"),
+        new("Starter Pack",      X: 142,  Y: 118, Size: 12400, "var(--gns-rosa-300)"),
+        new("Education",         X: 38,   Y: 52,  Size: 1800, "var(--gns-ouro-500)"),
     ];
 }

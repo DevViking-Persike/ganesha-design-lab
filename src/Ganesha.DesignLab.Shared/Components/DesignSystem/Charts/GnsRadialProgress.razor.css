@@ -51,7 +51,7 @@
 /* ----------------------------------------------------------------------------
    LABEL
 ---------------------------------------------------------------------------- */
-.gns-radial-progress__label {
+::deep .gns-radial-progress__label {
     font-family: var(--gns-font-sans, system-ui, sans-serif);
     font-size: 0.9em;
     font-weight: 700;
